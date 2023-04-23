@@ -21,9 +21,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="47"/>
-        <CursorPos X="30" Y="58"/>
+        <TopLine Value="48"/>
+        <CursorPos X="26" Y="48"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -32,9 +31,10 @@
         <Filename Value="ucnatural.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="UCNatural"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="99"/>
-        <CursorPos X="3" Y="101"/>
+        <TopLine Value="95"/>
+        <CursorPos Y="100"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit>
@@ -166,4 +166,15 @@
       <Modes ActiveMode=""/>
     </RunParams>
   </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="ucnatural.pas"/>
+        <Line Value="100"/>
+      </Item>
+    </BreakPoints>
+  </Debugging>
 </CONFIG>

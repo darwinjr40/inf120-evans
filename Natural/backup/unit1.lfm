@@ -31,7 +31,7 @@ object Form1: TForm1
     Left = 247
     Height = 38
     Top = 80
-    Width = 80
+    Width = 208
     Font.CharSet = ANSI_CHARSET
     Font.Height = -21
     Font.Pitch = fpVariable
@@ -44,7 +44,7 @@ object Form1: TForm1
     Left = 247
     Height = 38
     Top = 121
-    Width = 80
+    Width = 385
     Font.CharSet = ANSI_CHARSET
     Font.Height = -21
     Font.Pitch = fpVariable

@@ -73,6 +73,18 @@ object Form1: TForm1
         Caption = 'ToLiteral'
         OnClick = MenuItem5Click
       end
+      object MenuItem7: TMenuItem
+        Caption = 'EsPrimo'
+        OnClick = MenuItem7Click
+      end
+      object MenuItem8: TMenuItem
+        Caption = 'Tiene parte fraccionaria'
+        OnClick = MenuItem8Click
+      end
+      object MenuItem9: TMenuItem
+        Caption = 'RealToBin'
+        OnClick = MenuItem9Click
+      end
     end
     object MenuItem6: TMenuItem
       Caption = 'Digito'

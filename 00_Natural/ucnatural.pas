@@ -5,7 +5,7 @@ unit UCNatural;
 interface
 
 uses
-  Classes, SysUtils;
+  Classes, SysUtils, math;
 
 type
 
@@ -15,11 +15,19 @@ type
     private
       valor: cardinal;
     public  //metodos     ctrl + shift + c
-      procedure  cargar(x: cardinal);
-      function  descargar(): cardinal;
-      function SumarDigitos(): byte;
-      function ToRomano(): String;  // 'XX'
-      function ToLiteral(): String;
+      {funciones}
+      function  GetValor(): cardinal;
+      function  SumarDigitos(): byte;
+      function  VerifPrimo():boolean;
+      function  ToRomano(): String;  // 'XX'
+      function  ToLiteral(): String;
+      function  ToBaseN(b : cardinal) : String;
+      {procesos}
+      procedure  SetValor(x: cardinal);
+      {procesos estaticos}
+      class function Pot(b,e: Cardinal):Cardinal; static;
+      class function VerifPartFracc(x:real):boolean; static;
+      class procedure ToBinario(var x:real) static;
   end;
 
 implementation
@@ -28,12 +36,12 @@ implementation
 
 { Natural }
 
-procedure Natural.cargar(x: cardinal);
+procedure Natural.SetValor(x: cardinal);
 begin
   self.valor := x; //valor = x
 end;
 
-function Natural.descargar: cardinal;
+function Natural.GetValor: cardinal;
 begin
   result := self.valor;
 end;
@@ -51,6 +59,19 @@ begin  //valor = 123
     sum := sum + d;
   end;
   result := sum;
+end;
+
+function Natural.VerifPrimo: boolean;
+var i : cardinal;
+begin
+  i := self.valor div 2;
+  while (i >= 2) do begin
+    if (self.valor mod i = 0)  then begin
+      exit(false);
+    end;
+    dec(i);
+  end;
+  exit(true);
 end;
 
 function Natural.ToRomano: String;
@@ -116,6 +137,53 @@ begin
     inc(c); //c := c + 1
   end;
   result := r;
+end;
+
+function Natural.ToBaseN(b: cardinal): String;
+const VECTOR: Array[0..15] of string =
+('0','1','2','3','4','5','6','7','8','9','A','B', 'C','D','E', 'F');
+var n, d : cardinal;
+    r : String;
+begin
+  n := self.valor;  //copia
+  r := '';
+  while n > 0 do
+  begin
+    d := n mod b;
+    n := n div b;
+    R := VECTOR[d] + r;
+  end;
+  result := r
+end;
+
+class function Natural.Pot(b, e: Cardinal): Cardinal;
+begin
+  pot := trunc(power(b, e));
+end;
+
+class function Natural.VerifPartFracc(x: real): boolean;
+begin
+  result := (not (x = trunc(x)));
+end;
+
+class procedure Natural.ToBinario(var x: real);
+var n : Natural;
+    fr : real;
+    d, c : byte;
+begin
+  n := Natural.create;
+  n.SetValor(trunc(x)); //n = parte entera
+  fr := x - trunc(x);  //fr = parte fraccion
+  c := 0;
+  x := StrToInt(n.ToBaseN(2));
+  repeat
+    fr := fr * 2;
+    d := trunc(fr);
+    fr := fr - d;
+    x := x * 10 + d;
+    c := c + 1;
+  until (not Natural.VerifPartFracc(fr)) or (c = 8);
+  x := x / Natural.Pot(10, c);
 end;
 
 end.

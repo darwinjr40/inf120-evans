@@ -1,0 +1,382 @@
+object Form1: TForm1
+  Left = 327
+  Height = 520
+  Top = 131
+  Width = 797
+  Caption = 'Form1'
+  ClientHeight = 500
+  ClientWidth = 797
+  Color = 14548991
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '2.0.12.0'
+  object SG: TStringGrid
+    Left = 88
+    Height = 30
+    Top = 16
+    Width = 576
+    ColCount = 6
+    DefaultColWidth = 40
+    DefaultRowHeight = 27
+    RowCount = 1
+    TabOrder = 0
+    TitleFont.CharSet = ANSI_CHARSET
+    TitleFont.Color = clBlack
+    TitleFont.Height = -13
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+    TitleFont.Style = [fsBold]
+  end
+  object Button1: TButton
+    Left = 64
+    Height = 25
+    Top = 112
+    Width = 75
+    Caption = 'conversion a binario'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object SG1: TStringGrid
+    Left = 88
+    Height = 48
+    Top = 64
+    Width = 672
+    ColCount = 6
+    DefaultColWidth = 40
+    DefaultRowHeight = 27
+    RowCount = 1
+    TabOrder = 2
+    TitleFont.CharSet = ANSI_CHARSET
+    TitleFont.Color = clBlack
+    TitleFont.Height = -13
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+    TitleFont.Style = [fsBold]
+  end
+  object SG2: TStringGrid
+    Left = 88
+    Height = 30
+    Top = 144
+    Width = 576
+    ColCount = 6
+    DefaultColWidth = 40
+    DefaultRowHeight = 27
+    RowCount = 1
+    TabOrder = 3
+    TitleFont.CharSet = ANSI_CHARSET
+    TitleFont.Color = clBlack
+    TitleFont.Height = -13
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+    TitleFont.Style = [fsBold]
+  end
+  object SG3: TStringGrid
+    Left = 88
+    Height = 30
+    Top = 192
+    Width = 576
+    ColCount = 6
+    DefaultColWidth = 40
+    DefaultRowHeight = 27
+    RowCount = 1
+    TabOrder = 4
+    TitleFont.CharSet = ANSI_CHARSET
+    TitleFont.Color = clBlack
+    TitleFont.Height = -13
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+    TitleFont.Style = [fsBold]
+  end
+  object Label1: TLabel
+    Left = 8
+    Height = 21
+    Top = 16
+    Width = 70
+    Caption = 'Vector 1 :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    OnClick = Label1Click
+  end
+  object Label2: TLabel
+    Left = 8
+    Height = 21
+    Top = 144
+    Width = 70
+    Caption = 'Vector 2 :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    OnClick = Label2Click
+  end
+  object Label3: TLabel
+    Left = 8
+    Height = 21
+    Top = 192
+    Width = 70
+    Caption = 'Vector 3 :'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    OnClick = Label3Click
+  end
+  object StringGrid1: TStringGrid
+    Left = 72
+    Height = 104
+    Top = 280
+    Width = 680
+    ColCount = 10
+    RowCount = 1
+    TabOrder = 5
+  end
+  object MainMenu1: TMainMenu
+    Top = 96
+    object MenuItem1: TMenuItem
+      Caption = 'Vector1'
+      object MenuItem2: TMenuItem
+        Caption = 'Crear'
+        OnClick = MenuItem2Click
+      end
+      object MenuItem43: TMenuItem
+        Caption = '#1-Cargar '
+        OnClick = MenuItem43Click
+      end
+      object MenuItem4: TMenuItem
+        Caption = 'CargarRnd(Dim)'
+        OnClick = MenuItem4Click
+      end
+      object MenuItem47: TMenuItem
+        Caption = '#2-Descargar'
+        OnClick = MenuItem47Click
+      end
+      object MenuItem3: TMenuItem
+        Caption = '#3-Adicionar(ele)'
+        OnClick = MenuItem3Click
+      end
+      object MenuItem7: TMenuItem
+        Caption = '#4-Insertar(ele,pos)'
+        OnClick = MenuItem7Click
+      end
+      object MenuItem44: TMenuItem
+        Caption = '#5-Obtener(pos)'
+        OnClick = MenuItem44Click
+      end
+      object MenuItem6: TMenuItem
+        Caption = '#6-GetDim : Integer'
+        OnClick = MenuItem6Click
+      end
+      object MenuItem10: TMenuItem
+        Caption = '#7-Invertir ( )'
+        OnClick = MenuItem10Click
+      end
+      object MenuItem48: TMenuItem
+        Caption = '#8-Rotar(cantidad de veces)'
+        OnClick = MenuItem48Click
+      end
+      object MenuItem11: TMenuItem
+        Caption = '#9-Bus_Secuencial(Ele)'
+        OnClick = MenuItem11Click
+      end
+      object MenuItem12: TMenuItem
+        Caption = '#10-Bus_Binaria(ele)'
+        OnClick = MenuItem12Click
+      end
+      object MenuItem36: TMenuItem
+        Caption = '#11-Ord_INSERCION'
+        OnClick = MenuItem36Click
+      end
+      object MenuItem42: TMenuItem
+        Caption = '#11.1-Ord_insercion1()'
+        OnClick = MenuItem42Click
+      end
+      object MenuItem14: TMenuItem
+        Caption = '#11.2-Ord_Seleccion )'
+        OnClick = MenuItem14Click
+      end
+      object MenuItem13: TMenuItem
+        Caption = '#11.3-Ord_Intercambio( )'
+        OnClick = MenuItem13Click
+      end
+      object MenuItem15: TMenuItem
+        Caption = '#11.4-Ord_BURBUJA( )'
+        OnClick = MenuItem15Click
+      end
+      object MenuItem46: TMenuItem
+        Caption = '#13-Ord_Frecuencia'
+        OnClick = MenuItem46Click
+      end
+      object MenuItem8: TMenuItem
+        Caption = 'Eliminar(pos)'
+        OnClick = MenuItem8Click
+      end
+      object MenuItem5: TMenuItem
+        Caption = 'SetDim( dim )'
+        OnClick = MenuItem5Click
+      end
+      object MenuItem9: TMenuItem
+        Caption = 'Intercambiar(pos1,pos2)'
+        OnClick = MenuItem9Click
+      end
+    end
+    object MenuItem16: TMenuItem
+      Caption = 'Practico'
+      object MenuItem22: TMenuItem
+        Caption = '01_EliminarPri'
+        OnClick = MenuItem22Click
+      end
+      object MenuItem21: TMenuItem
+        Caption = '02_EliminarAllRep();'
+        OnClick = MenuItem21Click
+      end
+      object MenuItem45: TMenuItem
+        Caption = '03_moda'
+        OnClick = MenuItem45Click
+      end
+      object MenuItem24: TMenuItem
+        Caption = '04_EliminarRep( );'
+        OnClick = MenuItem24Click
+      end
+      object MenuItem33: TMenuItem
+        Caption = '05_InterOrdenar(v1,v2);'
+        OnClick = MenuItem33Click
+      end
+      object MenuItem35: TMenuItem
+        Caption = '06_DivRepNoRep'
+        OnClick = MenuItem35Click
+      end
+      object MenuItem19: TMenuItem
+        Caption = 'Frecuencia(ele):int'
+        OnClick = MenuItem19Click
+      end
+      object MenuItem17: TMenuItem
+        Caption = 'Ord_CantDivisore( )'
+        OnClick = MenuItem17Click
+      end
+      object MenuItem18: TMenuItem
+        Caption = 'Segmentar_Pri_nopri( )'
+        OnClick = MenuItem18Click
+      end
+      object MenuItem20: TMenuItem
+        Caption = 'SegmentarFrecu( )'
+        OnClick = MenuItem20Click
+      end
+      object MenuItem23: TMenuItem
+        Caption = 'EliminarAll(ele);'
+        OnClick = MenuItem23Click
+      end
+      object MenuItem34: TMenuItem
+        Caption = 'Menor'
+        OnClick = MenuItem34Click
+      end
+      object MenuItem37: TMenuItem
+        Caption = 'Ord_Selec_Burb_inter(a, b);'
+        OnClick = MenuItem37Click
+      end
+      object MenuItem38: TMenuItem
+        Caption = 'ElimOne(ele);'
+        OnClick = MenuItem38Click
+      end
+      object MenuItem51: TMenuItem
+        Caption = '07:interOrdenar(v1,v2,v3,v4)'
+        OnClick = MenuItem51Click
+      end
+    end
+    object MenuItem25: TMenuItem
+      Caption = 'Vector2'
+      object MenuItem29: TMenuItem
+        Caption = 'Crear'
+        OnClick = MenuItem29Click
+      end
+      object MenuItem49: TMenuItem
+        Caption = 'cargar'
+        OnClick = MenuItem49Click
+      end
+      object MenuItem27: TMenuItem
+        Caption = 'CargarRnd'
+        OnClick = MenuItem27Click
+      end
+      object MenuItem31: TMenuItem
+        Caption = 'Insertar(ele)'
+        OnClick = MenuItem31Click
+      end
+    end
+    object MenuItem26: TMenuItem
+      Caption = 'Vector3'
+      object MenuItem30: TMenuItem
+        Caption = 'Crear'
+        OnClick = MenuItem30Click
+      end
+      object MenuItem50: TMenuItem
+        Caption = 'cargar'
+        OnClick = MenuItem50Click
+      end
+      object MenuItem28: TMenuItem
+        Caption = 'CargarRnd'
+        OnClick = MenuItem28Click
+      end
+      object MenuItem32: TMenuItem
+        Caption = 'Insertar(ele)'
+        OnClick = MenuItem32Click
+      end
+    end
+    object MenuItem52: TMenuItem
+      Caption = 'vector4'
+      object MenuItem54: TMenuItem
+        Caption = 'cargar'
+        OnClick = MenuItem54Click
+      end
+      object MenuItem55: TMenuItem
+        Caption = 'descargar'
+        OnClick = MenuItem55Click
+      end
+    end
+    object MenuItem53: TMenuItem
+      Caption = 'vector5'
+      object MenuItem56: TMenuItem
+        Caption = 'cargar'
+        OnClick = MenuItem56Click
+      end
+      object MenuItem57: TMenuItem
+        Caption = 'descargar'
+        OnClick = MenuItem57Click
+      end
+    end
+    object MenuItem39: TMenuItem
+      Caption = 'UotrasTecnicas'
+      object MenuItem40: TMenuItem
+        Caption = 'Dispercion1'
+        OnClick = MenuItem40Click
+      end
+      object MenuItem41: TMenuItem
+        Caption = 'EJ7(V2)'
+        OnClick = MenuItem41Click
+      end
+      object MenuItem58: TMenuItem
+        Caption = 'Intercalar3vectores(v1,v2,v3)'
+        OnClick = MenuItem58Click
+      end
+    end
+  end
+end

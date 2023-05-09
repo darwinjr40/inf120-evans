@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus\fpc\3.2.0\bin\x86_64-win64\fpc.exe" Date="1381338938"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -WG -l -vewnhibq &quot;-FiF:\Disco C\Documents\Lazarus\02-Vector_Integer\T2VECAPP\lib\x86_64-win64&quot; &quot;-FuF:\Disco C\Documents\Lazarus\02-Vector_Integer\nuevo&quot; -FuC:\lazarus\lcl\units\x86_64-win64\win32 -FuC:\lazarus\lcl\units\x86_64-win64 -FuC:\lazarus\components\lazutils\lib\x86_64-win64 -FuC:\lazarus\packager\units\x86_64-win64 &quot;-FuF:\Disco C\Documents\Lazarus\02-Vector_Integer\T2VECAPP\&quot; &quot;-FUF:\Disco C\Documents\Lazarus\02-Vector_Integer\T2VECAPP\lib\x86_64-win64\&quot; &quot;-FEF:\Disco C\Documents\Lazarus\02-Vector_Integer\T2VECAPP\&quot; &quot;-oF:\Disco C\Documents\Lazarus\02-Vector_Integer\T2VECAPP\T2VECAPP.exe&quot; -dLCL -dLCLwin32 T2VECAPP.lpr"/>
+  <Complete Value="False"/>
+</CONFIG>

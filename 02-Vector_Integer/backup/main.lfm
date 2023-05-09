@@ -1,0 +1,87 @@
+object Form1: TForm1
+  Left = 298
+  Height = 264
+  Top = 194
+  Width = 886
+  Caption = 'Form1'
+  ClientHeight = 264
+  ClientWidth = 886
+  OnCreate = FormCreate
+  LCLVersion = '2.2.4.0'
+  object ComboBox1: TComboBox
+    Left = 8
+    Height = 23
+    Top = 8
+    Width = 120
+    ItemHeight = 15
+    ItemIndex = 0
+    Items.Strings = (
+      'Mostrar Vector'
+      'vector 1'
+      'vector 2'
+      'vector 3'
+      'vector 4'
+    )
+    OnChange = ComboBox1Change
+    Style = csDropDownList
+    TabOrder = 0
+    Text = 'Mostrar Vector'
+  end
+  object StringGrid1: TStringGrid
+    Left = 136
+    Height = 48
+    Top = 8
+    Width = 728
+    ColCount = 10
+    DefaultColWidth = 35
+    DefaultRowHeight = 25
+    FixedCols = 0
+    FixedRows = 0
+    RowCount = 1
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 8
+    Height = 25
+    Top = 72
+    Width = 120
+    Caption = 'CargarVector'
+    OnClick = Button1Click
+    TabOrder = 2
+  end
+  object Button2: TButton
+    Left = 8
+    Height = 25
+    Top = 40
+    Width = 120
+    Caption = 'CargarVectorRandom'
+    OnClick = Button2Click
+    TabOrder = 3
+  end
+  object Button3: TButton
+    Left = 32
+    Height = 25
+    Top = 160
+    Width = 75
+    Caption = 'Button3'
+    OnClick = Button3Click
+    TabOrder = 4
+  end
+  object Edit1: TEdit
+    Left = 144
+    Height = 23
+    Top = 165
+    Width = 656
+    TabOrder = 5
+    Text = 'Edit1'
+  end
+  object Button4: TButton
+    Left = 32
+    Height = 25
+    Top = 192
+    Width = 75
+    Caption = 'Button4'
+    OnClick = Button4Click
+    TabOrder = 6
+  end
+end

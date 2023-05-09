@@ -1,0 +1,200 @@
+unit FRMT2VECAPP;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Grids, StdCtrls,uvector;
+
+type
+
+  { TForm1 }
+
+  TForm1 = class(TForm)
+    B1: TButton;
+    B10: TButton;
+    B11: TButton;
+    B12: TButton;
+    B13: TButton;
+    B14: TButton;
+    B15: TButton;
+    B16: TButton;
+    B17: TButton;
+    B18: TButton;
+    B19: TButton;
+    B2: TButton;
+    B20: TButton;
+    B21: TButton;
+    B3: TButton;
+    B4: TButton;
+    B5: TButton;
+    B6: TButton;
+    B7: TButton;
+    B8: TButton;
+    B9: TButton;
+    E: TEdit;
+    P: TEdit;
+    SG: TStringGrid;
+    procedure B10Click(Sender: TObject);
+    procedure B11Click(Sender: TObject);
+    procedure B12Click(Sender: TObject);
+    procedure B14Click(Sender: TObject);
+    procedure B15Click(Sender: TObject);
+    procedure B16Click(Sender: TObject);
+    procedure B1Click(Sender: TObject);
+    procedure B20Click(Sender: TObject);
+    procedure B21Click(Sender: TObject);
+    procedure B2Click(Sender: TObject);
+    procedure B3Click(Sender: TObject);
+    procedure B4Click(Sender: TObject);
+    procedure B5Click(Sender: TObject);
+    procedure B6Click(Sender: TObject);
+    procedure B7Click(Sender: TObject);
+    procedure B8Click(Sender: TObject);
+    procedure B9Click(Sender: TObject);
+  private
+   v:vector;
+  public
+    procedure UpdateSG();
+    //procedure UpdateSG2();
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.lfm}
+
+{ TForm1 }
+
+ procedure TForm1.UpdateSG();
+var i:integer;
+begin
+   SG.ColCount:=v.getDim();
+   for i:=1 to v.getDim() do
+     begin
+       SG.Cells[i-1,0]:= IntToStr(v.getElem(i));
+     end;
+end;
+
+procedure TForm1.B1Click(Sender: TObject);
+begin
+  v:=vector.crear();
+  ShowMessage('Objeto creado...');
+  UpdateSG();
+end;
+
+procedure TForm1.B10Click(Sender: TObject);
+begin
+  v.rotaVector();
+  UpdateSG();
+end;
+
+procedure TForm1.B11Click(Sender: TObject);
+var ele:integer;
+begin
+  ele:= strtoint(E.text);
+  P.text:=inttostr(v.busq_sec(ele));
+  updatesg();
+  end;
+
+procedure TForm1.B12Click(Sender: TObject);
+var ele:integer;
+begin
+  ele:= strtoint(E.text);
+  P.text:= inttostr(v.busq_bi(ele));
+  updatesg();
+end;
+
+procedure TForm1.B14Click(Sender: TObject);
+begin
+  v.ord_selec();
+  UpdateSG();
+end;
+
+procedure TForm1.B15Click(Sender: TObject);
+begin
+  v.ord_inter();
+  UpdateSG();
+end;
+
+procedure TForm1.B16Click(Sender: TObject);
+begin
+  v.ord_burbu();
+  UpdateSG();
+end;
+
+procedure TForm1.B20Click(Sender: TObject);
+begin
+  close();
+end;
+
+procedure TForm1.B21Click(Sender: TObject);
+begin
+  UpdateSG();
+end;
+
+procedure TForm1.B2Click(Sender: TObject);
+var dim:integer;
+begin
+   dim:=StrToInt(E.Text);
+   v.setDim(dim);
+   E.Text:=' ';
+   UpdateSG();
+end;
+
+procedure TForm1.B3Click(Sender: TObject);
+begin
+  E.Text:=IntToStr(v.getDim());
+end;
+
+procedure TForm1.B4Click(Sender: TObject);
+begin
+  v.addElem(StrToInt(E.Text));
+  E.Text:='';
+  UpdateSG();
+end;
+
+procedure TForm1.B5Click(Sender: TObject);
+var pos,ele:integer;
+begin
+  pos:=StrToInt(P.Text);
+  ele:=StrToInt(E.Text);
+  v.insElem(pos,ele);
+  UpdateSG();
+end;
+
+procedure TForm1.B6Click(Sender: TObject);
+var pos:integer;
+begin
+  pos:=StrToInt(P.Text);
+  v.RemElem(pos);
+  P.Text:='';
+  UpdateSG();
+end;
+
+procedure TForm1.B7Click(Sender: TObject);
+var pos1,pos2:integer;
+begin
+  pos1:=StrToInt(P.Text);
+  pos2:=StrToInt(E.Text);
+  v.InteElem(pos1,pos2);
+  UpdateSG();
+end;
+
+procedure TForm1.B8Click(Sender: TObject);
+begin
+  v.invertir();
+  P.Text:='';
+  E.Text:='';
+end;
+
+procedure TForm1.B9Click(Sender: TObject);
+begin
+  E.Text:=IntToStr(v.getDim());
+end;
+
+
+end.

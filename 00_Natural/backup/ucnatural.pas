@@ -182,7 +182,7 @@ begin
     fr := fr - d;
     x := x * 10 + d;
     c := c + 1;
-  until (not Natural.VerifPartFracc(fr));
+  until (not Natural.VerifPartFracc(fr)) or (c = 8);
   x := x / Natural.Pot(10, c);
 end;
 

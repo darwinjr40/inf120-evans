@@ -175,11 +175,11 @@ begin
   n.SetValor(trunc(x)); //n = parte entera
   fr := x - trunc(x);  //fr = parte fraccion
   c := 0;
-  x := StrToInt(n.ToBaseN(2));
+  x := StrToInt(n.ToBaseN(2));  //x = 11
   repeat
     fr := fr * 2;
-    d := trunc(fr);
-    fr := fr - d;
+    d := trunc(fr);   //entera
+    fr := fr - d;     //
     x := x * 10 + d;
     c := c + 1;
   until (not Natural.VerifPartFracc(fr)) or (c = 8);

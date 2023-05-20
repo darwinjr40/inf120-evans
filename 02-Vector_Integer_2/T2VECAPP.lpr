@@ -7,7 +7,7 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, FRMT2VECAPP, uvector, Unit2
+  Forms, FRMT2VECAPP, uvector
   { you can add units after this };
 
 {$R *.res}
@@ -17,7 +17,7 @@ begin
   Application.Scaled:=True;
   Application.Initialize;
   Application.CreateForm(TForm1, Form1);
-  Application.CreateForm(TForm2, Form2);
+  //Application.CreateForm(TForm2, Form2);
   Application.Run;
 end.
 

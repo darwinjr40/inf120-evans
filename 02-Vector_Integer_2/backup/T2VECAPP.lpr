@@ -7,8 +7,8 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, FRMT2VECAPP, uvector, Formulario, Unit2
-  { you can add units after this }
+  Forms, FRMT2VECAPP, uvector
+  { you can add units after this };
 
 {$R *.res}
 

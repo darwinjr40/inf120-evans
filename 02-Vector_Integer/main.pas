@@ -17,6 +17,7 @@ type
     Button3: TButton;
     Button4: TButton;
     ComboBox1: TComboBox;
+    ComboBox2: TComboBox;
     Edit1: TEdit;
     StringGrid1: TStringGrid;
     procedure Button1Click(Sender: TObject);

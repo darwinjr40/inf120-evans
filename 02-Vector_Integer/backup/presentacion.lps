@@ -12,7 +12,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="34"/>
+        <UsageCount Value="35"/>
       </Unit0>
       <Unit1>
         <Filename Value="main.pas"/>
@@ -20,14 +20,22 @@
         <ComponentName Value="Form1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="45"/>
-        <CursorPos Y="48"/>
-        <UsageCount Value="34"/>
+        <TopLine Value="80"/>
+        <CursorPos X="43" Y="91"/>
+        <UsageCount Value="35"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
+        <Filename Value="prueba.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="6"/>
+        <CursorPos Y="29"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
         <Filename Value="natural.pas"/>
         <UnitName Value="Natural"/>
         <EditorIndex Value="3"/>
@@ -35,145 +43,137 @@
         <CursorPos X="25" Y="57"/>
         <UsageCount Value="17"/>
         <Loaded Value="True"/>
-      </Unit2>
-      <Unit3>
-        <Filename Value="uvector.pas"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="353"/>
-        <CursorPos X="31" Y="356"/>
-        <UsageCount Value="17"/>
-        <Loaded Value="True"/>
       </Unit3>
       <Unit4>
-        <Filename Value="prueba.pas"/>
-        <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="22"/>
-        <CursorPos Y="29"/>
-        <UsageCount Value="21"/>
+        <Filename Value="uvector.pas"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="353"/>
+        <CursorPos Y="361"/>
+        <UsageCount Value="17"/>
         <Loaded Value="True"/>
       </Unit4>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="main.pas"/>
-        <Caret Line="80" Column="7" TopLine="71"/>
+        <Filename Value="uvector.pas"/>
+        <Caret Line="14" Column="36" TopLine="2"/>
       </Position1>
       <Position2>
         <Filename Value="uvector.pas"/>
-        <Caret Line="70" Column="33" TopLine="68"/>
+        <Caret Line="28" Column="33" TopLine="12"/>
       </Position2>
       <Position3>
-        <Filename Value="natural.pas"/>
-        <Caret Line="61" Column="28" TopLine="51"/>
+        <Filename Value="prueba.pas"/>
+        <Caret Line="8" Column="50"/>
       </Position3>
       <Position4>
-        <Filename Value="uvector.pas"/>
-        <Caret Line="588" Column="14" TopLine="576"/>
+        <Filename Value="prueba.pas"/>
+        <Caret Line="9" Column="31"/>
       </Position4>
       <Position5>
-        <Filename Value="uvector.pas"/>
-        <Caret Line="84" Column="42" TopLine="78"/>
+        <Filename Value="prueba.pas"/>
+        <Caret Line="14" Column="8"/>
       </Position5>
       <Position6>
-        <Filename Value="main.pas"/>
-        <Caret Line="87" Column="22" TopLine="77"/>
+        <Filename Value="prueba.pas"/>
+        <Caret Line="9" Column="38"/>
       </Position6>
       <Position7>
-        <Filename Value="uvector.pas"/>
-        <Caret Line="106" Column="33" TopLine="101"/>
+        <Filename Value="main.pas"/>
+        <Caret Line="87" Column="28" TopLine="46"/>
       </Position7>
       <Position8>
-        <Filename Value="uvector.pas"/>
-        <Caret Line="49" Column="37" TopLine="38"/>
+        <Filename Value="prueba.pas"/>
+        <Caret Line="22" Column="28" TopLine="12"/>
       </Position8>
       <Position9>
-        <Filename Value="uvector.pas"/>
-        <Caret Line="106" Column="33" TopLine="90"/>
+        <Filename Value="main.pas"/>
+        <Caret Line="88" Column="23" TopLine="79"/>
       </Position9>
       <Position10>
         <Filename Value="uvector.pas"/>
-        <Caret Line="844" Column="25" TopLine="826"/>
+        <Caret Line="25" Column="46" TopLine="13"/>
       </Position10>
       <Position11>
         <Filename Value="uvector.pas"/>
-        <Caret Line="174" Column="25" TopLine="143"/>
+        <Caret Line="172" Column="14" TopLine="156"/>
       </Position11>
       <Position12>
         <Filename Value="uvector.pas"/>
-        <Caret Line="87" Column="43" TopLine="80"/>
+        <Caret Line="169" Column="18" TopLine="157"/>
       </Position12>
       <Position13>
-        <Filename Value="uvector.pas"/>
-        <Caret Line="14" Column="36" TopLine="2"/>
+        <Filename Value="main.pas"/>
+        <Caret Line="88" Column="23" TopLine="80"/>
       </Position13>
       <Position14>
         <Filename Value="uvector.pas"/>
-        <Caret Line="28" Column="33" TopLine="12"/>
+        <Caret Line="41" Column="39" TopLine="37"/>
       </Position14>
       <Position15>
-        <Filename Value="prueba.pas"/>
-        <Caret Line="8" Column="50"/>
+        <Filename Value="uvector.pas"/>
+        <Caret Line="60" Column="38" TopLine="49"/>
       </Position15>
       <Position16>
-        <Filename Value="prueba.pas"/>
-        <Caret Line="9" Column="31"/>
+        <Filename Value="main.pas"/>
+        <Caret Line="82" Column="18" TopLine="77"/>
       </Position16>
       <Position17>
-        <Filename Value="prueba.pas"/>
-        <Caret Line="14" Column="8"/>
+        <Filename Value="main.pas"/>
+        <Caret Line="89" Column="18" TopLine="79"/>
       </Position17>
       <Position18>
-        <Filename Value="prueba.pas"/>
-        <Caret Line="9" Column="38"/>
+        <Filename Value="main.pas"/>
+        <Caret Line="34" Column="19" TopLine="24"/>
       </Position18>
       <Position19>
         <Filename Value="main.pas"/>
-        <Caret Line="87" Column="28" TopLine="46"/>
+        <Caret Line="48" Column="27" TopLine="45"/>
       </Position19>
       <Position20>
-        <Filename Value="prueba.pas"/>
-        <Caret Line="22" Column="28" TopLine="12"/>
+        <Filename Value="main.pas"/>
+        <Caret Line="58" Column="18" TopLine="45"/>
       </Position20>
       <Position21>
         <Filename Value="main.pas"/>
-        <Caret Line="88" Column="23" TopLine="79"/>
+        <Caret Line="59" Column="18" TopLine="46"/>
       </Position21>
       <Position22>
-        <Filename Value="uvector.pas"/>
-        <Caret Line="25" Column="46" TopLine="13"/>
+        <Filename Value="main.pas"/>
+        <Caret Line="124" Column="33" TopLine="107"/>
       </Position22>
       <Position23>
-        <Filename Value="uvector.pas"/>
-        <Caret Line="172" Column="14" TopLine="156"/>
+        <Filename Value="main.pas"/>
+        <Caret Line="84" Column="29" TopLine="80"/>
       </Position23>
       <Position24>
         <Filename Value="uvector.pas"/>
-        <Caret Line="169" Column="18" TopLine="157"/>
+        <Caret Line="25" Column="34" TopLine="20"/>
       </Position24>
       <Position25>
-        <Filename Value="main.pas"/>
-        <Caret Line="88" Column="23" TopLine="80"/>
+        <Filename Value="uvector.pas"/>
+        <Caret Line="153" Column="27" TopLine="151"/>
       </Position25>
       <Position26>
         <Filename Value="uvector.pas"/>
-        <Caret Line="41" Column="39" TopLine="37"/>
+        <Caret Line="39" Column="41" TopLine="34"/>
       </Position26>
       <Position27>
         <Filename Value="uvector.pas"/>
-        <Caret Line="60" Column="38" TopLine="49"/>
+        <Caret Line="40" Column="41" TopLine="34"/>
       </Position27>
       <Position28>
-        <Filename Value="main.pas"/>
-        <Caret Line="82" Column="18" TopLine="77"/>
+        <Filename Value="uvector.pas"/>
+        <Caret Line="310" Column="28" TopLine="307"/>
       </Position28>
       <Position29>
-        <Filename Value="main.pas"/>
-        <Caret Line="89" Column="18" TopLine="79"/>
+        <Filename Value="uvector.pas"/>
+        <Caret Line="40" Column="41" TopLine="31"/>
       </Position29>
       <Position30>
         <Filename Value="main.pas"/>
-        <Caret Line="34" Column="19" TopLine="24"/>
+        <Caret Line="85" Column="31" TopLine="80"/>
       </Position30>
     </JumpHistory>
     <RunParams>
@@ -181,4 +181,15 @@
       <Modes ActiveMode=""/>
     </RunParams>
   </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="uvector.pas"/>
+        <Line Value="361"/>
+      </Item>
+    </BreakPoints>
+  </Debugging>
 </CONFIG>

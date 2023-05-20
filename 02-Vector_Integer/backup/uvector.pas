@@ -332,12 +332,14 @@ end;
 procedure vector.ord_intercambio();
 var i,j:integer;
 begin
-  for i:=1 to dim-1 do begin
-    for j:=i+1 to dim do begin
-      if(elem[i] > elem[j] )then
-        InteElem(j,i);
-    end;
-  end;
+  //for i:=1 to dim-1 do begin
+  //  for j:=i+1 to dim do begin
+  //    if(elem[i] > elem[j] )then
+  //      InteElem(j,i);
+  //  end;
+  //end;
+
+  self.ord_intercambio(1, self.dim);
 end;
 
 procedure vector.ord_intercambio(a, b: integer);
@@ -359,7 +361,7 @@ begin
   for p1:=1 to dim-1 do  begin
     s:=p1;
     for d:= s+1 to dim do  begin
-      if(elem[d] > elem[s]) then//d=5
+      if(elem[s] < elem[d]) then//d=5
        s:= d;                   //s=4
     end;
     if (s<> p1)then begin

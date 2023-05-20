@@ -17,7 +17,11 @@ type
     Edit1: TEdit;
     Edit2: TEdit;
     MainMenu1: TMainMenu;
+    MainMenu2: TMainMenu;
     MenuItem1: TMenuItem;
+    MenuItem10: TMenuItem;
+    MenuItem11: TMenuItem;
+    MenuItem12: TMenuItem;
     MenuItem2: TMenuItem;
     MenuItem3: TMenuItem;
     MenuItem4: TMenuItem;
@@ -29,6 +33,8 @@ type
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure MenuItem11Click(Sender: TObject);
+    procedure MenuItem12Click(Sender: TObject);
     procedure MenuItem2Click(Sender: TObject);
     procedure MenuItem4Click(Sender: TObject);
     procedure MenuItem5Click(Sender: TObject);
@@ -81,13 +87,23 @@ procedure TForm1.MenuItem9Click(Sender: TObject);
 var x : real;
 begin
   x := StrToFloat(edit1.Text);
-  Natural.ToBinario(x)
+  Natural.ToBinario(x);
   Edit2.Text:= floatToStr(x);
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
   obj := Natural.create;
+end;
+
+procedure TForm1.MenuItem11Click(Sender: TObject);
+begin
+  //codgio
+end;
+
+procedure TForm1.MenuItem12Click(Sender: TObject);
+begin
+  //metodo2
 end;
 
 procedure TForm1.Button1Click(Sender: TObject);

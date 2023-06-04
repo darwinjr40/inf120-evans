@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units Count="13">
+      <Unit0>
+        <Filename Value="Cadena.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="15"/>
+        <UsageCount Value="87"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="formulario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Formulario"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="118"/>
+        <CursorPos X="6" Y="120"/>
+        <UsageCount Value="87"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="conjunto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Conjunto"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="90"/>
+        <CursorPos X="38" Y="12"/>
+        <UsageCount Value="87"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="cadena.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Cadena1"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="13"/>
+        <UsageCount Value="86"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="cadenas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Cadenas"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="103"/>
+        <CursorPos X="44" Y="122"/>
+        <UsageCount Value="85"/>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="C:\lazarus\lcl\include\menuitem.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="282"/>
+        <CursorPos Y="298"/>
+        <UsageCount Value="9"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32callback.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2657"/>
+        <CursorPos Y="2681"/>
+        <UsageCount Value="8"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1561"/>
+        <CursorPos Y="1583"/>
+        <UsageCount Value="8"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32proc.pp"/>
+        <UnitName Value="Win32Proc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="824"/>
+        <CursorPos Y="842"/>
+        <UsageCount Value="8"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32wsforms.pp"/>
+        <UnitName Value="Win32WSForms"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="374"/>
+        <CursorPos Y="388"/>
+        <UsageCount Value="8"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32object.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="385"/>
+        <CursorPos Y="406"/>
+        <UsageCount Value="8"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32winapi.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2680"/>
+        <CursorPos Y="2696"/>
+        <UsageCount Value="8"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="natural.pas"/>
+        <UnitName Value="Natural"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="718"/>
+        <CursorPos X="6" Y="103"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit12>
+    </Units>
+    <JumpHistory Count="29" HistoryIndex="28">
+      <Position1>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="224" TopLine="211"/>
+      </Position1>
+      <Position2>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="225" TopLine="211"/>
+      </Position2>
+      <Position3>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="224" TopLine="211"/>
+      </Position3>
+      <Position4>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="225" TopLine="211"/>
+      </Position4>
+      <Position5>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="224" TopLine="211"/>
+      </Position5>
+      <Position6>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="225" TopLine="211"/>
+      </Position6>
+      <Position7>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="224" TopLine="211"/>
+      </Position7>
+      <Position8>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="226" TopLine="211"/>
+      </Position8>
+      <Position9>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="29" Column="25" TopLine="24"/>
+      </Position9>
+      <Position10>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="70" Column="46" TopLine="67"/>
+      </Position10>
+      <Position11>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="72" Column="8" TopLine="60"/>
+      </Position11>
+      <Position12>
+        <Filename Value="formulario.pas"/>
+        <Caret Line="108" Column="4" TopLine="106"/>
+      </Position12>
+      <Position13>
+        <Filename Value="formulario.pas"/>
+        <Caret Line="129" Column="3" TopLine="106"/>
+      </Position13>
+      <Position14>
+        <Filename Value="formulario.pas"/>
+        <Caret Line="115" Column="33" TopLine="106"/>
+      </Position14>
+      <Position15>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="51" Column="26" TopLine="44"/>
+      </Position15>
+      <Position16>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="56" Column="25" TopLine="44"/>
+      </Position16>
+      <Position17>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="74" Column="26" TopLine="54"/>
+      </Position17>
+      <Position18>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="56" Column="28" TopLine="51"/>
+      </Position18>
+      <Position19>
+        <Filename Value="formulario.pas"/>
+        <Caret Line="113" Column="115" TopLine="34"/>
+      </Position19>
+      <Position20>
+        <Filename Value="formulario.pas"/>
+        <Caret Line="114" Column="115" TopLine="84"/>
+      </Position20>
+      <Position21>
+        <Filename Value="formulario.pas"/>
+        <Caret Line="115" Column="115" TopLine="85"/>
+      </Position21>
+      <Position22>
+        <Filename Value="formulario.pas"/>
+        <Caret Line="117" Column="115" TopLine="87"/>
+      </Position22>
+      <Position23>
+        <Filename Value="formulario.pas"/>
+        <Caret Line="241" Column="27" TopLine="236"/>
+      </Position23>
+      <Position24>
+        <Filename Value="formulario.pas"/>
+        <Caret Line="246" TopLine="240"/>
+      </Position24>
+      <Position25>
+        <Filename Value="formulario.pas"/>
+        <Caret Line="253" TopLine="237"/>
+      </Position25>
+      <Position26>
+        <Filename Value="formulario.pas"/>
+        <Caret Line="249" Column="16" TopLine="237"/>
+      </Position26>
+      <Position27>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="27" Column="25" TopLine="14"/>
+      </Position27>
+      <Position28>
+        <Filename Value="formulario.pas"/>
+        <Caret Line="260" Column="54" TopLine="243"/>
+      </Position28>
+      <Position29>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="28" Column="24" TopLine="24"/>
+      </Position29>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <Watches>
+      <Item>
+        <Expression Value="elem"/>
+      </Item>
+      <Item>
+        <Expression Value="pos"/>
+      </Item>
+      <Item>
+        <Expression Value="dim"/>
+      </Item>
+      <Item>
+        <Expression Value="palabra"/>
+      </Item>
+      <Item>
+        <Expression Value="pal"/>
+      </Item>
+      <Item>
+        <Expression Value="p"/>
+      </Item>
+      <Item>
+        <Expression Value="i"/>
+      </Item>
+      <Item>
+        <Expression Value="delpal"/>
+      </Item>
+      <Item>
+        <Expression Value="dim"/>
+      </Item>
+      <Item>
+        <Expression Value="j"/>
+      </Item>
+    </Watches>
+  </Debugging>
+</CONFIG>

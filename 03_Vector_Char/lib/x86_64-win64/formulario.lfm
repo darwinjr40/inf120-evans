@@ -74,7 +74,7 @@ object Form1: TForm1
     Height = 50
     Top = 184
     Width = 640
-    DefaultColWidth = 22
+    DefaultColWidth = 25
     DefaultRowHeight = 21
     FixedCols = 0
     FixedRows = 0
@@ -100,7 +100,7 @@ object Form1: TForm1
   object StringGrid2: TStringGrid
     Left = 152
     Height = 25
-    Top = 234
+    Top = 232
     Width = 640
     DefaultColWidth = 22
     DefaultRowHeight = 21
@@ -236,6 +236,10 @@ object Form1: TForm1
       object MenuItem32: TMenuItem
         Caption = 'Proceso: Desencriptar(k)'
         OnClick = MenuItem32Click
+      end
+      object MenuItem33: TMenuItem
+        Caption = 'prueba'
+        OnClick = MenuItem33Click
       end
     end
     object MenuItem13: TMenuItem

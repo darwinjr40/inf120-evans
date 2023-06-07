@@ -18,11 +18,7 @@ const MAX_ELE = 1200;
        dim: integer;                      //dim=puntero
        May,Min,Dig,Sep:conjuntos;
      public
-       Constructor crear();
-       procedure descargar(v:TStringGrid );
-       procedure setDim(n :integer);
-       function getDim():integer;
-       function getChar(pos:integer):char;
+
 
        procedure LeerPal(var pos:integer;var pal:String);
        procedure AddPal(pal :String);
@@ -33,7 +29,7 @@ const MAX_ELE = 1200;
        procedure ReemPal(palO,PalN:String); //remplaza la primera palabra a buscar por la nueva palabra
        function CantPal():integer;         //retorna la cantidad de palabras
        function BuscPal(palB:String):integer;  //agarra palabra*palabra y verifica si EXISTE(palB), retorna el indice de la primera palabra
-       function frecuenciaPal(pal:String):integer;        //frecuencia de una palabra(pal)
+
        procedure ejercicio1(cad2 :cadena;pal: String);         //división de una Cadena en dos Cadenas a partir de una palabra X, la palabra X formará parte de la Primer Cadena.
        procedure Invertir();
        procedure ejercicio6(cad1,cad2:String);
@@ -51,11 +47,35 @@ const MAX_ELE = 1200;
        procedure leerNumReales(var pos:integer; var pal:String);
        procedure mostrarNum();
 
-       procedure Intercambiar(a,b : integer);
+
+       Constructor crear();
+       {setters y getters}
+       procedure descargar(v:TStringGrid );
+       procedure setDim(n :integer);
+       function getDim():integer;
+       function getChar(pos:integer):char;
+       {procesos}
+
        procedure Encriptar(k: byte);
        procedure Desencriptar(k: byte);
-       procedure InvertirCadaPalabra;
+
+       procedure Intercambiar(a,b : integer);
+       procedure DeletePos(posicion, cantidad : word);
+       procedure DeleteAllPalabra(palabraBusc : String);
        procedure Invertir(a, b: byte);
+       procedure InvertirCadaPalabra;
+
+       {funciones}
+       function LeerPal(var a: integer; b: integer): String; overload;
+       function LeerPal(var pos: integer): String;overload;
+       function Posicion(buscPalabra: String): word;
+       function Posicion(a, b: word; buscPalabra: String): word;
+       function verifRango(a, b: word): boolean;
+       function BuscarCaracter(a, b :word; busq: char): word; overload;
+       function EsSubCadena(a, b :word; cad: String) : boolean;
+       function EsRepetido(a, b: word; x: char): boolean;
+       function frecuenciaPal(pal:String):integer;        //frecuencia de una palabra(pal)
+       function frecuenciaPal(a,b:integer; pal:String):integer;        //frecuencia de una palabra(pal)
 
   end;
 implementation
@@ -94,8 +114,10 @@ procedure cadena.descargar(v: TStringGrid);
 var i:integer;
 begin
   v.ColCount:=dim;
+  v.RowCount:=2;
   for i:=1 to dim do begin
       v.Cells[i-1, 0]:=elem[i];
+      v.Cells[i-1, 1]:= IntToStr(i);
   end;
 end;
 procedure cadena.setDim(n: integer);
@@ -107,9 +129,11 @@ end;
 procedure cadena.AddPal(pal: String);
 var n,i:integer;
 begin
-  if not (dim+n+1<=MAX_ELE)then //longitud actual <= longitudMax
-   raise Exception.Create('Posición fuera de rango');
   n:=Length(pal);//'jose'=4
+  if not (dim+n+1<=MAX_ELE)then //longitud actual <= longitudMax
+    raise Exception.Create('Posición fuera de rango');
+
+
   if(dim<>0)then begin
    dim:=dim+1;
    elem[dim]:=' '; //[ |]
@@ -269,6 +293,19 @@ begin
       c:=c+1;
  end;
  result:=c;
+end;
+
+function cadena.frecuenciaPal(a, b: integer; pal: String): integer;
+var c:integer;
+    palabra:String;
+begin
+  c:=0;
+  while(a<=b)do begin
+    palabra:= LeerPal(a, b);
+    if(palabra = pal)then
+     c:=c+1;
+  end;
+  result:=c;
 end;
 
 
@@ -520,7 +557,7 @@ begin
   elem[b]:=aux;
 end;
 
-procedure cadena.encriptar(k: byte);
+procedure cadena.Encriptar(k: byte);
 var i, pos, p :integer;
 begin
   p := 97;
@@ -533,7 +570,7 @@ begin
   end;
 end;
 
-procedure cadena.desencriptar(k: byte);
+procedure cadena.Desencriptar(k: byte);
 var i,p,pos :integer;
 begin
   p := 97;
@@ -552,7 +589,7 @@ var  posIni, posfin  :byte;
 begin
   i := 1;
   while i <= self.dim do begin
-    self.LeerPal(i, pal);
+    pal := self.LeerPal(i);
     posIni := i - Length(pal);
     posfin := i - 1;
     self.Invertir(posIni, posfin);
@@ -560,7 +597,6 @@ begin
  end;
 
 procedure cadena.Invertir(a, b: byte);
-var aux : char;
 begin
   while a < b  do  begin
     self.Intercambiar(a,b);
@@ -569,11 +605,127 @@ begin
   end;
 end;
 
+{Elimina desde una posicion la cantidad de elementos
+ "hola como estas": DeletePos(posicion=6, cantidad=3)
+ "hola o estas" }
+procedure cadena.DeletePos(posicion, cantidad: word);
+var i: word;
+begin
+  if not ((posicion >= 1)and(posicion <= self.dim)) then
+     raise Exception.Create('Posicion Fuera de rango, DeletePos()');
+
+    if (posicion+cantidad) > self.dim then
+      self.dim := posicion - 1
+    else begin
+      for i := posicion+cantidad to self.dim do
+        self.elem[i-cantidad] := self.elem[i];
+      self.dim := self.dim - cantidad;
+    end;
+end;
+
+{Elimina una palabra de todo el vector
+"hola como hola": DeleteAllPalabra(palabraBusc='hola')
+ "hola o estas"}
+procedure cadena.DeleteAllPalabra(palabraBusc: String);
+var pos : word;
+begin
+  pos := 1;
+  repeat
+    pos := Posicion(pos, self.dim, palabraBusc);
+  until (pos = 0);
+end;
+
+function cadena.Posicion(buscPalabra: String): word;
+begin
+  result := self.Posicion(1, self.dim, buscPalabra);
+end;
 
 
 
+{Retorna la posicion donde encontro la sub cadena
+ "hola como estas": Posicion(buscPalabra='como') ==> 6
+ "hola como estas": Posicion(buscPalabra='ta') ==> 13
+ "hola como estas": Posicion(buscPalabra='xo') ==> 0
+ }
+function cadena.Posicion(a, b: word; buscPalabra: String): word;
+var p : word;
+begin
+  if not self.verifRango(a,b) then
+    raise Exception.Create('Posicion(a,b): Fuera del rango');
+  p := a -1;
+  repeat
+    p := BuscarCaracter(p + 1, b, buscPalabra[1]);
+  until(p = 0)or ((self.EsSubCadena(p, b, buscPalabra)));
+  result := p;
+end;
+
+function cadena.verifRango(a, b: word): boolean;
+begin
+  result := ((b-a+1 > 0) and (a >= 1) and (b <= self.dim)) ;
+end;
 
 
+function cadena.BuscarCaracter(a, b: word; busq: char): word;
+var pos : word;
+begin
+  if not verifRango(a, b) then
+    raise Exception.Create('BuscarCaracter(a,b,busq): Fuera del rango');
+
+  while (a <= b) and (self.elem[a] <> busq) do
+    inc(a);
+  if (a <= b) then pos := a  else pos := 0;
+  Result := pos;
+end;
+
+function cadena.EsSubCadena(a, b: word; cad: String): boolean;
+var
+    k, n : word;
+    sw : boolean;
+begin
+  if not verifRango(a, b) then
+    raise Exception.Create('EsSubCadena(a,b,x): Fuera del rango');
+
+  k := 1;
+  n := Length(cad);
+  a := a - 1;
+  while(a+k <= b) and (k <= n)and(self.elem[a+k] = cad[k]) do
+    inc(k);
+  if (k <= n) then  sw := false else sw := true;
+  result := sw;
+end;
+
+function cadena.EsRepetido(a, b: word; x: char): boolean;
+var c :word;
+begin
+  if not verifRango(a, b) then
+    raise Exception.Create('EsRepetido(a,b,x): Fuera del rango');
+  c := 0;
+  while ( a <= b)and(c <=1) do begin
+    if (self.elem[a] = x) then
+      inc(c);
+    inc(a);
+  end;
+  result := (c >= 2);
+end;
+
+
+function cadena.LeerPal(var a: integer; b: integer): String;
+var pal:string;
+begin
+  pal:='';
+  while(a<=b)and(sep.pertenece(elem[a]))do //pos queda como puntero de la siguiente palabra
+    a:=a+1;            //sep[ . | ; |  | , | : | - | _ ]
+  while(a<=b)and(not sep.pertenece(elem[a]))do begin   //encuentra[ . | ; |  | , | : | - | _ ]->finaliza
+    pal:=pal+elem[a];  //pal='ho'
+    a:=a+1;          //pos=5
+  end;
+  result := pal;
+end;
+
+function cadena.LeerPal(var pos: integer): String;
+begin
+  result := self.LeerPal(pos, self.dim);
+end;
 
 
 end.

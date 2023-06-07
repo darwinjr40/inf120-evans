@@ -237,6 +237,10 @@ object Form1: TForm1
         Caption = 'Proceso: Desencriptar(k)'
         OnClick = MenuItem32Click
       end
+      object MenuItem33: TMenuItem
+        Caption = 'prueba'
+        OnClick = MenuItem33Click
+      end
     end
     object MenuItem13: TMenuItem
       Caption = 'Cadena2'

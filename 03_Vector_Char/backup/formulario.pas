@@ -49,6 +49,7 @@ type
     MenuItem30: TMenuItem;
     MenuItem31: TMenuItem;
     MenuItem32: TMenuItem;
+    MenuItem33: TMenuItem;
     MenuItem4: TMenuItem;
     MenuItem5: TMenuItem;
     MenuItem6: TMenuItem;
@@ -84,6 +85,7 @@ type
     procedure MenuItem30Click(Sender: TObject);
     procedure MenuItem31Click(Sender: TObject);
     procedure MenuItem32Click(Sender: TObject);
+    procedure MenuItem33Click(Sender: TObject);
     procedure MenuItem3Click(Sender: TObject);
     procedure MenuItem4Click(Sender: TObject);
     procedure MenuItem5Click(Sender: TObject);
@@ -118,12 +120,12 @@ end;
 procedure TForm1.Button2Click(Sender: TObject);
 begin
      cad.AddPal((InputBox('Ingrese una palabra','','')));
-     updateSG();
+     cad.descargar(StringGrid1);
 end;
 
 procedure TForm1.Button3Click(Sender: TObject);
 begin
-  updateSG();
+   cad.descargar(StringGrid1);
   Edit1.Text:='';
   edit2.Text:='';
 end;
@@ -245,15 +247,24 @@ end;
 procedure TForm1.MenuItem31Click(Sender: TObject);
 var k : byte;
 begin
-  k := StrToInt(InputBox('k','',''));
+  k := StrToInt(InputBox('','Ingrese el desplazamiento: ','3'));
   cad.Encriptar(k);
 end;
 
 procedure TForm1.MenuItem32Click(Sender: TObject);
 var k : byte;
 begin
-  k := StrToInt(InputBox('','po','as'));
+  k := StrToInt(InputBox('','Ingrese el desplazamiento: ','3'));
   cad.Desencriptar(k);
+end;
+
+procedure TForm1.MenuItem33Click(Sender: TObject);
+begin
+  edit3.Text:= IntToStr(cad.Posicion(
+    StrToInt(InputBox('','rango a','')),
+    StrToInt(InputBox('','rango b','')),
+    InputBox('','sub cadena: ','h')
+  ));
 end;
 
 procedure TForm1.MenuItem3Click(Sender: TObject);

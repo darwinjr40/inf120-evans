@@ -10,7 +10,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos Y="15"/>
-        <UsageCount Value="87"/>
+        <UsageCount Value="116"/>
       </Unit0>
       <Unit1>
         <Filename Value="formulario.pas"/>
@@ -19,9 +19,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Formulario"/>
-        <TopLine Value="118"/>
-        <CursorPos X="6" Y="120"/>
-        <UsageCount Value="87"/>
+        <TopLine Value="248"/>
+        <CursorPos Y="262"/>
+        <UsageCount Value="116"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -32,7 +32,7 @@
         <EditorIndex Value="3"/>
         <TopLine Value="90"/>
         <CursorPos X="38" Y="12"/>
-        <UsageCount Value="87"/>
+        <UsageCount Value="116"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -41,7 +41,7 @@
         <UnitName Value="Cadena1"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="13"/>
-        <UsageCount Value="86"/>
+        <UsageCount Value="115"/>
       </Unit3>
       <Unit4>
         <Filename Value="cadenas.pas"/>
@@ -49,9 +49,9 @@
         <UnitName Value="Cadenas"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="103"/>
-        <CursorPos X="61" Y="116"/>
-        <UsageCount Value="85"/>
+        <TopLine Value="674"/>
+        <CursorPos X="25" Y="689"/>
+        <UsageCount Value="114"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
@@ -59,21 +59,21 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="282"/>
         <CursorPos Y="298"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="6"/>
       </Unit5>
       <Unit6>
         <Filename Value="C:\lazarus\lcl\interfaces\win32\win32callback.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="2657"/>
         <CursorPos Y="2681"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="5"/>
       </Unit6>
       <Unit7>
         <Filename Value="C:\lazarus\lcl\include\control.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="1561"/>
         <CursorPos Y="1583"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="5"/>
       </Unit7>
       <Unit8>
         <Filename Value="C:\lazarus\lcl\interfaces\win32\win32proc.pp"/>
@@ -81,7 +81,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="824"/>
         <CursorPos Y="842"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="5"/>
       </Unit8>
       <Unit9>
         <Filename Value="C:\lazarus\lcl\interfaces\win32\win32wsforms.pp"/>
@@ -89,152 +89,152 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="374"/>
         <CursorPos Y="388"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="5"/>
       </Unit9>
       <Unit10>
         <Filename Value="C:\lazarus\lcl\interfaces\win32\win32object.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="385"/>
         <CursorPos Y="406"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="5"/>
       </Unit10>
       <Unit11>
         <Filename Value="C:\lazarus\lcl\interfaces\win32\win32winapi.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="2680"/>
         <CursorPos Y="2696"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="5"/>
       </Unit11>
       <Unit12>
         <Filename Value="natural.pas"/>
         <UnitName Value="Natural"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="718"/>
+        <TopLine Value="703"/>
         <CursorPos X="6" Y="103"/>
-        <UsageCount Value="22"/>
+        <UsageCount Value="36"/>
         <Loaded Value="True"/>
       </Unit12>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="224" TopLine="211"/>
+        <Caret Line="667" TopLine="647"/>
       </Position1>
       <Position2>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="225" TopLine="211"/>
+        <Caret Line="666" TopLine="647"/>
       </Position2>
       <Position3>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="224" TopLine="211"/>
+        <Caret Line="668" TopLine="647"/>
       </Position3>
       <Position4>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="225" TopLine="211"/>
+        <Caret Line="669" TopLine="647"/>
       </Position4>
       <Position5>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="224" TopLine="211"/>
+        <Caret Line="670" TopLine="647"/>
       </Position5>
       <Position6>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="225" TopLine="211"/>
+        <Caret Line="650" TopLine="636"/>
       </Position6>
       <Position7>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="224" TopLine="211"/>
+        <Caret Line="676" TopLine="661"/>
       </Position7>
       <Position8>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="226" TopLine="211"/>
+        <Caret Line="677" TopLine="661"/>
       </Position8>
       <Position9>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="29" Column="25" TopLine="24"/>
+        <Caret Line="680" TopLine="666"/>
       </Position9>
       <Position10>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="70" Column="46" TopLine="67"/>
+        <Caret Line="681" TopLine="666"/>
       </Position10>
       <Position11>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="72" Column="8" TopLine="60"/>
+        <Caret Line="682" TopLine="666"/>
       </Position11>
       <Position12>
-        <Filename Value="formulario.pas"/>
-        <Caret Line="29" Column="117" TopLine="55"/>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="683" TopLine="666"/>
       </Position12>
       <Position13>
-        <Filename Value="formulario.pas"/>
-        <Caret Line="108" Column="4" TopLine="106"/>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="684" TopLine="666"/>
       </Position13>
       <Position14>
-        <Filename Value="formulario.pas"/>
-        <Caret Line="129" Column="3" TopLine="106"/>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="683" TopLine="666"/>
       </Position14>
       <Position15>
-        <Filename Value="formulario.pas"/>
-        <Caret Line="115" Column="33" TopLine="106"/>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="684" TopLine="666"/>
       </Position15>
       <Position16>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="51" Column="26" TopLine="44"/>
+        <Caret Line="683" TopLine="666"/>
       </Position16>
       <Position17>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="56" Column="25" TopLine="44"/>
+        <Caret Line="685" TopLine="666"/>
       </Position17>
       <Position18>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="74" Column="26" TopLine="54"/>
+        <Caret Line="686" TopLine="666"/>
       </Position18>
       <Position19>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="56" Column="28" TopLine="51"/>
+        <Caret Line="676" TopLine="666"/>
       </Position19>
       <Position20>
-        <Filename Value="formulario.pas"/>
-        <Caret Line="113" Column="115" TopLine="34"/>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="687" TopLine="666"/>
       </Position20>
       <Position21>
-        <Filename Value="formulario.pas"/>
-        <Caret Line="114" Column="115" TopLine="84"/>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="651" TopLine="636"/>
       </Position21>
       <Position22>
-        <Filename Value="formulario.pas"/>
-        <Caret Line="115" Column="115" TopLine="85"/>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="643" TopLine="636"/>
       </Position22>
       <Position23>
-        <Filename Value="formulario.pas"/>
-        <Caret Line="117" Column="115" TopLine="87"/>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="652" TopLine="636"/>
       </Position23>
       <Position24>
         <Filename Value="formulario.pas"/>
-        <Caret Line="241" Column="27" TopLine="236"/>
+        <Caret Line="263" TopLine="248"/>
       </Position24>
       <Position25>
         <Filename Value="formulario.pas"/>
-        <Caret Line="246" TopLine="240"/>
+        <Caret Line="262" TopLine="248"/>
       </Position25>
       <Position26>
-        <Filename Value="formulario.pas"/>
-        <Caret Line="253" TopLine="237"/>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="64" TopLine="48"/>
       </Position26>
       <Position27>
-        <Filename Value="formulario.pas"/>
-        <Caret Line="249" Column="16" TopLine="237"/>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="69" Column="40" TopLine="55"/>
       </Position27>
       <Position28>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="27" Column="25" TopLine="14"/>
+        <Caret Line="71" Column="58" TopLine="56"/>
       </Position28>
       <Position29>
-        <Filename Value="formulario.pas"/>
-        <Caret Line="260" Column="54" TopLine="243"/>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="57" Column="27" TopLine="33"/>
       </Position29>
       <Position30>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="28" Column="24" TopLine="24"/>
+        <Caret Line="30" Column="38" TopLine="12"/>
       </Position30>
     </JumpHistory>
     <RunParams>

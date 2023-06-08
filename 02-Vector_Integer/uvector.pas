@@ -21,7 +21,7 @@ uses
                constructor crear();
                procedure cargar();
                procedure CargarRnd(a,b:Integer);
-               procedure descargar(v:TStringGrid);
+               procedure Descargar(v:TStringGrid);
                function descargar(): String;
                procedure setDim(n:integer);
                function  getDim():integer;
@@ -142,7 +142,7 @@ end;
 procedure vector.CargarRnd(a, b: Integer);
 var i:integer;
 begin
-dim:=StrToInt(InputBox('cantidad de elementos','dim',''));
+  dim:=StrToInt(InputBox('cantidad de elementos','dim=?','10'));
 //a:=StrToInt(InputBox('rango A','A',''));
 //b:=StrToInt(InputBox('rango B','B',''));
   for i:=1 to dim do begin
@@ -150,26 +150,29 @@ dim:=StrToInt(InputBox('cantidad de elementos','dim',''));
   end;                         //ramdon(100)  //[1..10]
 end;
 
-procedure vector.descargar(v: TStringGrid);
+procedure vector.Descargar(v: TStringGrid);
 var i:integer;
 begin
    v.ColCount:=dim;
-   for i:=1 to getDim() do
-     begin
-      //[columna, fila]
-       v.Cells[i-1,0]:= IntToStr(Elem[i]);
-     end;
+   //v.RowCount:=2;
+   for i:=1 to getDim() do begin
+       v.Cells[i-1,0]:= '  ' + IntToStr(Elem[i]);
+       v.Cells[i-1,1]:= '  ' + IntToStr(i);
+       //[columna, fila]
+  end;
 end;
 
 function vector.descargar: String;
-var x : String;
+var x, s : String;
   i : integer;
 begin
-   x := '';
+   x := '[';
+   s := ', ';
    for i:=1 to self.dim do begin
-      x := x + IntToStr(self.elem[i]) + ',';
+      if i = self.dim then s:='';
+      x := x + IntToStr(self.elem[i]) + s;
    end;
-  result := x;
+  result := x + ']';
 end;
 
 

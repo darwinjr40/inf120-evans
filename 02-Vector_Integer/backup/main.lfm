@@ -1,17 +1,17 @@
 object Form1: TForm1
-  Left = 298
+  Left = 342
   Height = 264
-  Top = 194
-  Width = 886
+  Top = 234
+  Width = 1101
   Caption = 'Form1'
   ClientHeight = 264
-  ClientWidth = 886
+  ClientWidth = 1101
   OnCreate = FormCreate
   LCLVersion = '2.2.4.0'
   object ComboBox1: TComboBox
-    Left = 8
+    Left = 16
     Height = 23
-    Top = 8
+    Top = 64
     Width = 120
     ItemHeight = 15
     ItemIndex = 0
@@ -28,59 +28,70 @@ object Form1: TForm1
     Text = 'Mostrar Vector'
   end
   object StringGrid1: TStringGrid
-    Left = 136
-    Height = 48
-    Top = 8
+    Left = 144
+    Height = 87
+    Top = 96
     Width = 728
     ColCount = 10
     DefaultColWidth = 35
     DefaultRowHeight = 25
     FixedCols = 0
     FixedRows = 0
-    RowCount = 1
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    RowCount = 2
     TabOrder = 1
   end
   object Button1: TButton
-    Left = 8
+    Left = 16
     Height = 25
-    Top = 72
+    Top = 128
     Width = 120
     Caption = 'CargarVector'
     OnClick = Button1Click
     TabOrder = 2
   end
   object Button2: TButton
-    Left = 8
+    Left = 16
     Height = 25
-    Top = 40
+    Top = 96
     Width = 120
     Caption = 'CargarVectorRandom'
     OnClick = Button2Click
     TabOrder = 3
   end
   object Button3: TButton
-    Left = 32
+    Left = 144
     Height = 25
-    Top = 160
+    Top = 32
     Width = 75
-    Caption = 'Button3'
+    Caption = 'Descargar'
     OnClick = Button3Click
     TabOrder = 4
   end
   object Edit1: TEdit
     Left = 144
     Height = 23
-    Top = 165
-    Width = 656
+    Top = 64
+    Width = 728
+    Font.CharSet = ANSI_CHARSET
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
     TabOrder = 5
-    Text = 'Edit1'
+    TextHint = 'vector'
   end
   object Button4: TButton
-    Left = 32
+    Left = 232
     Height = 25
-    Top = 192
+    Top = 32
     Width = 75
-    Caption = 'Button4'
+    Caption = 'Ejercicio'
     OnClick = Button4Click
     TabOrder = 6
   end

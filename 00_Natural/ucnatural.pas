@@ -28,6 +28,11 @@ type
       class function Pot(b,e: Cardinal):Cardinal; static;
       class function VerifPartFracc(x:real):boolean; static;
       class procedure ToBinario(var x:real) static;
+      class function  ToUnidad(n : byte) : String; static;
+      class function  ToDecenas(n : byte) : String; static;
+      class function  ToCentenas(n : word) : String; static;
+      class function  ToLiteral(n : cardinal) : String; overload; static;
+      //34,54 => 54,34
   end;
 
 implementation
@@ -76,7 +81,7 @@ end;
 
 function Natural.ToRomano: String;
 const ROM : Array[1..30] of string =(
-  'I','II','III','IV','V','VI','VII','VII','IX','X',
+  'I','II','III','IV','V','VI','VII','VIII','IX','X',
   'XX','XXX','XL','L','LX','LXX','LXX','XC','C','CC',
   'CCC','CD','D','DC','DCC','DCCC','CM','M','MM','MMM'
 );
@@ -87,16 +92,12 @@ begin
   r := '';
   c := 0;
   n := self.valor;
-
-  while n > 0 do
-  begin
+  while n > 0 do begin
     d := n mod 10;  //0,1..9
     if d <> 0 then
-    begin
       r := ROM[d+(c*10-c)] + r;
-    end;
     c := c + 1;
-    n := n div 10
+    n := n div 10;
   end;
   result := r;
 end;
@@ -147,8 +148,7 @@ var n, d : cardinal;
 begin
   n := self.valor;  //copia
   r := '';
-  while n > 0 do
-  begin
+  while n > 0 do begin
     d := n mod b;
     n := n div b;
     R := VECTOR[d] + r;
@@ -170,12 +170,14 @@ class procedure Natural.ToBinario(var x: real);
 var n : Natural;
     fr : real;
     d, c : byte;
+    res:string;
 begin
   n := Natural.create;
   n.SetValor(trunc(x)); //n = parte entera
   fr := x - trunc(x);  //fr = parte fraccion
   c := 0;
-  x := StrToInt(n.ToBaseN(2));  //x = 11
+  res := n.ToBaseN(2);  //x = 11     StrToInt('')
+  if res='' then x:=0 else x:=StrToInt(res);
   repeat
     fr := fr * 2;
     d := trunc(fr);   //entera
@@ -184,6 +186,57 @@ begin
     c := c + 1;
   until (not Natural.VerifPartFracc(fr)) or (c = 8);
   x := x / Natural.Pot(10, c);
+end;
+
+class function Natural.ToUnidad(n: byte): String;
+const UNI:Array[0..9] of string =
+  ('','uno','dos','tres','cuatro','cinco','seis','siete','ocho','nueve');
+begin
+  result := UNI[n];
+end;
+
+class function Natural.ToDecenas(n: byte): String;
+const
+  DEC: array[1..2, 0..9] of string = (
+     ('','diez', 'veinte', 'treinta', 'cuarenta', 'cincuenta', 'sesenta', 'setenta', 'ochenta', 'noventa'),
+     ('','once', 'doce', 'trece', 'catorce', 'quince', 'dieciseis', 'diecisiete', 'dieciocho', 'diecinueve')
+  );
+var r : String;
+begin
+  if(n>10)and(n<20)then //11..19
+    Result := (DEC[2, n mod 10])
+  else begin  //n={10,20....90} or (n<=30) r='';
+    if (n mod 10 = 0)or(n <= 30) then r:='' else r:=' y ';
+    Result := (DEC[1, n div 10] + r + Natural.ToUnidad(n mod 10));
+  end;
+end;
+
+class function Natural.ToCentenas(n: word): String;//300 => 3
+const  CEN: array[0..9] of string = ('','cien','doscientos','trescientos','cuatrocientos','quinientos', 'seiscientos', 'setecientos', 'ochocientos', 'novecientos');
+var r : String;
+begin
+  r := ' ';
+  if n<100 then
+    r := ''
+  else if (n<200) then //ciento cinco
+    r := 'to';
+  Result := (CEN[n div 100] + r + Natural.ToDecenas(n mod 100));
+end;
+
+class function Natural.ToLiteral(n: cardinal): String;
+const VEC:Array[0..3] of string = ('', ' mil ',' millon ',' billon ');
+var r, cad : string;//uno mil veintitres
+    p, d  : word;   //dos mil
+begin
+  r := '';
+  p := 0;
+  while n > 0 do  begin //123123456
+    d := n mod 1000;
+    n := n div 1000;
+    r := Natural.ToCentenas(d) + VEC[p] + r;
+    p := p + 1;
+  end;
+  result := r;
 end;
 
 end.

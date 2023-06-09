@@ -77,6 +77,9 @@ const MAX_ELE = 1200;
        function frecuenciaPal(pal:String):integer;        //frecuencia de una palabra(pal)
        function frecuenciaPal(a,b:integer; pal:String):integer;        //frecuencia de una palabra(pal)
 
+
+       class function CifradoCesar(x : string; d : byte): String; static;
+       class function DescifradoCesar(x : string; d : byte): String; static;
   end;
 implementation
 
@@ -99,14 +102,15 @@ begin
   Dig:=conjuntos.crear;
   for i:=0 to 9 do
     Dig.agregar(char(48+i));//0..9 = dig
-    Sep:=conjuntos.crear;
-    Sep.agregar('.');
-    Sep.agregar(';');
-    Sep.agregar(' ');
-    Sep.agregar(',');
-    Sep.agregar(':');
-    Sep.agregar('-');
-    Sep.agregar('_');       //sep=[ . | ; | | , | : | - | _ |]
+
+  Sep:=conjuntos.crear;
+  Sep.agregar('.');
+  Sep.agregar(';');
+  Sep.agregar(' ');
+  Sep.agregar(',');
+  Sep.agregar(':');
+  Sep.agregar('-');
+  Sep.agregar('_');       //sep=[ . | ; | | , | : | - | _ |]
 
 end;
 
@@ -298,6 +302,46 @@ begin
      c:=c+1;
   end;
   result:=c;
+end;
+
+class function cadena.CifradoCesar(x: string; d: byte): String;
+const abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var n,i : Cardinal;
+      p : byte;
+      r : string;
+begin
+ x := UpperCase(x);
+ n := Length(x);
+ r := '';
+ for i := 1 to n do begin
+   p :=  Pos(x[i], abc);
+    if p > 0 then begin          //0  22
+      r := r + ABC[(((p-1)+d) mod 26)+1];
+    end else begin
+      r := r + ' ';
+    end;
+ end;
+ result := r;
+end;
+
+class function cadena.DescifradoCesar(x: string; d: byte): String;
+const abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var n,i : Cardinal;
+      p : byte;
+      r : string;
+begin
+ x := UpperCase(x);
+ n := Length(x);
+ r := '';
+ for i := 1 to n do begin
+   p :=  Pos(x[i], abc);
+    if p > 0 then begin          //0  22
+      r := r + ABC[(((p-1)+26 - d) mod 26)+1];
+    end else begin
+      r := r + ' ';
+    end;
+ end;
+ result := r;
 end;
 
 
@@ -555,7 +599,7 @@ begin
   p := 97;
   for i:=1 to dim do begin
        if (elem[i]<>' ') then begin
-        ShowMessage(IntToStr(ord(elem[i])));
+        //ShowMessage(IntToStr(ord(elem[i])));
           pos := (ord(elem[i])+k);
           elem[i]:= char((pos-p) mod (26) + p) ;
        end;
@@ -718,6 +762,7 @@ function cadena.LeerPal(var pos: integer): String;
 begin
   result := self.LeerPal(pos, self.dim);
 end;
+
 
 
 end.

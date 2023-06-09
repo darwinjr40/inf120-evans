@@ -1,14 +1,14 @@
 object Form1: TForm1
-  Left = 224
+  Left = 336
   Height = 515
-  Top = 103
+  Top = 279
   Width = 855
   Caption = 'Form1'
   ClientHeight = 495
   ClientWidth = 855
   Menu = MainMenu1
   OnCreate = FormCreate
-  LCLVersion = '2.2.6.0'
+  LCLVersion = '2.2.4.0'
   object Button1: TButton
     Left = 112
     Height = 25
@@ -54,7 +54,8 @@ object Form1: TForm1
     TabOrder = 3
   end
   object MainMenu1: TMainMenu
-    Left = 24
+    Left = 32
+    Top = 24
     object MenuItem1: TMenuItem
       Caption = 'Entero'
       object MenuItem2: TMenuItem
@@ -84,24 +85,12 @@ object Form1: TForm1
         Caption = 'RealToBin'
         OnClick = MenuItem9Click
       end
+      object MenuItem10: TMenuItem
+        Caption = 'MenuItem10'
+      end
     end
     object MenuItem6: TMenuItem
       Caption = 'Digito'
-    end
-  end
-  object MainMenu2: TMainMenu
-    Left = 24
-    Top = 64
-    object MenuItem10: TMenuItem
-      Caption = 'MenuItem10'
-      object MenuItem11: TMenuItem
-        Caption = 'metodo1'
-        OnClick = MenuItem11Click
-      end
-      object MenuItem12: TMenuItem
-        Caption = 'metodo2'
-        OnClick = MenuItem12Click
-      end
     end
   end
 end

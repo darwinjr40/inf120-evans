@@ -99,14 +99,15 @@ begin
   Dig:=conjuntos.crear;
   for i:=0 to 9 do
     Dig.agregar(char(48+i));//0..9 = dig
-    Sep:=conjuntos.crear;
-    Sep.agregar('.');
-    Sep.agregar(';');
-    Sep.agregar(' ');
-    Sep.agregar(',');
-    Sep.agregar(':');
-    Sep.agregar('-');
-    Sep.agregar('_');       //sep=[ . | ; | | , | : | - | _ |]
+
+  Sep:=conjuntos.crear;
+  Sep.agregar('.');
+  Sep.agregar(';');
+  Sep.agregar(' ');
+  Sep.agregar(',');
+  Sep.agregar(':');
+  Sep.agregar('-');
+  Sep.agregar('_');       //sep=[ . | ; | | , | : | - | _ |]
 
 end;
 
@@ -283,16 +284,8 @@ begin
 end;
 //frecuencia de una palabra(pal)
 function cadena.frecuenciaPal(pal:String): integer;
-var c,i:integer;
-    palabra:String;
 begin
- i:=1; palabra:=''; c:=0;
- while(i<=dim)do begin
-   LeerPal(i,palabra);
-   if(palabra=pal)then
-      c:=c+1;
- end;
- result:=c;
+ result:= (self.frecuenciaPal(pal));
 end;
 
 function cadena.frecuenciaPal(a, b: integer; pal: String): integer;
@@ -563,7 +556,7 @@ begin
   p := 97;
   for i:=1 to dim do begin
        if (elem[i]<>' ') then begin
-        ShowMessage(IntToStr(ord(elem[i])));
+        //ShowMessage(IntToStr(ord(elem[i])));
           pos := (ord(elem[i])+k);
           elem[i]:= char((pos-p) mod (26) + p) ;
        end;

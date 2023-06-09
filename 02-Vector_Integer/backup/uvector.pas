@@ -157,7 +157,7 @@ begin
    //v.RowCount:=2;
    for i:=1 to getDim() do begin
        v.Cells[i-1,0]:= '  ' + IntToStr(Elem[i]);
-       v.Cells[i-1,1]:= IntToStr(i);
+       v.Cells[i-1,1]:= '  ' + IntToStr(i);
        //[columna, fila]
   end;
 end;
@@ -335,13 +335,6 @@ end;
 procedure vector.ord_intercambio();
 var i,j:integer;
 begin
-  //for i:=1 to dim-1 do begin
-  //  for j:=i+1 to dim do begin
-  //    if(elem[i] > elem[j] )then
-  //      InteElem(j,i);
-  //  end;
-  //end;
-
   self.ord_intercambio(1, self.dim);
 end;
 
@@ -350,7 +343,7 @@ var p1,d:integer;
 begin
   for p1:=a to b-1 do begin
     for d:=p1+1 to b do begin
-      if( elem[d] < elem[p1])then
+      if( elem[d] < elem[p1])then //ascendente 1,2,3
         InteElem(d,p1);
     end;
   end;
@@ -359,18 +352,8 @@ end;
 //Ordena por seleccion   ---------------ojo-----------------
 ////elem[1 | 3 | 2 | 4]   => elem[1 | 2 | 3 | 4]
 procedure vector.ord_seleccion();
-var s,p1,d:integer;
 begin
-  for p1:=1 to dim-1 do  begin
-    s:=p1;
-    for d:= s+1 to dim do  begin
-      if(elem[s] > elem[d]) then//d=5
-       s:= d;                   //s=4
-    end;
-    if (s<> p1)then begin
-       InteElem(s,p1);
-    end;
-  end;
+  self.ord_seleccion(1, self.dim);
 end;
 
 procedure vector.ord_seleccion(a, b: integer);
@@ -379,7 +362,7 @@ begin
   for p1:=a to B-1 do  begin
     s:=p1;
     for d:= s+1 to b do  begin
-      if(elem[d] < elem[s]) then
+      if(elem[d] > elem[s]) then//ascendente <,  > descendente
        s:= d;
     end;
     if (s<> p1)then begin

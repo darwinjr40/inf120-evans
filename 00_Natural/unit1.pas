@@ -17,11 +17,8 @@ type
     Edit1: TEdit;
     Edit2: TEdit;
     MainMenu1: TMainMenu;
-    MainMenu2: TMainMenu;
     MenuItem1: TMenuItem;
     MenuItem10: TMenuItem;
-    MenuItem11: TMenuItem;
-    MenuItem12: TMenuItem;
     MenuItem2: TMenuItem;
     MenuItem3: TMenuItem;
     MenuItem4: TMenuItem;
@@ -68,7 +65,7 @@ end;
 
 procedure TForm1.MenuItem5Click(Sender: TObject);
 begin
-  Edit2.Text := obj.ToLiteral();
+  Edit2.Text := Natural.ToLiteral(obj.GetValor());
 end;
 
 procedure TForm1.MenuItem7Click(Sender: TObject);
@@ -87,8 +84,9 @@ procedure TForm1.MenuItem9Click(Sender: TObject);
 var x : real;
 begin
   x := StrToFloat(edit1.Text);
-  Natural.ToBinario(x);
-  Edit2.Text:= floatToStr(x);
+  Natural.ToBinario(x); //x=3.25
+  Edit2.Text:= floatToStr(x);//11,01
+
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);

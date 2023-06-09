@@ -49,8 +49,8 @@
         <UnitName Value="Cadenas"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="276"/>
-        <CursorPos X="35" Y="287"/>
+        <TopLine Value="297"/>
+        <CursorPos X="41" Y="309"/>
         <UsageCount Value="114"/>
         <Loaded Value="True"/>
       </Unit4>
@@ -118,123 +118,123 @@
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="670" TopLine="647"/>
+        <Caret Line="650" TopLine="636"/>
       </Position1>
       <Position2>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="650" TopLine="636"/>
+        <Caret Line="676" TopLine="661"/>
       </Position2>
       <Position3>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="676" TopLine="661"/>
+        <Caret Line="677" TopLine="661"/>
       </Position3>
       <Position4>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="677" TopLine="661"/>
+        <Caret Line="680" TopLine="666"/>
       </Position4>
       <Position5>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="680" TopLine="666"/>
+        <Caret Line="681" TopLine="666"/>
       </Position5>
       <Position6>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="681" TopLine="666"/>
+        <Caret Line="682" TopLine="666"/>
       </Position6>
       <Position7>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="682" TopLine="666"/>
+        <Caret Line="683" TopLine="666"/>
       </Position7>
       <Position8>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="683" TopLine="666"/>
+        <Caret Line="684" TopLine="666"/>
       </Position8>
       <Position9>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="684" TopLine="666"/>
+        <Caret Line="683" TopLine="666"/>
       </Position9>
       <Position10>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="683" TopLine="666"/>
+        <Caret Line="684" TopLine="666"/>
       </Position10>
       <Position11>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="684" TopLine="666"/>
+        <Caret Line="683" TopLine="666"/>
       </Position11>
       <Position12>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="683" TopLine="666"/>
+        <Caret Line="685" TopLine="666"/>
       </Position12>
       <Position13>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="685" TopLine="666"/>
+        <Caret Line="686" TopLine="666"/>
       </Position13>
       <Position14>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="686" TopLine="666"/>
+        <Caret Line="676" TopLine="666"/>
       </Position14>
       <Position15>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="676" TopLine="666"/>
+        <Caret Line="687" TopLine="666"/>
       </Position15>
       <Position16>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="687" TopLine="666"/>
+        <Caret Line="651" TopLine="636"/>
       </Position16>
       <Position17>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="651" TopLine="636"/>
+        <Caret Line="643" TopLine="636"/>
       </Position17>
       <Position18>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="643" TopLine="636"/>
+        <Caret Line="652" TopLine="636"/>
       </Position18>
       <Position19>
-        <Filename Value="cadenas.pas"/>
-        <Caret Line="652" TopLine="636"/>
+        <Filename Value="formulario.pas"/>
+        <Caret Line="263" TopLine="248"/>
       </Position19>
       <Position20>
         <Filename Value="formulario.pas"/>
-        <Caret Line="263" TopLine="248"/>
+        <Caret Line="262" TopLine="248"/>
       </Position20>
       <Position21>
-        <Filename Value="formulario.pas"/>
-        <Caret Line="262" TopLine="248"/>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="64" TopLine="48"/>
       </Position21>
       <Position22>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="64" TopLine="48"/>
+        <Caret Line="69" Column="40" TopLine="55"/>
       </Position22>
       <Position23>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="69" Column="40" TopLine="55"/>
+        <Caret Line="71" Column="58" TopLine="56"/>
       </Position23>
       <Position24>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="71" Column="58" TopLine="56"/>
+        <Caret Line="57" Column="27" TopLine="33"/>
       </Position24>
       <Position25>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="57" Column="27" TopLine="33"/>
+        <Caret Line="30" Column="38" TopLine="12"/>
       </Position25>
       <Position26>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="30" Column="38" TopLine="12"/>
+        <Caret Line="689" Column="25" TopLine="674"/>
       </Position26>
       <Position27>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="689" Column="25" TopLine="674"/>
+        <Caret Line="40" Column="29" TopLine="27"/>
       </Position27>
       <Position28>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="40" Column="29" TopLine="27"/>
+        <Caret Line="454" Column="23" TopLine="438"/>
       </Position28>
       <Position29>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="454" Column="23" TopLine="438"/>
+        <Caret Line="78" Column="44" TopLine="61"/>
       </Position29>
       <Position30>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="78" Column="44" TopLine="61"/>
+        <Caret Line="82" Column="77" TopLine="60"/>
       </Position30>
     </JumpHistory>
     <RunParams>

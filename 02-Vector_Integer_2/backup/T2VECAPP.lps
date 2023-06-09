@@ -8,7 +8,6 @@
       <Unit0>
         <Filename Value="T2VECAPP.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <CursorPos X="48" Y="20"/>
         <UsageCount Value="105"/>
@@ -21,10 +20,12 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FRMT2VECAPP"/>
-        <TopLine Value="467"/>
-        <CursorPos X="26" Y="474"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="374"/>
+        <CursorPos X="19" Y="379"/>
         <UsageCount Value="105"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="uvector.pas"/>
@@ -123,7 +124,7 @@
         <UsageCount Value="10"/>
       </Unit13>
     </Units>
-    <JumpHistory Count="26" HistoryIndex="25">
+    <JumpHistory Count="27" HistoryIndex="26">
       <Position1>
         <Filename Value="uvector.pas"/>
         <Caret Line="901" TopLine="896"/>
@@ -228,6 +229,10 @@
         <Filename Value="T2VECAPP.lpr"/>
         <Caret Line="12" Column="42"/>
       </Position26>
+      <Position27>
+        <Filename Value="frmt2vecapp.pas"/>
+        <Caret Line="474" Column="26" TopLine="467"/>
+      </Position27>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

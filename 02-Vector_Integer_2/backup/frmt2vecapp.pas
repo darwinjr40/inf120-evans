@@ -499,11 +499,11 @@ end;
 procedure TForm1.descargar(o: vector; vec: TStringGrid);
 var i:integer;
 begin
-   vec.ColCount:= o.dim;
+   vec.ColCount:= o.getDim();
    for i:=1 to o.getDim() do
      begin
       //[columna, fila]
-       vec.Cells[i-1,0]:= IntToStr(Elem[i]);
+       vec.Cells[i-1,0]:= IntToStr(o.getElem(i));
      end;
 end;
 

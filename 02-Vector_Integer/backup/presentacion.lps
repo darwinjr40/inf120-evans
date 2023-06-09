@@ -20,6 +20,7 @@
         <ComponentName Value="Form1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <TopLine Value="103"/>
         <CursorPos X="12" Y="103"/>
         <UsageCount Value="37"/>
@@ -45,10 +46,8 @@
       </Unit3>
       <Unit4>
         <Filename Value="uvector.pas"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="352"/>
-        <CursorPos X="61" Y="365"/>
+        <CursorPos X="37" Y="296"/>
         <UsageCount Value="18"/>
         <Loaded Value="True"/>
       </Unit4>

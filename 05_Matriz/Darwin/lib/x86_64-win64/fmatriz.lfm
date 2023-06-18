@@ -1,0 +1,82 @@
+object Form1: TForm1
+  Left = 347
+  Height = 515
+  Top = 118
+  Width = 852
+  Caption = 'Form1'
+  ClientHeight = 495
+  ClientWidth = 852
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '2.0.8.0'
+  object StringGrid1: TStringGrid
+    Left = 248
+    Height = 280
+    Top = 8
+    Width = 408
+    DefaultColWidth = 45
+    DefaultRowHeight = 30
+    FixedCols = 0
+    FixedRows = 0
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 16
+    Height = 25
+    Top = 136
+    Width = 75
+    Caption = 'cargar Rnd'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object ComboBox1: TComboBox
+    Left = 8
+    Height = 23
+    Top = 88
+    Width = 100
+    ItemHeight = 15
+    ItemIndex = 0
+    Items.Strings = (
+      'mostrar Matriz'
+      'Matriz 1'
+      'Matriz 2'
+      'Matriz 3'
+      'Matriz 4'
+    )
+    OnChange = ComboBox1Change
+    Style = csDropDownList
+    TabOrder = 2
+    Text = 'mostrar Matriz'
+  end
+  object Button2: TButton
+    Left = 16
+    Height = 25
+    Top = 168
+    Width = 75
+    Caption = 'cargar '
+    OnClick = Button2Click
+    TabOrder = 3
+  end
+  object MainMenu1: TMainMenu
+    left = 8
+    object MenuItem1: TMenuItem
+      Caption = 'M1'
+      object MenuItem2: TMenuItem
+        Caption = 'Cargar(Rnd)'
+        OnClick = MenuItem2Click
+      end
+      object MenuItem3: TMenuItem
+        Caption = 'Cargar(ele)'
+        OnClick = MenuItem3Click
+      end
+      object MenuItem4: TMenuItem
+        Caption = 'Descargar'
+        OnClick = MenuItem4Click
+      end
+      object MenuItem5: TMenuItem
+        Caption = 'Prueba'
+        OnClick = MenuItem5Click
+      end
+    end
+  end
+end

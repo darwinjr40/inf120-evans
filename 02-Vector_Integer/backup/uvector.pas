@@ -101,6 +101,7 @@ uses
                PROCEDURE ELIMINAR(elemento:integer);
                //Intercalar A,B de manera ordenado ascendente en el vector
                procedure ejercicio5(A,B:vector);
+               procedure CargarMult2yMul3(v1, v2: vector);//practico #8
                {---------EXAMEN-----------------------------}
                //#2021_1. divide el vector en ,pares,multiplos de 3 y palindrome
                procedure Divide3(A,B,C:vector);
@@ -362,7 +363,7 @@ begin
   for p1:=a to B-1 do  begin
     s:=p1;
     for d:= s+1 to b do  begin
-      if(elem[d] > elem[s]) then//ascendente <,  > descendente
+      if(elem[d] < elem[s]) then//ascendente <,  > descendente
        s:= d;
     end;
     if (s<> p1)then begin
@@ -802,9 +803,9 @@ begin
  aux:=dim; dim:=0;
  for i:=1 to (aux-1) do begin
       if(elem[i]<>elem[i+1])Then
-         AddElem(getElem(i));
+         AddElem(self.getElem(i));
  end;
- AddElem(getElem(aux));
+ AddElem(self.getElem(aux));
 end;
 
 function vector.ElemMenor(): integer;
@@ -843,6 +844,22 @@ begin
    end;
    i:=i+1;
    end;
+end;
+
+procedure vector.CargarMult2yMul3(v1, v2: vector);
+var i:integer;
+    n:UNatural;
+begin
+  n:=UNatural.crear();
+  v1.dim:=0;  v2.dim:=0;
+  for i:=1 to self.dim do begin
+    n.setValor(self.elem[i]);
+    if n.EsMult(2)then
+      v1.addElem(self.elem[i]);
+    if n.EsMult(3)then
+      v2.addElem(self.elem[i]);
+  end;
+  self.dim := 0;
 end;
 
 procedure vector.Divide3(A, B, C: vector);

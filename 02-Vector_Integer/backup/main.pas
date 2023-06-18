@@ -99,7 +99,8 @@ end;
 
 procedure TForm1.Button4Click(Sender: TObject);
 begin
-  v.ord_seleccion();
+  //v.ord_seleccion();
+  v.CargarMult2yMul3(v2,v3);
 end;
 
 

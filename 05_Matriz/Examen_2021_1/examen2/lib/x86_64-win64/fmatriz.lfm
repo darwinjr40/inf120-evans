@@ -1,0 +1,69 @@
+object Form1: TForm1
+  Left = 234
+  Height = 577
+  Top = 141
+  Width = 1086
+  Caption = 'Form1'
+  ClientHeight = 577
+  ClientWidth = 1086
+  OnCreate = FormCreate
+  LCLVersion = '2.0.12.0'
+  object StringGrid1: TStringGrid
+    Left = 40
+    Height = 264
+    Top = 200
+    Width = 352
+    DefaultColWidth = 45
+    DefaultRowHeight = 30
+    FixedCols = 0
+    FixedRows = 0
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 64
+    Height = 25
+    Top = 120
+    Width = 115
+    Caption = 'obj1 Cargar Random'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 64
+    Height = 25
+    Top = 152
+    Width = 112
+    Caption = 'objt1 descargar'
+    OnClick = Button2Click
+    TabOrder = 2
+  end
+  object Button3: TButton
+    Left = 64
+    Height = 25
+    Top = 88
+    Width = 115
+    Caption = 'obj1 Cargar'
+    OnClick = Button3Click
+    TabOrder = 3
+  end
+  object Button4: TButton
+    Left = 208
+    Height = 25
+    Top = 152
+    Width = 75
+    Caption = 'Button4'
+    OnClick = Button4Click
+    TabOrder = 4
+  end
+  object StringGrid2: TStringGrid
+    Left = 440
+    Height = 264
+    Top = 200
+    Width = 352
+    DefaultColWidth = 45
+    DefaultRowHeight = 30
+    FixedCols = 0
+    FixedRows = 0
+    TabOrder = 5
+  end
+end

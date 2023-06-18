@@ -20,9 +20,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FRMT2VECAPP"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="374"/>
-        <CursorPos X="19" Y="379"/>
+        <TopLine Value="131"/>
+        <CursorPos X="29" Y="139"/>
         <UsageCount Value="105"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -30,7 +29,9 @@
       <Unit2>
         <Filename Value="uvector.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
+        <TopLine Value="41"/>
         <CursorPos Y="153"/>
         <UsageCount Value="105"/>
         <Loaded Value="True"/>
@@ -75,7 +76,7 @@
         <Filename Value="natural.pas"/>
         <UnitName Value="Natural"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="548"/>
+        <TopLine Value="520"/>
         <CursorPos Y="719"/>
         <UsageCount Value="50"/>
         <Loaded Value="True"/>
@@ -124,7 +125,7 @@
         <UsageCount Value="10"/>
       </Unit13>
     </Units>
-    <JumpHistory Count="27" HistoryIndex="26">
+    <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="uvector.pas"/>
         <Caret Line="901" TopLine="896"/>
@@ -233,6 +234,18 @@
         <Filename Value="frmt2vecapp.pas"/>
         <Caret Line="474" Column="26" TopLine="467"/>
       </Position27>
+      <Position28>
+        <Filename Value="frmt2vecapp.pas"/>
+        <Caret Line="379" Column="19" TopLine="374"/>
+      </Position28>
+      <Position29>
+        <Filename Value="frmt2vecapp.pas"/>
+        <Caret Line="418" Column="30" TopLine="411"/>
+      </Position29>
+      <Position30>
+        <Filename Value="frmt2vecapp.pas"/>
+        <Caret Line="332" TopLine="175"/>
+      </Position30>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

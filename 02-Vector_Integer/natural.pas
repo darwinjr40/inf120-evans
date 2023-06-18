@@ -76,6 +76,7 @@ type
         function  CantDiv():integer;
 
         function  Intercalar24(na,nb:UNatural):Integer;
+        function EsMult(x: integer): boolean;
   end;
 
 implementation
@@ -887,6 +888,11 @@ begin
    end;
 
    result:=new;
+end;
+
+function UNatural.EsMult(x: integer): boolean;
+begin
+  result := (self.valor mod x = 0);
 end;
 
 

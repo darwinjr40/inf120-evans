@@ -1,0 +1,208 @@
+object Form1: TForm1
+  Left = 445
+  Height = 572
+  Top = 107
+  Width = 429
+  Caption = 'Form1'
+  ClientHeight = 552
+  ClientWidth = 429
+  Color = 16777088
+  Menu = MainMenu1
+  LCLVersion = '2.0.8.0'
+  object L1: TLabel
+    Left = 88
+    Height = 23
+    Top = 0
+    Width = 130
+    Caption = 'CLASE MATRIZ'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Showcard Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object SG: TStringGrid
+    Left = 33
+    Height = 152
+    Top = 24
+    Width = 265
+    DefaultColWidth = 32
+    FixedCols = 0
+    FixedRows = 0
+    TabOrder = 0
+  end
+  object F1: TEdit
+    Left = 32
+    Height = 23
+    Top = 192
+    Width = 120
+    TabOrder = 1
+    TextHint = 'Fila 1...'
+  end
+  object F2: TEdit
+    Left = 176
+    Height = 23
+    Top = 192
+    Width = 120
+    TabOrder = 2
+    TextHint = 'Fila 2...'
+  end
+  object C1: TEdit
+    Left = 32
+    Height = 23
+    Top = 224
+    Width = 120
+    TabOrder = 3
+    TextHint = 'Columna 1...'
+  end
+  object C2: TEdit
+    Left = 177
+    Height = 23
+    Top = 224
+    Width = 120
+    TabOrder = 4
+    TextHint = 'Columna 2...'
+  end
+  object ELE: TEdit
+    Left = 32
+    Height = 23
+    Top = 254
+    Width = 264
+    OnChange = ELEChange
+    TabOrder = 5
+    TextHint = 'Elemento..'
+  end
+  object Button1: TButton
+    Left = 32
+    Height = 25
+    Top = 280
+    Width = 264
+    Caption = 'CREAR'
+    OnClick = Button1Click
+    TabOrder = 6
+  end
+  object Button2: TButton
+    Left = 32
+    Height = 25
+    Top = 312
+    Width = 264
+    Caption = 'SET_ELEM'
+    OnClick = Button2Click
+    TabOrder = 7
+  end
+  object Button3: TButton
+    Left = 32
+    Height = 25
+    Top = 344
+    Width = 264
+    Caption = 'GET_ELEM'
+    OnClick = Button3Click
+    TabOrder = 8
+  end
+  object Button4: TButton
+    Left = 32
+    Height = 25
+    Top = 376
+    Width = 264
+    Caption = 'SET_FILA'
+    OnClick = Button4Click
+    TabOrder = 9
+  end
+  object Button5: TButton
+    Left = 32
+    Height = 25
+    Top = 404
+    Width = 264
+    Caption = 'GET_FILA'
+    OnClick = Button5Click
+    TabOrder = 10
+  end
+  object Button6: TButton
+    Left = 32
+    Height = 25
+    Top = 432
+    Width = 264
+    Caption = 'SET_COLUMNA'
+    OnClick = Button6Click
+    TabOrder = 11
+  end
+  object Button7: TButton
+    Left = 32
+    Height = 25
+    Top = 464
+    Width = 264
+    Caption = 'GET_COLUMNA'
+    OnClick = Button7Click
+    TabOrder = 12
+  end
+  object Button8: TButton
+    Left = 32
+    Height = 25
+    Top = 492
+    Width = 264
+    Caption = 'INTERCALAR_ELEM'
+    OnClick = Button8Click
+    TabOrder = 13
+  end
+  object Button9: TButton
+    Left = 33
+    Height = 25
+    Top = 520
+    Width = 264
+    Caption = 'SALIR'
+    OnClick = Button9Click
+    TabOrder = 14
+  end
+  object Button10: TButton
+    Left = 320
+    Height = 25
+    Top = 88
+    Width = 75
+    Caption = 'CARGAR'
+    OnClick = Button10Click
+    TabOrder = 15
+  end
+  object Button11: TButton
+    Left = 328
+    Height = 25
+    Top = 128
+    Width = 75
+    Caption = 'descargar'
+    OnClick = Button11Click
+    TabOrder = 16
+  end
+  object MainMenu1: TMainMenu
+    left = 320
+    top = 24
+    object MenuItem1: TMenuItem
+      Caption = 'Practico'
+      object MenuItem2: TMenuItem
+        Caption = '06_ejercicio'
+        OnClick = MenuItem2Click
+      end
+      object MenuItem3: TMenuItem
+        Caption = '09_ejercicio'
+        OnClick = MenuItem3Click
+      end
+      object MenuItem4: TMenuItem
+        Caption = '08_ejercicio'
+        OnClick = MenuItem4Click
+      end
+      object MenuItem5: TMenuItem
+        Caption = 'MenorNumPar(fila)'
+        OnClick = MenuItem5Click
+      end
+      object MenuItem6: TMenuItem
+        Caption = 'PermutarFilas(fa,fb)'
+        OnClick = MenuItem6Click
+      end
+      object MenuItem7: TMenuItem
+        Caption = 'OrdenarFilas_MenNumPar()'
+        OnClick = MenuItem7Click
+      end
+    end
+  end
+end

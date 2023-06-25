@@ -15,6 +15,7 @@ type
   TForm1 = class(TForm)
     Button1: TButton;
     Button2: TButton;
+    Button3: TButton;
     ComboBox1: TComboBox;
     MainMenu1: TMainMenu;
     MenuItem1: TMenuItem;
@@ -23,8 +24,10 @@ type
     MenuItem4: TMenuItem;
     MenuItem5: TMenuItem;
     StringGrid1: TStringGrid;
+    StringGrid2: TStringGrid;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
     procedure ComboBox1Change(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure MenuItem2Click(Sender: TObject);
@@ -104,6 +107,11 @@ begin
   ComboBox1.ItemIndex:=0;
 end;
 
+procedure TForm1.Button3Click(Sender: TObject);
+begin
+  m1.descargarM(StringGrid2);
+end;
+
 procedure TForm1.ComboBox1Change(Sender: TObject);
 begin
      case(ComboBox1.ItemIndex) of //
@@ -155,7 +163,9 @@ begin
   // M.Ord_TII();   updateSG1();
    // m.Ordenar_Fil_NumPar();  updateSG1();
    //m.cargaTsd(); updateSG1();
-   m1.Mejor(); m2.descargarM(StringGrid1);  ;
+   //m1.Mejor(); m2.descargarM(StringGrid1);
+   m1.TransponerTriangSinTp();
+   //m1.TranpuestaTII1();
 end;
 
 

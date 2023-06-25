@@ -117,6 +117,9 @@ CONST
           procedure  ordTID();
           //MULTIPLICA 2 MATRICES
           procedure multiplica(m1,m2:matriz);
+          procedure TranpuestaTII1();
+          procedure TranpuestaTSD1();
+          procedure TransponerTriangSinTp();
     end;
 
 implementation
@@ -879,6 +882,43 @@ begin
   end;
 end;
 
+procedure Matriz.TranpuestaTSD1();
+var f1,c1:integer;
+begin
+ for f1:=1 to (fils div 2) do begin
+    for c1:=f1+1  to (cols-1) do begin
+        interElem(f1,c1,fils-c1+1,cols-f1+1);
+     end;
+  end;
+ end;
 
+
+
+
+procedure Matriz.TranpuestaTII1();
+var f1,c1,i,f2,c2:integer;
+begin
+ i:=0;
+ for c1:=1  to (coLS DIV 2) do begin
+  for f1:=c1+1 to (fils-c1) do begin
+      i:=I+1;
+     interElem(f1,c1,fils+1-C1,FILS+1-F1);
+      //  ELEM[F1,C1]:= I
+     end;
+  end;
+end;
+
+procedure Matriz.TransponerTriangSinTp;
+var i,j: integer;
+begin
+  for i:=1 to (self.fils div 2 ) do begin
+    for j:=1 to self.cols-1 do begin
+      if(i<j)then begin //tsd
+         self.interElem(i,j, self.fils-j+1,self.cols-i+1);
+         //self.interElem(j,i, self.cols-i+1, self.fils-j+1);
+      end;
+    end;
+  end;
+end;
 end.
 

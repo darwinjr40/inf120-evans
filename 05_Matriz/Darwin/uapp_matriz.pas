@@ -119,6 +119,7 @@ CONST
           procedure multiplica(m1,m2:matriz);
           procedure TranpuestaTII1();
           procedure TranpuestaTSD1();
+          procedure TransponerTriangSinTp();
     end;
 
 implementation
@@ -892,6 +893,8 @@ begin
  end;
 
 
+
+
 procedure Matriz.TranpuestaTII1();
 var f1,c1,i,f2,c2:integer;
 begin
@@ -905,5 +908,17 @@ begin
   end;
 end;
 
+procedure Matriz.TransponerTriangSinTp;
+var i,j: integer;
+begin
+  for i:=1 to (self.fils div 2 ) do begin
+    for j:=1 to self.cols-1 do begin
+      if(i<j)then begin //tsd
+         self.interElem(i,j, self.fils-j+1,self.cols-i+1);
+         self.interElem(j,i, self.cols-i+1, self.fils-j+1);
+      end;
+    end;
+  end;
+end;
 end.
 

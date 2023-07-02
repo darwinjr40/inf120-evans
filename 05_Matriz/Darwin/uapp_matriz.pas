@@ -868,17 +868,21 @@ begin
 end;
 
 procedure Matriz.multiplica(m1, m2: matriz);
-var f1,c1,c2:integer;
+var f1,c1,i:integer;
 begin
-  if(m1.getcols()=m2.getfils()) then begin
-      setcols(m2.getcols()); setfils(m1.getfils());
-      for f1:=1 to m1.getfils() do begin
-         for c1:=1 to m2.getcols() do begin
-           for c2:=1 to m1.getcols() do begin
-             elem[f1,c1]:=elem[f1,c1]+ m1.elem[f1,c2] * m2.elem[c2,c1];
-           end;
-         end;
-      end;
+  if(m1.getcols() <> m2.getfils()) then
+    //raise Exception.create('El número de columnas de la primera matriz debe ser igual al número de filas de la segunda matriz')
+    ShowMessage('El número de columnas de la primera matriz debe ser igual al número de filas de la segunda matriz')
+  else begin
+    self.fils := m1.fils; // self.setfils(m1.getfils());
+    self.cols:= m2.cols; //self.setcols(m2.getcols());
+    for f1:=1 to m1.fils do begin
+      for c1:=1 to m2.cols do begin
+         elem[f1,c1] := 0;
+         for i:=1 to m1.cols do
+           elem[f1,c1] := elem[f1,c1] + (m1.elem[f1,i] * m2.elem[i,c1]);
+       end;
+    end;
   end;
 end;
 

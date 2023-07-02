@@ -79,7 +79,7 @@ begin
         end;
      else ShowMessage('ERROR');
     end;
-  ComboBox1.ItemIndex:=0;
+  //ComboBox1.ItemIndex:=0;
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
@@ -164,8 +164,16 @@ begin
    // m.Ordenar_Fil_NumPar();  updateSG1();
    //m.cargaTsd(); updateSG1();
    //m1.Mejor(); m2.descargarM(StringGrid1);
-   m1.TransponerTriangSinTp();
+   //m1.TransponerTriangSinTp();
    //m1.TranpuestaTII1();
+
+
+  try
+    m4.multiplica(m1,m2);
+  except
+    on E:Exception do
+      ShowMessage('Se ha producido un error: ' + E.Message);
+  end;
 end;
 
 

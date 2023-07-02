@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 347
+  Left = 342
   Height = 702
-  Top = 118
+  Top = 201
   Width = 1122
   Caption = 'Form1'
   ClientHeight = 682
@@ -30,9 +30,9 @@ object Form1: TForm1
     TabOrder = 1
   end
   object ComboBox1: TComboBox
-    Left = 8
+    Left = 32
     Height = 23
-    Top = 88
+    Top = 72
     Width = 100
     ItemHeight = 15
     ItemIndex = 0

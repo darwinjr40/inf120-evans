@@ -108,7 +108,7 @@ CONST
           function FreF(ele,fila:integer):integer;
           //Elemento mas repetido y su frecuencia al final
           procedure Mejor();
-
+          function EcuacionMatriz(): string;
           {EXAMEN---------------------}
           //Ordena la TII sin "DP"
           procedure ordTII();
@@ -144,7 +144,7 @@ begin
     for f1:=1 to fils do begin
        for c1:=1 to cols do begin
                  //           10-1 = 9->(0..9)+1
-          elem[f1,c1]:=Random(b-a+1)+a;
+          elem[f1,c1]:= Random(b-a+1)+a;
        end;
     end;
 end;
@@ -808,6 +808,48 @@ begin
       elem[f1,cols+2]:=fr;
   end;
   setcols(cols+2);
+end;
+//revisar el div, tiene que ser para numeros reales
+function Matriz.EcuacionMatriz(): string;
+const  N = 3; // Número de filas y columnas de la matriz
+var
+  A: array[1..N, 1..N+1] of real; // Matriz aumentada del sistema
+  X: array[1..N] of real; // Solución del sistema
+  i, j, k: integer;
+  factor: real;
+  res: string;
+begin
+   //copiar la matriz objeto a la mtriz A
+   for i := 1 to self.fils do begin
+       for j := 1 to self.cols do  begin
+         A[i,j]:= self.elem[i,j];
+       end;
+   end;
+   // Aplicar eliminación gaussiana
+  for k := 1 to N-1 do begin
+    for i := k+1 to N do begin
+      factor := A[i,k] / A[k,k];
+      for j := k+1 to N+1 do  begin
+        A[i,j] := A[i,j] - factor * A[k,j];
+      end;
+      A[i,k] := 0;
+    end;
+  end;
+  // Resolver el sistema por sustitución hacia atrás
+  X[N] := A[N,N+1] / A[N,N];
+  for i := N-1 downto 1 do begin
+    X[i] := A[i,N+1];
+    for j := i+1 to N do begin
+      X[i] := X[i] - A[i,j] * X[j];
+    end;
+    X[i] := X[i] / A[i,i];
+  end;
+  // Mostrar la solución
+  res := '';
+  for i := 1 to N do begin
+    res := 'x'+ inttostr(i)+ ' = ' + floattostr(X[i])+ #10 + res;
+  end;
+  result := res;
 end;
 
 procedure Matriz.ordTII();

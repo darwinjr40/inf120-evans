@@ -79,7 +79,7 @@ begin
         end;
      else ShowMessage('ERROR');
     end;
-  ComboBox1.ItemIndex:=0;
+  //ComboBox1.ItemIndex:=0;
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
@@ -167,9 +167,31 @@ begin
    //m1.TransponerTriangSinTp();
    //m1.TranpuestaTII1();
 
-
   try
-    m4.multiplica(m1,m2);
+    //m4.multiplica(m1,m2);
+    m1.setfils(3);
+    m1.setcols(4);
+
+    m1.setElem(1,1, 2);
+    m1.setElem(1,2, 4);
+    m1.setElem(1,3, 6);
+    m1.setElem(1,4, 18);
+
+    m1.setElem(2,1,4);
+    m1.setElem(2,2, 5);
+    m1.setElem(2,3, 6);
+    m1.setElem(2,4, 24);
+
+    m1.setElem(3,1,3 );
+    m1.setElem(3,2, 1);
+    m1.setElem(3,3, -2);
+    m1.setElem(3,4, 4);
+
+
+    m1.descargarM(StringGrid2);
+
+    ShowMessage(m1.EcuacionMatriz());
+    m1.descargarM(StringGrid1);
   except
     on E:Exception do
       ShowMessage('Se ha producido un error: ' + E.Message);

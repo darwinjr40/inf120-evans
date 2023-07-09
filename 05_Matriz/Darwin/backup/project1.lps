@@ -4,7 +4,7 @@
     <PathDelim Value="\"/>
     <Version Value="12"/>
     <BuildModes Active="Default"/>
-    <Units Count="3">
+    <Units Count="4">
       <Unit0>
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -12,7 +12,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="30"/>
+        <UsageCount Value="34"/>
       </Unit0>
       <Unit1>
         <Filename Value="fmatriz.pas"/>
@@ -21,143 +21,103 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FMatriz"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="114"/>
-        <CursorPos X="35" Y="118"/>
-        <UsageCount Value="30"/>
+        <TopLine Value="181"/>
+        <CursorPos X="31" Y="191"/>
+        <UsageCount Value="34"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="uapp_matriz.pas"/>
         <UnitName Value="UAPP_MATRIZ"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="17"/>
-        <UsageCount Value="14"/>
+        <TopLine Value="841"/>
+        <CursorPos X="59" Y="850"/>
+        <UsageCount Value="15"/>
         <Loaded Value="True"/>
       </Unit2>
+      <Unit3>
+        <Filename Value="..\..\..\..\inf110\poo\Fecha\FechaUnit.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <CursorPos X="65" Y="12"/>
+        <UsageCount Value="10"/>
+      </Unit3>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="18" HistoryIndex="17">
       <Position1>
         <Filename Value="uapp_matriz.pas"/>
-        <Caret Line="23" Column="31" TopLine="7"/>
+        <Caret Line="111" Column="44" TopLine="98"/>
       </Position1>
       <Position2>
-        <Filename Value="fmatriz.pas"/>
-        <Caret Line="77" Column="28" TopLine="52"/>
+        <Filename Value="uapp_matriz.pas"/>
+        <Caret Line="826" Column="24" TopLine="813"/>
       </Position2>
       <Position3>
-        <Filename Value="fmatriz.pas"/>
-        <Caret Line="79" Column="28" TopLine="54"/>
+        <Filename Value="uapp_matriz.pas"/>
+        <Caret Line="814" Column="17" TopLine="812"/>
       </Position3>
       <Position4>
-        <Filename Value="uapp_matriz.pas"/>
-        <Caret Line="72" Column="32" TopLine="68"/>
+        <Filename Value="fmatriz.pas"/>
+        <Caret Line="73" Column="27" TopLine="67"/>
       </Position4>
       <Position5>
-        <Filename Value="uapp_matriz.pas"/>
-        <Caret Line="460" Column="5" TopLine="436"/>
+        <Filename Value="fmatriz.pas"/>
+        <Caret Line="188" Column="17" TopLine="171"/>
       </Position5>
       <Position6>
-        <Filename Value="uapp_matriz.pas"/>
-        <Caret Line="71" Column="27" TopLine="57"/>
+        <Filename Value="fmatriz.pas"/>
+        <Caret Line="191" Column="30" TopLine="177"/>
       </Position6>
       <Position7>
-        <Filename Value="fmatriz.pas"/>
-        <Caret Line="45" Column="62" TopLine="35"/>
+        <Filename Value="uapp_matriz.pas"/>
+        <Caret Line="825" Column="21" TopLine="819"/>
       </Position7>
       <Position8>
-        <Filename Value="uapp_matriz.pas"/>
-        <Caret Line="120" Column="35" TopLine="107"/>
+        <Filename Value="fmatriz.pas"/>
+        <Caret Line="189" Column="19" TopLine="172"/>
       </Position8>
       <Position9>
         <Filename Value="uapp_matriz.pas"/>
-        <Caret Line="884" Column="32" TopLine="865"/>
+        <Caret Line="19" Column="32" TopLine="12"/>
       </Position9>
       <Position10>
         <Filename Value="uapp_matriz.pas"/>
-        <Caret Line="121" Column="35" TopLine="111"/>
+        <Caret Line="18" Column="49" TopLine="13"/>
       </Position10>
       <Position11>
-        <Filename Value="fmatriz.pas"/>
-        <Caret Line="51" Column="6" TopLine="21"/>
+        <Filename Value="uapp_matriz.pas"/>
+        <Caret Line="111" Column="41" TopLine="107"/>
       </Position11>
       <Position12>
-        <Filename Value="fmatriz.pas"/>
-        <Caret Line="157" Column="16" TopLine="142"/>
+        <Filename Value="uapp_matriz.pas"/>
+        <Caret Line="814" Column="19" TopLine="810"/>
       </Position12>
       <Position13>
         <Filename Value="uapp_matriz.pas"/>
-        <Caret Line="121" Column="35" TopLine="105"/>
+        <Caret Line="853" Column="53" TopLine="840"/>
       </Position13>
       <Position14>
-        <Filename Value="fmatriz.pas"/>
-        <Caret Line="159" Column="26" TopLine="145"/>
+        <Filename Value="uapp_matriz.pas"/>
+        <Caret Line="815" Column="4" TopLine="805"/>
       </Position14>
       <Position15>
-        <Filename Value="fmatriz.pas"/>
-        <Caret Line="160" Column="26" TopLine="146"/>
+        <Filename Value="uapp_matriz.pas"/>
+        <Caret Line="822" Column="6" TopLine="805"/>
       </Position15>
       <Position16>
-        <Filename Value="fmatriz.pas"/>
-        <Caret Line="167" Column="26" TopLine="153"/>
+        <Filename Value="uapp_matriz.pas"/>
+        <Caret Line="147" Column="15" TopLine="134"/>
       </Position16>
       <Position17>
         <Filename Value="uapp_matriz.pas"/>
-        <Caret Line="122" Column="45" TopLine="106"/>
+        <Caret Line="145" Column="35" TopLine="134"/>
       </Position17>
       <Position18>
-        <Filename Value="fmatriz.pas"/>
-        <Caret Line="167" Column="28" TopLine="153"/>
+        <Filename Value="uapp_matriz.pas"/>
+        <Caret Line="111" Column="34" TopLine="100"/>
       </Position18>
-      <Position19>
-        <Filename Value="uapp_matriz.pas"/>
-        <Caret Line="915" Column="11" TopLine="902"/>
-      </Position19>
-      <Position20>
-        <Filename Value="uapp_matriz.pas"/>
-        <Caret Line="119" Column="31" TopLine="107"/>
-      </Position20>
-      <Position21>
-        <Filename Value="fmatriz.pas"/>
-        <Caret Line="167" Column="28" TopLine="139"/>
-      </Position21>
-      <Position22>
-        <Filename Value="fmatriz.pas"/>
-        <Caret Line="169" Column="3" TopLine="155"/>
-      </Position22>
-      <Position23>
-        <Filename Value="uapp_matriz.pas"/>
-        <Caret Line="884" Column="10" TopLine="867"/>
-      </Position23>
-      <Position24>
-        <Filename Value="uapp_matriz.pas"/>
-        <Caret Line="885" Column="21" TopLine="869"/>
-      </Position24>
-      <Position25>
-        <Filename Value="fmatriz.pas"/>
-        <Caret Line="173" TopLine="162"/>
-      </Position25>
-      <Position26>
-        <Filename Value="uapp_matriz.pas"/>
-        <Caret Line="874" TopLine="865"/>
-      </Position26>
-      <Position27>
-        <Filename Value="fmatriz.pas"/>
-        <Caret Line="174" Column="7" TopLine="162"/>
-      </Position27>
-      <Position28>
-        <Filename Value="fmatriz.pas"/>
-        <Caret Line="38" Column="23" TopLine="34"/>
-      </Position28>
-      <Position29>
-        <Filename Value="fmatriz.pas"/>
-        <Caret Line="52" Column="28" TopLine="47"/>
-      </Position29>
-      <Position30>
-        <Filename Value="fmatriz.pas"/>
-        <Caret Line="172" Column="8" TopLine="162"/>
-      </Position30>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

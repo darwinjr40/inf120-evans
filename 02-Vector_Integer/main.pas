@@ -101,7 +101,10 @@ procedure TForm1.Button4Click(Sender: TObject);
 begin
   //v.ord_seleccion();
   //v.CargarMult2yMul3(v2,v3);
-  v.ejercicio9();
+  //v.ejercicio9();
+  //ShowMessage(IntToStr(v.elementoModa()));
+  //v.mezclarDesc(v1,v2);
+  v.intercalar3Vectores(v1,v2,v3)
 end;
 
 

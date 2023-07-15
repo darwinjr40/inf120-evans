@@ -113,9 +113,8 @@ uses
 
                //#2021_1. Retorna el elemeno mas repetido (moda)
                function elementoModa():integer;
-
                procedure intercalar3Vectores(v1,v2,v3:vector);
-
+               procedure mezclarDesc(v1,v2: vector);
 
        end;
 
@@ -439,14 +438,15 @@ begin
 end;
 
 function vector.elementoModa(): integer;
-var i, m,ele,frecuenciaElemento:integer;
+var i, fr,ele,frElem:integer;
 begin
-  m:=0;
-  for i:=1 to dim do begin
-    frecuenciaElemento:=frec(elem[i]);
-    if( frecuenciaElemento > m)then begin
-       m:=frecuenciaElemento;
-       ele:=elem[i]
+  fr:=frec(elem[1]);
+  ele:=elem[1];
+  for i:=2 to dim do begin
+    frElem:=frec(elem[i]);
+    if( frElem > fr)then begin
+       fr:=frElem;
+       ele:=elem[i];
     end;
   end;
   Result:=ele;
@@ -915,33 +915,53 @@ begin
 end;
 
 procedure vector.intercalar3Vectores(v1, v2, v3: vector);
-var i,i1,i2,i3,n:Integer;
+var i1,i2,i3,n:Integer;
 begin //3,1,2
-i:= 1;
 i1:= 1;
 i2:= 1;
 i3:= 1;
 n:= v1.dim+v2.dim+v3.dim;
-while (i<=n) do begin
+while (self.dim < n) do begin
  if(i3<=v3.dim) then begin
    addElem(v3.elem[i3]);
    i3:=i3+1;
-   i:=i+1;
  end;
 
  if(i1<=v1.dim) then begin
    addElem(v1.elem[i1]);
    i1:=i1+1;
-   i:=i+1;
  end;
 
  if(i2<=v2.dim) then begin
    addElem(v2.elem[i2]);
    i2:=i2+1;
-   i:=i+1;
  end;
 end;
 
+end;
+
+procedure vector.mezclarDesc(v1, v2: vector);
+var i,j : integer;
+begin
+  i := 1;
+  j := 1;
+  while (i<=v1.dim)and(j<=v2.dim) do begin
+    if (v1.elem[i] > v2.elem[j])then begin
+      self.addElem(v1.elem[i]);
+      i := i + 1;
+    end else begin
+      self.addElem(v2.elem[j]);
+      j := j + 1;
+    end;
+  end;
+  while (i<=v1.dim) do begin
+      self.addElem(v1.elem[i]);
+      i := i + 1;
+  end;
+  while (j<=v2.dim) do begin
+      self.addElem(v2.elem[j]);
+      j := j + 1;
+  end;
 end;
 
 

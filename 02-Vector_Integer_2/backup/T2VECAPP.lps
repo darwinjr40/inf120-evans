@@ -20,6 +20,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FRMT2VECAPP"/>
+        <IsVisibleTab Value="True"/>
         <TopLine Value="131"/>
         <CursorPos X="29" Y="139"/>
         <UsageCount Value="105"/>
@@ -29,10 +30,9 @@
       <Unit2>
         <Filename Value="uvector.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="41"/>
-        <CursorPos Y="153"/>
+        <TopLine Value="51"/>
+        <CursorPos X="27" Y="51"/>
         <UsageCount Value="105"/>
         <Loaded Value="True"/>
       </Unit2>

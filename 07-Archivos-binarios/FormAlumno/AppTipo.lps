@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units Count="14">
+      <Unit0>
+        <Filename Value="AppTipo.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos X="13" Y="5"/>
+        <UsageCount Value="116"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="fprincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FPrincipal"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="316"/>
+        <CursorPos X="8" Y="320"/>
+        <UsageCount Value="116"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="utipo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UTipo"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="29"/>
+        <CursorPos X="11" Y="31"/>
+        <UsageCount Value="116"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="unota.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UNota"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="38"/>
+        <UsageCount Value="45"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="unitempleado.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitEmpleado"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="43" Y="143"/>
+        <UsageCount Value="27"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="unitnota.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitNota"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="5"/>
+        <CursorPos X="8" Y="17"/>
+        <UsageCount Value="23"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="..\07-Archivos\t7e1\t7el.lpr"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="24"/>
+        <CursorPos X="10" Y="40"/>
+        <UsageCount Value="1"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\07-Archivos\t7e2\t7e2.lpr"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="16"/>
+        <UsageCount Value="1"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\06-Archivos\02-Formulario\utexto.pas"/>
+        <UnitName Value="Utexto"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="130"/>
+        <CursorPos Y="148"/>
+        <UsageCount Value="1"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\t7e6\t7e6.lpr"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="36"/>
+        <CursorPos X="18" Y="18"/>
+        <UsageCount Value="3"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="C:\lazarus\lcl\include\messagedialogs.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="212"/>
+        <CursorPos Y="227"/>
+        <UsageCount Value="2"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="C:\lazarus\components\lazutils\lazstringutils.pas"/>
+        <UnitName Value="LazStringUtils"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="152"/>
+        <CursorPos Y="168"/>
+        <UsageCount Value="1"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="C:\lazarus\lcl\include\menuitem.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="283"/>
+        <CursorPos Y="298"/>
+        <UsageCount Value="3"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32callback.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2094"/>
+        <CursorPos Y="2108"/>
+        <UsageCount Value="3"/>
+      </Unit13>
+    </Units>
+    <JumpHistory Count="3" HistoryIndex="2">
+      <Position1>
+        <Filename Value="AppTipo.lpr"/>
+        <Caret Line="13" Column="24"/>
+      </Position1>
+      <Position2>
+        <Filename Value="AppTipo.lpr"/>
+        <Caret Line="5" Column="13"/>
+      </Position2>
+      <Position3>
+        <Filename Value="utipo.pas"/>
+        <Caret Line="131" Column="8" TopLine="93"/>
+      </Position3>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <Watches>
+      <Item>
+        <Expression Value="C"/>
+      </Item>
+      <Item>
+        <Expression Value="R"/>
+      </Item>
+      <Item>
+        <Expression Value="N"/>
+      </Item>
+      <Item>
+        <Expression Value="D"/>
+      </Item>
+      <Item>
+        <Expression Value="I"/>
+      </Item>
+      <Item>
+        <Expression Value="CI"/>
+      </Item>
+      <Item>
+        <Expression Value="e"/>
+      </Item>
+    </Watches>
+  </Debugging>
+</CONFIG>

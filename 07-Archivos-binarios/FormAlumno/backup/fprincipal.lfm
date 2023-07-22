@@ -1,0 +1,207 @@
+object Form1: TForm1
+  Left = 611
+  Height = 405
+  Top = 148
+  Width = 634
+  Caption = 'Form1'
+  ClientHeight = 385
+  ClientWidth = 634
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '2.0.8.0'
+  object Label1: TLabel
+    Left = 113
+    Height = 15
+    Top = 112
+    Width = 35
+    Caption = 'Carnet'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 103
+    Height = 15
+    Top = 144
+    Width = 43
+    Caption = 'Registro'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 48
+    Height = 15
+    Top = 176
+    Width = 100
+    Caption = 'Nombre Completo'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 96
+    Height = 15
+    Top = 208
+    Width = 50
+    Caption = 'Direccion'
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    Left = 168
+    Height = 23
+    Top = 112
+    Width = 160
+    TabOrder = 0
+  end
+  object Edit2: TEdit
+    Left = 168
+    Height = 23
+    Top = 144
+    Width = 160
+    TabOrder = 1
+  end
+  object Edit3: TEdit
+    Left = 168
+    Height = 23
+    Top = 168
+    Width = 160
+    TabOrder = 2
+  end
+  object Edit4: TEdit
+    Left = 168
+    Height = 23
+    Top = 200
+    Width = 160
+    TabOrder = 3
+  end
+  object Button1: TButton
+    Left = 72
+    Height = 25
+    Top = 256
+    Width = 75
+    Caption = 'Primer'
+    OnClick = Button1Click
+    TabOrder = 4
+  end
+  object Button2: TButton
+    Left = 152
+    Height = 25
+    Top = 256
+    Width = 75
+    Caption = 'Anterior'
+    OnClick = Button2Click
+    TabOrder = 5
+  end
+  object Button3: TButton
+    Left = 240
+    Height = 25
+    Top = 256
+    Width = 75
+    Caption = 'Siguiente'
+    OnClick = Button3Click
+    TabOrder = 6
+  end
+  object Button4: TButton
+    Left = 328
+    Height = 25
+    Top = 256
+    Width = 75
+    Caption = 'Ultimo'
+    OnClick = Button4Click
+    TabOrder = 7
+  end
+  object Button5: TButton
+    Left = 385
+    Height = 25
+    Top = 75
+    Width = 75
+    Caption = 'Button5'
+    OnClick = Button5Click
+    TabOrder = 8
+  end
+  object MainMenu1: TMainMenu
+    top = 8
+    object MenuItem1: TMenuItem
+      Caption = 'Archivo'
+      object MenuItem2: TMenuItem
+        Caption = 'Nuevo'
+        OnClick = MenuItem2Click
+      end
+      object MenuItem3: TMenuItem
+        Caption = 'Abrir'
+        OnClick = MenuItem3Click
+      end
+      object MenuItem4: TMenuItem
+        Caption = 'Cerrar'
+        OnClick = MenuItem4Click
+      end
+      object MenuItem5: TMenuItem
+        Caption = 'Salir'
+      end
+    end
+    object MenuItem6: TMenuItem
+      Caption = 'Operaciones'
+      object MenuItem7: TMenuItem
+        Caption = 'Mostrar'
+        OnClick = MenuItem7Click
+      end
+      object MenuItem8: TMenuItem
+        Caption = 'Adicionar(n+1)'
+        OnClick = MenuItem8Click
+      end
+      object MenuItem9: TMenuItem
+        Caption = 'Remplazar'
+        OnClick = MenuItem9Click
+      end
+      object MenuItem18: TMenuItem
+        Caption = 'Existe()bool'
+        OnClick = MenuItem18Click
+      end
+      object MenuItem19: TMenuItem
+        Caption = 'cambiar nombre'
+        OnClick = MenuItem19Click
+      end
+    end
+    object MenuItem10: TMenuItem
+      Caption = 'Practico'
+      object MenuItem20: TMenuItem
+        Caption = 'A.Listar'
+        OnClick = MenuItem20Click
+      end
+      object MenuItem14: TMenuItem
+        Caption = 'B. -Agregar'
+        OnClick = MenuItem14Click
+      end
+      object MenuItem15: TMenuItem
+        Caption = 'C. -Buscar (Registro)'
+        OnClick = MenuItem15Click
+      end
+      object MenuItem16: TMenuItem
+        Caption = 'D.  -Modificar Direccion(CI)'
+        OnClick = MenuItem16Click
+      end
+      object MenuItem17: TMenuItem
+        Caption = 'E. -'
+      end
+      object MenuItem11: TMenuItem
+        Caption = 'F. -Eliminar(reg)'
+        OnClick = MenuItem11Click
+      end
+      object MenuItem21: TMenuItem
+        Caption = 'G.'
+        OnClick = MenuItem21Click
+      end
+      object MenuItem12: TMenuItem
+        Caption = 'I. -Ordenar(Nombre)'
+        OnClick = MenuItem12Click
+      end
+      object MenuItem13: TMenuItem
+        Caption = 'J.-Ordena por Registro'
+        OnClick = MenuItem13Click
+      end
+    end
+  end
+  object OD: TOpenDialog
+    left = 56
+    top = 8
+  end
+  object SD: TSaveDialog
+    left = 104
+    top = 8
+  end
+end

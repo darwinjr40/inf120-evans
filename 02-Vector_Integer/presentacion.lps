@@ -22,7 +22,7 @@
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
         <TopLine Value="92"/>
-        <CursorPos X="28" Y="105"/>
+        <CursorPos X="6" Y="105"/>
         <UsageCount Value="41"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -46,8 +46,8 @@
       <Unit4>
         <Filename Value="uvector.pas"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="918"/>
-        <CursorPos X="37" Y="918"/>
+        <TopLine Value="943"/>
+        <CursorPos X="29" Y="943"/>
         <UsageCount Value="19"/>
         <Loaded Value="True"/>
       </Unit4>
@@ -179,7 +179,7 @@
       </Position29>
       <Position30>
         <Filename Value="uvector.pas"/>
-        <Caret Line="117" Column="45" TopLine="108"/>
+        <Caret Line="117" Column="37" TopLine="103"/>
       </Position30>
     </JumpHistory>
     <RunParams>

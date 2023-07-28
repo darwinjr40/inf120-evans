@@ -101,6 +101,10 @@ object Form1: TForm1
         Caption = 'Get(pos)'
         OnClick = MenuItem24Click
       end
+      object MenuItem4: TMenuItem
+        Caption = 'Mezclar(ta,tb)'
+        OnClick = MenuItem4Click
+      end
     end
     object MenuItem1: TMenuItem
       Caption = 'Examen'

@@ -36,6 +36,7 @@ type
     MenuItem28: TMenuItem;
     MenuItem29: TMenuItem;
     MenuItem3: TMenuItem;
+    MenuItem4: TMenuItem;
     MenuItem9: TMenuItem;
     OD: TOpenDialog;
     SD: TSaveDialog;
@@ -59,11 +60,14 @@ type
     procedure MenuItem29Click(Sender: TObject);
     procedure MenuItem2Click(Sender: TObject);
     procedure MenuItem3Click(Sender: TObject);
+    procedure MenuItem4Click(Sender: TObject);
 
   private
-   T,T1:Texto;
+   T, T1, T2:Texto;
   public
      procedure abrirArchivo(a :Texto);
+     procedure SeleccionarArchivo(archivo: texto );
+     procedure GuardarArchivoComo(archivo: texto );
   end;
 
 var
@@ -81,6 +85,7 @@ procedure TForm1.FormCreate(Sender: TObject);
 begin
  T:=Texto.create();
  T1:=Texto.create();
+ T2:=Texto.create();
 end;
 
 procedure TForm1.MChange(Sender: TObject);
@@ -264,16 +269,29 @@ end;
 procedure TForm1.MenuItem3Click(Sender: TObject);
 var p, may : real;
 begin
-  t.MayorYpromedio(p, m);
+  t.MayorYpromedio(p, may);
   ShowMessage('promedio: ' + FloatToStr(p));
   ShowMessage('mayor: ' + FloatToStr(may));
+end;
+
+procedure TForm1.MenuItem4Click(Sender: TObject);
+begin
+ ShowMessage('SELECCIONA EL ARCHIVO N1');
+ self.SeleccionarArchivo(self.T1);
+ //ShowMessage(t1.getnom() + '.'+t1.getExt());
+ ShowMessage('SELECCIONA EL ARCHIVO N2');
+ self.SeleccionarArchivo(self.T2);
+
+ //ShowMessage(t2.getnom() + '.'+t2.getExt());
+ self.GuardarArchivoComo(T); //guardamos el nom y ext
+ self.T.mezclar(self.t1, self.t2);
 end;
 
 procedure TForm1.abrirArchivo(a: Texto);
 VAR ext,nom,linea:String;
           i:integer;
 begin
-  ShowMessage('Seleccionar el archivo principal');
+  //ShowMessage('Seleccionar el archivo principal');
   if(OD.Execute)then begin //Abrimos ventana OpenDialog 'para buscar el archivo'
     nom:='';
     i:=1; //puntero del Opendialog empiezan en 1
@@ -293,6 +311,51 @@ begin
     Caption:='Mi Block de Notas : '+a.getnom()+'.'+a.getExt();
   end;
 end;
+
+procedure TForm1.SeleccionarArchivo(archivo: texto);
+VAR ext,nom:String;
+          i:integer;
+begin
+  if(OD.Execute)then begin
+    nom:='';     ext:='';
+    i:=1;
+    while(OD.FileName[i]<>'.')do begin//
+      nom:=nom+od.FileName[i];
+      i:=i+1;
+    end;
+    archivo.setNom(nom);
+    i:=i+1;
+    while(OD.FileName[i]<>'.')do begin
+      ext:=ext+od.FileName[i];
+      i:=i+1;
+    end;
+    archivo.setExt(ext);
+  end;
+end;
+
+procedure TForm1.GuardarArchivoComo(archivo: texto);
+VAR ext,nom:String;
+          i:integer;
+begin
+ if(SD.Execute)then begin //ABRE LA VENTA SaveDialog 'GUARDAR COMO'
+   nom:='';
+   i:=1;
+   while(SD.FileName[i]<>'.')do begin
+   nom:=nom+Sd.FileName[i];
+   i:=i+1;
+   end;
+   archivo.setNom(nom);
+   i:=i+1;
+   ext:='';
+   while(Sd.FileName[i]<>'.')do begin
+   ext:=ext+SD.FileName[i];
+   i:=i+1;
+   end;
+   archivo.setExt(ext);
+  end;
+end;
+
+
 
 
 

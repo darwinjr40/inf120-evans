@@ -89,10 +89,10 @@ uses
             •El número de la línea en la que hay más palabras, junto con el número de palabras en esa línea.
             •El número de la línea en la que hay más palabras que acaban como la primera, junto con el número de dichas palabras.}
         procedure informe(O:Texto);
-
+        procedure mezclar(ta, tb :Texto);
         //examen
         procedure frecuenciaDePalabras(new : Texto);
-        procedure MayorYpromedio(promedio, mayor : real);
+        procedure MayorYpromedio(var promedio, mayor : real);
  end;
 
 implementation
@@ -494,6 +494,33 @@ begin
  cerrar();
 end;
 
+procedure Texto.mezclar(ta, tb: Texto);
+VAR cad : STRING;
+begin
+  //self.nom:='mezcla';
+  //self.ext:='txt';
+  self.crear();
+  ta.abrir();
+  tb.abrir();
+  while (not ta.esfin()) and (not tb.esfin()) do begin
+    cad := ta.leerLinea();
+    self.escribirLinea( cad);
+    cad := tb.leerLinea();
+    self.escribirLinea( cad);
+  end;
+
+  while (not ta.esfin())do
+    self.escribirLinea( ta.leerLinea() );
+
+  while (not tb.esfin())do
+    self.escribirLinea( tb.leerLinea() );
+  ta.cerrar();
+  tb.cerrar();
+  self.cerrar();
+end;
+
+
+
 procedure Texto.frecuenciaDePalabras(new: Texto);
 var v : cadena;
     i, moda: Integer;
@@ -525,7 +552,7 @@ begin
  end;
 end;
 
-procedure Texto.MayorYpromedio(promedio, mayor: real);
+procedure Texto.MayorYpromedio(var promedio, mayor: real);
 begin
 
  promedio :=5.5;

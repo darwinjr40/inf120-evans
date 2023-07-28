@@ -8,9 +8,9 @@
       <Unit0>
         <Filename Value="AppTipo.lpr"/>
         <IsPartOfProject Value="True"/>
-        <CursorPos X="13" Y="5"/>
-        <UsageCount Value="116"/>
-        <Loaded Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="11" Y="6"/>
+        <UsageCount Value="117"/>
       </Unit0>
       <Unit1>
         <Filename Value="fprincipal.pas"/>
@@ -19,20 +19,21 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FPrincipal"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="316"/>
-        <CursorPos X="8" Y="320"/>
-        <UsageCount Value="116"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="207"/>
+        <CursorPos X="13" Y="216"/>
+        <UsageCount Value="117"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="utipo.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="UTipo"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="183"/>
-        <CursorPos Y="196"/>
-        <UsageCount Value="116"/>
+        <TopLine Value="150"/>
+        <CursorPos X="10" Y="161"/>
+        <UsageCount Value="117"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -41,7 +42,7 @@
         <UnitName Value="UNota"/>
         <EditorIndex Value="-1"/>
         <CursorPos Y="38"/>
-        <UsageCount Value="45"/>
+        <UsageCount Value="46"/>
       </Unit3>
       <Unit4>
         <Filename Value="unitempleado.pas"/>
@@ -49,7 +50,7 @@
         <UnitName Value="UnitEmpleado"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="43" Y="143"/>
-        <UsageCount Value="27"/>
+        <UsageCount Value="28"/>
       </Unit4>
       <Unit5>
         <Filename Value="unitnota.pas"/>
@@ -58,7 +59,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5"/>
         <CursorPos X="8" Y="17"/>
-        <UsageCount Value="23"/>
+        <UsageCount Value="24"/>
       </Unit5>
       <Unit6>
         <Filename Value="..\07-Archivos\t7e1\t7el.lpr"/>
@@ -118,19 +119,91 @@
         <UsageCount Value="3"/>
       </Unit13>
     </Units>
-    <JumpHistory Count="3" HistoryIndex="2">
+    <JumpHistory Count="21" HistoryIndex="20">
       <Position1>
-        <Filename Value="AppTipo.lpr"/>
-        <Caret Line="13" Column="24"/>
+        <Filename Value="utipo.pas"/>
+        <Caret Line="131" Column="8" TopLine="93"/>
       </Position1>
       <Position2>
-        <Filename Value="AppTipo.lpr"/>
-        <Caret Line="5" Column="13"/>
+        <Filename Value="fprincipal.pas"/>
+        <Caret Line="320" Column="8" TopLine="239"/>
       </Position2>
       <Position3>
         <Filename Value="utipo.pas"/>
-        <Caret Line="131" Column="8" TopLine="93"/>
+        <Caret Line="301" Column="19" TopLine="290"/>
       </Position3>
+      <Position4>
+        <Filename Value="utipo.pas"/>
+        <Caret Line="72" Column="25" TopLine="65"/>
+      </Position4>
+      <Position5>
+        <Filename Value="fprincipal.pas"/>
+        <Caret Line="253" Column="47" TopLine="239"/>
+      </Position5>
+      <Position6>
+        <Filename Value="fprincipal.pas"/>
+        <Caret Line="332" Column="2" TopLine="332"/>
+      </Position6>
+      <Position7>
+        <Filename Value="fprincipal.pas"/>
+        <Caret Line="334" Column="2" TopLine="334"/>
+      </Position7>
+      <Position8>
+        <Filename Value="fprincipal.pas"/>
+        <Caret Line="349" Column="40" TopLine="340"/>
+      </Position8>
+      <Position9>
+        <Filename Value="utipo.pas"/>
+        <Caret Line="205" Column="17" TopLine="196"/>
+      </Position9>
+      <Position10>
+        <Filename Value="fprincipal.pas"/>
+        <Caret Line="349" Column="40" TopLine="340"/>
+      </Position10>
+      <Position11>
+        <Filename Value="fprincipal.pas"/>
+        <Caret Line="78" Column="15" TopLine="74"/>
+      </Position11>
+      <Position12>
+        <Filename Value="fprincipal.pas"/>
+        <Caret Line="202" Column="17" TopLine="193"/>
+      </Position12>
+      <Position13>
+        <Filename Value="utipo.pas"/>
+        <Caret Line="64" Column="28" TopLine="60"/>
+      </Position13>
+      <Position14>
+        <Filename Value="fprincipal.pas"/>
+        <Caret Line="216" Column="18" TopLine="207"/>
+      </Position14>
+      <Position15>
+        <Filename Value="fprincipal.pas"/>
+        <Caret Line="179" Column="18" TopLine="166"/>
+      </Position15>
+      <Position16>
+        <Filename Value="utipo.pas"/>
+        <Caret Line="191" Column="23" TopLine="186"/>
+      </Position16>
+      <Position17>
+        <Filename Value="utipo.pas"/>
+        <Caret Line="365" Column="8" TopLine="357"/>
+      </Position17>
+      <Position18>
+        <Filename Value="utipo.pas"/>
+        <Caret Line="385" Column="20" TopLine="369"/>
+      </Position18>
+      <Position19>
+        <Filename Value="fprincipal.pas"/>
+        <Caret Line="179" Column="10" TopLine="165"/>
+      </Position19>
+      <Position20>
+        <Filename Value="fprincipal.pas"/>
+        <Caret Line="218" Column="20" TopLine="207"/>
+      </Position20>
+      <Position21>
+        <Filename Value="utipo.pas"/>
+        <Caret Line="51" Column="30" TopLine="44"/>
+      </Position21>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

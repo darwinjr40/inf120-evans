@@ -17,6 +17,7 @@ type
     Button3: TButton;
     Button4: TButton;
     Button5: TButton;
+    Button6: TButton;
     Edit1: TEdit;
     Edit2: TEdit;
     Edit3: TEdit;
@@ -54,6 +55,7 @@ type
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure Button5Click(Sender: TObject);
+    procedure Button6Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure MenuItem11Click(Sender: TObject);
     procedure MenuItem12Click(Sender: TObject);
@@ -173,7 +175,7 @@ begin
     T.setExt(ext);//set 'nombre' de extencion'txt'
     //Un ves teniendo el "nombre"+"ext"
     T.abrir();    //Abrimos el objeto
-     ShowMessage('Archivo de alumno Abierto...');
+    ShowMessage('Archivo de alumno Abierto...');
     t.Cerrar();
   end;
 end;
@@ -211,8 +213,10 @@ begin
      r.Reg:=StrToInt(InputBox('Adicionar ','Registro','000000'));
      r.Nom:=InputBox('Adicionar ','Nombre_Completo','Juan Perez');
      r.Dir:=InputBox('Adicionar ','Diecion','Av.Bush');
+     t.Abrir();
      T.Posicionar(T.tamano()+1); //seek(f,filesize(f)) Estamos en T[0]
      T.EscribirTipo(r); //write(f,r)
+     t.Cerrar();
  end else begin
   ShowMessage('El archivo '+t.getNom()+'.'+t.getExt()+' no existe');
  end;
@@ -339,6 +343,12 @@ begin
  n.INF110:=90;   n.LIN100:=80; n.MAT101:=80; n.FIS101:=70;  n.INF119:=60;
  nota.EscribirTipo(n);
  NOTA.Cerrar();
+end;
+
+procedure TForm1.Button6Click(Sender: TObject);
+begin
+
+    ShowMessage(self.T.getNom() + ','+self.T.getExt());
 end;
 
 procedure TForm1.MenuItem21Click(Sender: TObject);

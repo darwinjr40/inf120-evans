@@ -1,121 +1,131 @@
 object Form1: TForm1
-  Left = 611
-  Height = 405
-  Top = 148
-  Width = 634
+  Left = 505
+  Height = 506
+  Top = 173
+  Width = 792
   Caption = 'Form1'
-  ClientHeight = 385
-  ClientWidth = 634
+  ClientHeight = 481
+  ClientWidth = 792
+  DesignTimePPI = 120
   Menu = MainMenu1
   OnCreate = FormCreate
-  LCLVersion = '2.0.8.0'
+  LCLVersion = '2.2.4.0'
   object Label1: TLabel
-    Left = 113
-    Height = 15
-    Top = 112
-    Width = 35
+    Left = 141
+    Height = 20
+    Top = 140
+    Width = 43
     Caption = 'Carnet'
     ParentColor = False
   end
   object Label2: TLabel
-    Left = 103
-    Height = 15
-    Top = 144
-    Width = 43
+    Left = 129
+    Height = 20
+    Top = 180
+    Width = 55
     Caption = 'Registro'
     ParentColor = False
   end
   object Label3: TLabel
-    Left = 48
-    Height = 15
-    Top = 176
-    Width = 100
+    Left = 60
+    Height = 20
+    Top = 220
+    Width = 125
     Caption = 'Nombre Completo'
     ParentColor = False
   end
   object Label4: TLabel
-    Left = 96
-    Height = 15
-    Top = 208
-    Width = 50
+    Left = 120
+    Height = 20
+    Top = 260
+    Width = 63
     Caption = 'Direccion'
     ParentColor = False
   end
   object Edit1: TEdit
-    Left = 168
-    Height = 23
-    Top = 112
-    Width = 160
+    Left = 210
+    Height = 28
+    Top = 140
+    Width = 200
     TabOrder = 0
   end
   object Edit2: TEdit
-    Left = 168
-    Height = 23
-    Top = 144
-    Width = 160
+    Left = 210
+    Height = 28
+    Top = 180
+    Width = 200
     TabOrder = 1
   end
   object Edit3: TEdit
-    Left = 168
-    Height = 23
-    Top = 168
-    Width = 160
+    Left = 210
+    Height = 28
+    Top = 210
+    Width = 200
     TabOrder = 2
   end
   object Edit4: TEdit
-    Left = 168
-    Height = 23
-    Top = 200
-    Width = 160
+    Left = 210
+    Height = 28
+    Top = 250
+    Width = 200
     TabOrder = 3
   end
   object Button1: TButton
-    Left = 72
-    Height = 25
-    Top = 256
-    Width = 75
+    Left = 90
+    Height = 31
+    Top = 320
+    Width = 94
     Caption = 'Primer'
     OnClick = Button1Click
     TabOrder = 4
   end
   object Button2: TButton
-    Left = 152
-    Height = 25
-    Top = 256
-    Width = 75
+    Left = 190
+    Height = 31
+    Top = 320
+    Width = 94
     Caption = 'Anterior'
     OnClick = Button2Click
     TabOrder = 5
   end
   object Button3: TButton
-    Left = 240
-    Height = 25
-    Top = 256
-    Width = 75
+    Left = 300
+    Height = 31
+    Top = 320
+    Width = 94
     Caption = 'Siguiente'
     OnClick = Button3Click
     TabOrder = 6
   end
   object Button4: TButton
-    Left = 328
-    Height = 25
-    Top = 256
-    Width = 75
+    Left = 410
+    Height = 31
+    Top = 320
+    Width = 94
     Caption = 'Ultimo'
     OnClick = Button4Click
     TabOrder = 7
   end
   object Button5: TButton
-    Left = 385
-    Height = 25
-    Top = 75
-    Width = 75
+    Left = 481
+    Height = 31
+    Top = 94
+    Width = 94
     Caption = 'Button5'
     OnClick = Button5Click
     TabOrder = 8
   end
+  object Button6: TButton
+    Left = 481
+    Height = 31
+    Top = 144
+    Width = 94
+    Caption = 'Button6'
+    OnClick = Button6Click
+    TabOrder = 9
+  end
   object MainMenu1: TMainMenu
-    top = 8
+    Top = 10
     object MenuItem1: TMenuItem
       Caption = 'Archivo'
       object MenuItem2: TMenuItem
@@ -197,11 +207,11 @@ object Form1: TForm1
     end
   end
   object OD: TOpenDialog
-    left = 56
-    top = 8
+    Left = 70
+    Top = 10
   end
   object SD: TSaveDialog
-    left = 104
-    top = 8
+    Left = 130
+    Top = 10
   end
 end

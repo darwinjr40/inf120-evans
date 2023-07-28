@@ -30,26 +30,30 @@
         <Filename Value="unitEmpleado.pas"/>
         <UnitName Value="UnitEmpleado"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="46"/>
-        <CursorPos Y="148"/>
+        <TopLine Value="207"/>
+        <CursorPos X="13" Y="215"/>
         <UsageCount Value="10"/>
+        <Loaded Value="True"/>
       </Unit2>
     </Units>
-    <General>
-      <ActiveWindowIndexAtStart Value="-1"/>
-    </General>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory Count="2" HistoryIndex="1">
+      <Position1>
+        <Filename Value="unitEmpleado.pas"/>
+        <Caret Line="54" Column="25" TopLine="48"/>
+      </Position1>
+      <Position2>
+        <Filename Value="unitEmpleado.pas"/>
+        <Caret Line="215" Column="12" TopLine="216"/>
+      </Position2>
+    </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>
     </RunParams>
     <HistoryLists Count="3">
-      <List0 Name="WorkingDirectory" Type="File" Count="1"/>
-      <List1 Name="LaunchingApplication" Type="File" Count="1">
+      <List0 Name="LaunchingApplication" Type="File" Count="1">
         <Item1 Value="C:\WINDOWS\system32\cmd.exe /C ${TargetCmdLine}"/>
-      </List1>
-      <List2 Name="CommandLineParameters" Count="1"/>
+      </List0>
     </HistoryLists>
   </ProjectSession>
   <Debugging>

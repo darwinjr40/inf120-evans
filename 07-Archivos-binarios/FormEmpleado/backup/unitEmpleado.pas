@@ -210,36 +210,32 @@ var e : Empleado;
 begin //prom = (500 + 200 + 300 + 1000 + 800 ) / 5 ==> 560
    Abrir();
    cad := ''; cad2 :='';
-   prom := 0;   //1 > 0
-   //sueldo2 := 0;   //  < 2147483647
+   prom := 0;
    cant := 0;
+   may := 0
+   //obtener el promedio de sueldos
    while (not EsFin()) do begin
        e := LeerTipo;
        prom := prom + e.sueldo ;
        cant := cant + 1 ;
    end;
-   prom := prom / cant ;//promedio
-   //-----------------------------------
+   prom := prom / cant ;
+   //Sacar el (Mayor sueldo) y (empleados con sueldo mayor al promedio)
    Posicionar(1);
    while (not EsFin()) do begin
        e := LeerTipo;
        if (e.sueldo > prom ) then begin
          cad := cad + e.Nombre+'  ' + e.sexo+'  '+ e.cargo +'  '+ Inttostr(e.sueldo) + e.moneda + #10#13;
        end;
-   end;
-   //-----------------------------------
-   Posicionar(1);
-   may := 0;
-   while (not EsFin()) do begin
-       e := LeerTipo;
        if (e.sueldo > may ) then begin
          may := e.sueldo;
-         cad2 := 'el empleado con Mayor sueldo es : ' + #10#13 + e.Nombre+'  ' + e.sexo+'  '+ e.cargo +'  '+ Inttostr(e.sueldo) + e.moneda ;
+         cad2 := 'EL EMPLEADO CON MAYOR SUELDO ES : ' + #10#13 +
+                 e.Nombre+'  ' + e.sexo+'  '+ e.cargo +'  '+ Inttostr(e.sueldo) + e.moneda ;
        end;
    end;
    Cerrar();
    //result:= 'el promedio es = ' + FloatToStr(prom);
-   result:= cad +#10#13 + cad2;
+   result:= 'LISTA DE EMPLEADOS CON SUELDO MAYOR AL PROMEDIO : ' +cad +#10#13 + cad2;
 end;
 
 end.

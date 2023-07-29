@@ -16,6 +16,7 @@ type
     Button2: TButton;
     Button3: TButton;
     Button4: TButton;
+    Button5: TButton;
     ComboBox1: TComboBox;
     Edit1: TEdit;
     StringGrid1: TStringGrid;
@@ -23,17 +24,13 @@ type
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
     procedure ComboBox1Change(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
 
   public
-
-        v :vector;
-        v1:vector;
-        v2:vector;
-        v3:vector;
-        v4:vector;
+        v, v1, v2, v3, v4 :vector;
         VEC: array[0..4] of vector;
   end;
 
@@ -62,27 +59,6 @@ end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
-  //case(ComboBox1.ItemIndex) of
-  //   0: ShowMessage('seleccione un Vector');
-  //   1: begin
-  //           v1.CargarRnd(1,10);
-  //           v1.descargar(StringGrid1);
-  //      end;
-  //   2: begin
-  //           v2.CargarRnd(1,10);
-  //           v2.descargar(StringGrid1);
-  //      end;
-  //   3: begin
-  //           v3.CargarRnd(1,10);
-  //           v3.descargar(StringGrid1);
-  //      end;
-  //   4: begin
-  //           v4.CargarRnd(1,10);
-  //           v4.descargar(StringGrid1);
-  //      end;
-  //   else ShowMessage('ERROR');
-  //  end;
-  //ComboBox1.ItemIndex:=0;
   v.CargarRnd(
     StrToInt(InputBox('','rango A: ','1')),
     StrToInt(InputBox('','rango B:','10'))
@@ -92,8 +68,6 @@ end;
 
 procedure TForm1.Button3Click(Sender: TObject);
 begin
-  //v1.intercalar3Vectores(v2,v3,v4);
- // v1.Dim:=5;
   Edit1.Text := v.descargar();
 end;
 
@@ -102,8 +76,17 @@ begin
   //v.ord_seleccion();
   //v.CargarMult2yMul3(v2,v3);
   //v.ejercicio9();
-  ShowMessage(IntToStr(v.elementoModa()));
-  v.mezclarDesc(v1,v2);
+  //ShowMessage(IntToStr(v.elementoModa()));
+  //v.mezclarDesc(v1,v2);
+  //v.intercalar3Vectores(v1,v2,v3)
+
+  v.RotarIzquierdaV2(StrToInt(InputBox('','','')));
+
+end;
+
+procedure TForm1.Button5Click(Sender: TObject);
+begin
+  v.RotarDerecha(StrToInt(InputBox('','','')));
 end;
 
 

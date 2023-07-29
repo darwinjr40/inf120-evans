@@ -1,19 +1,20 @@
 object Form1: TForm1
   Left = 342
-  Height = 264
+  Height = 330
   Top = 234
-  Width = 1101
+  Width = 1376
   Caption = 'Form1'
-  ClientHeight = 264
-  ClientWidth = 1101
+  ClientHeight = 330
+  ClientWidth = 1376
+  DesignTimePPI = 120
   OnCreate = FormCreate
   LCLVersion = '2.2.4.0'
   object ComboBox1: TComboBox
-    Left = 16
-    Height = 23
-    Top = 64
-    Width = 120
-    ItemHeight = 15
+    Left = 24
+    Height = 28
+    Top = 80
+    Width = 150
+    ItemHeight = 20
     ItemIndex = 0
     Items.Strings = (
       'Mostrar Vector'
@@ -28,17 +29,17 @@ object Form1: TForm1
     Text = 'Mostrar Vector'
   end
   object StringGrid1: TStringGrid
-    Left = 144
-    Height = 87
-    Top = 104
-    Width = 728
+    Left = 180
+    Height = 109
+    Top = 130
+    Width = 910
     ColCount = 10
-    DefaultColWidth = 35
-    DefaultRowHeight = 25
+    DefaultColWidth = 44
+    DefaultRowHeight = 31
     FixedCols = 0
     FixedRows = 0
     Font.CharSet = ANSI_CHARSET
-    Font.Height = -13
+    Font.Height = -16
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
@@ -47,39 +48,39 @@ object Form1: TForm1
     TabOrder = 1
   end
   object Button1: TButton
-    Left = 16
-    Height = 25
-    Top = 128
-    Width = 120
+    Left = 24
+    Height = 31
+    Top = 200
+    Width = 150
     Caption = 'CargarVector'
     OnClick = Button1Click
     TabOrder = 2
   end
   object Button2: TButton
-    Left = 16
-    Height = 25
-    Top = 96
-    Width = 120
+    Left = 24
+    Height = 31
+    Top = 160
+    Width = 150
     Caption = 'CargarVectorRandom'
     OnClick = Button2Click
     TabOrder = 3
   end
   object Button3: TButton
-    Left = 144
-    Height = 25
-    Top = 32
-    Width = 75
+    Left = 24
+    Height = 31
+    Top = 120
+    Width = 150
     Caption = 'Descargar'
     OnClick = Button3Click
     TabOrder = 4
   end
   object Edit1: TEdit
-    Left = 144
-    Height = 33
-    Top = 64
-    Width = 728
+    Left = 180
+    Height = 40
+    Top = 80
+    Width = 910
     Font.CharSet = ANSI_CHARSET
-    Font.Height = -19
+    Font.Height = -24
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
@@ -88,12 +89,21 @@ object Form1: TForm1
     TextHint = 'vector'
   end
   object Button4: TButton
-    Left = 240
-    Height = 25
-    Top = 32
-    Width = 75
+    Left = 184
+    Height = 31
+    Top = 40
+    Width = 94
     Caption = 'Ejercicio'
     OnClick = Button4Click
     TabOrder = 6
+  end
+  object Button5: TButton
+    Left = 304
+    Height = 31
+    Top = 40
+    Width = 94
+    Caption = 'otro button'
+    OnClick = Button5Click
+    TabOrder = 7
   end
 end

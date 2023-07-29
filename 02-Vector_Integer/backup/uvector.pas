@@ -19,6 +19,7 @@ uses
 
          public                      //puntero
                constructor crear();
+               constructor crear(v : vector);
                procedure cargar();
                procedure CargarRnd(a,b:Integer);
                procedure Descargar(v:TStringGrid);
@@ -31,7 +32,9 @@ uses
                procedure RemElem(pos:integer);    //Elimina una "posicion"
                procedure InteElem(pos1,pos2:integer);  //Intercambia dos posiciones
                procedure invertir();  //invierte todo el vector
-               procedure rotar(cantidad:integer);   //rota el vector dependiendo de las cantidad de veces
+               procedure RotarIzquierda(cantidad:integer);   //rota el vector dependiendo de las cantidad de veces
+               procedure RotarIzquierdaV2(cant:byte);
+               procedure RotarDerecha(cant:byte);
                //---------busqueda de elementos--------
                function  busq_sec(ele:integer):integer;
                function  busq_bi(ele:integer):integer;
@@ -113,7 +116,6 @@ uses
 
                //#2021_1. Retorna el elemeno mas repetido (moda)
                function elementoModa():integer;
-
                procedure intercalar3Vectores(v1,v2,v3:vector);
                procedure mezclarDesc(v1,v2: vector);
 
@@ -129,6 +131,14 @@ begin
  dim:=0;
  for i:=1 to MAX_ELE do;
     elem[i]:=0;
+end;
+
+constructor vector.crear(v: vector);
+var i:integer;
+begin
+ dim := v.dim;
+ for i:=1 to v.dim do
+    self.elem[i] := v.elem[i];
 end;
 
 procedure vector.cargar();//f7 paso a paso,
@@ -267,16 +277,34 @@ begin
   end;
 end;
 
-procedure vector.rotar(cantidad: integer);
+procedure vector.RotarIzquierda(cantidad: integer);
 var i,j,elemento:integer;
 begin
   for j:=1 to cantidad do begin
-      elemento:=elem[1];
+      elemento := elem[1];
       for i:=1 to dim-1 do begin
         elem[i]:=elem[i+1];
       end;
       elem[dim]:=elemento;
   end;
+end;
+
+procedure vector.RotarIzquierdaV2(cant: byte);
+var vecAux : vector;
+    i : cardinal;
+begin
+ vecAux := Vector.crear(self);
+ for i:=1 to dim do
+   self.elem[i] := vecAux.elem[(i-1+dim-cant) mod dim + 1];
+end;
+
+procedure vector.RotarDerecha(cant: byte);
+var vecAux : vector;
+    i : cardinal;
+begin
+ vecAux := Vector.crear(self);
+ for i:=1 to dim do
+   self.elem[i] := vecAux.elem[(i-1+cant) mod dim + 1];
 end;
 
 //Busca un elemento      (ele=2)
@@ -305,9 +333,6 @@ begin
       result:=i
     else
       result:=-1;
-  {--------------------------------------------}
-
-
 end;
 //elem[ 1 | 4 | 8 | 10 ] -->result=> 3(posicion)
 //Busca un elemento (ojo.-vector ordenado ascendentemente) (ele=8)

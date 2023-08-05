@@ -30,36 +30,25 @@ Type
 
   FileTipo=Class
      private
-          f:file of Alumno; //
-    nom,ext:String;        //Nombre del archivo
-       modo:integer; //Lectura o Escritura
+          f : file of Alumno; //
+    nom,ext : String;        //Nombre del archivo
+       modo : integer; //Lectura o Escritura
     {TENER encuenta
     - se puede escribir cuando (creamos el archivo)o(cuando este abierto"modo lectura")
     - solo podemos sacar la informacion(cuando este abierto"modo lectura")
     }
     public
        Constructor Create();
-       //enviar nombre del archivo
-       Procedure setNom(s:String);
-       //cargar extencion del archico"txt"
-       Procedure setExt(s:String);
-       //Crea un archivo nuevo, Activa modo escritura(0)
-       procedure Crear();
-       //Abre el archivo creado,Activamos modo lectura(1)
-       procedure Abrir();
-       //Escribe un registro o fila
-       procedure EscribirTipo(r:Tipo);
-       //devuelve El type de un registro o fila
-       function LeerTipo:Tipo;
-       //retorna nombre
-       function getNom():String;
-       //retorna extension
-       function getExt():String;
-       //verifica si llegaste al final de la fila
-       Function EsFin():Boolean;
-       //cierra un archivo
-       procedure Cerrar();
-
+       Procedure setNom(s:String); //enviar nombre del archivo
+       Procedure setExt(s:String); //cargar extencion del archico"txt"
+       procedure Crear(); //Crea un archivo nuevo, Activa modo escritura(0)
+       procedure Abrir(); //Abre el archivo creado,Activamos modo lectura(1)
+       procedure Cerrar(); //cierra un archivo
+       procedure EscribirTipo(r:Tipo); //Escribe un registro o fila
+       function LeerTipo:Tipo; //devuelve El type de un registro o fila
+       function getNom():String; //retorna nombre
+       function getExt():String; //retorna extension
+       Function EsFin():Boolean; //verifica si llegaste al final de la fila
        {---------Adicionales-------------------}
        procedure Posicionar(pos:Integer);//fijar el puntero en registro
        function tamano():Integer;//Cantidad de registros del archivo
@@ -75,25 +64,14 @@ Type
        //Intercambia dos regristros
        procedure permutar(c1, r1: Integer; n1, d1: String;a,c2, r2: Integer; n2, d2: String;b: integer);
 
-
-       //b) Agregar los datos de un Nuevo Alumno.
-       procedure ejerB(c1, r1: Integer; n1, d1: String);
-       //c) buscar por registro y mostrar
-       function ejerC(registro:Integer):String;
-       //d)Modificar el "domicilio" del alumno con CI: 111
-       procedure ejerD(CI:Integer;Dom:String);
-       //Elimina un registro
-       procedure ejerF(registro:Integer);
-       //Copia un registro
-       procedure copia(A:FileTipo);
+       procedure ejerB(c1, r1: Integer; n1, d1: String); //b) Agregar los datos de un Nuevo Alumno.
+       function ejerC(registro:Integer):String; //c) buscar por registro y mostrar
+       procedure ejerD(CI:Integer;Dom:String);  //d)Modificar el "domicilio" del alumno con CI: 111
+       procedure ejerF(registro:Integer); //Elimina un registro
+       procedure copia(A:FileTipo); //Copia un registro
        //falta
-
-       //ordena el registro ASCENDENTEMENT por "Nombre"
-       procedure ejerI();
-       //ordena el registro ASCENDENTEMENT por "registro"
-       procedure ejerJ();
-
-       //
+       procedure ejerI(); //ordena el registro ASCENDENTEMENT por "Nombre"
+       procedure ejerJ(); //ordena el registro ASCENDENTEMENT por "registro"
        procedure ejerG(archivoNota : FileNota);
   end;
 

@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 505
+  Left = 411
   Height = 506
-  Top = 173
+  Top = 213
   Width = 792
   Caption = 'Form1'
   ClientHeight = 481
@@ -73,7 +73,7 @@ object Form1: TForm1
   object Button1: TButton
     Left = 90
     Height = 31
-    Top = 320
+    Top = 336
     Width = 94
     Caption = 'Primer'
     OnClick = Button1Click
@@ -82,7 +82,7 @@ object Form1: TForm1
   object Button2: TButton
     Left = 190
     Height = 31
-    Top = 320
+    Top = 336
     Width = 94
     Caption = 'Anterior'
     OnClick = Button2Click
@@ -91,7 +91,7 @@ object Form1: TForm1
   object Button3: TButton
     Left = 300
     Height = 31
-    Top = 320
+    Top = 336
     Width = 94
     Caption = 'Siguiente'
     OnClick = Button3Click
@@ -100,7 +100,7 @@ object Form1: TForm1
   object Button4: TButton
     Left = 410
     Height = 31
-    Top = 320
+    Top = 336
     Width = 94
     Caption = 'Ultimo'
     OnClick = Button4Click
@@ -128,20 +128,21 @@ object Form1: TForm1
     Top = 10
     object MenuItem1: TMenuItem
       Caption = 'Archivo'
+      object MenuItem3: TMenuItem
+        Caption = 'Seleccionar'
+        OnClick = MenuItem3Click
+      end
       object MenuItem2: TMenuItem
         Caption = 'Nuevo'
         OnClick = MenuItem2Click
       end
-      object MenuItem3: TMenuItem
+      object MenuItem22: TMenuItem
         Caption = 'Abrir'
-        OnClick = MenuItem3Click
+        OnClick = MenuItem22Click
       end
       object MenuItem4: TMenuItem
         Caption = 'Cerrar'
         OnClick = MenuItem4Click
-      end
-      object MenuItem5: TMenuItem
-        Caption = 'Salir'
       end
     end
     object MenuItem6: TMenuItem

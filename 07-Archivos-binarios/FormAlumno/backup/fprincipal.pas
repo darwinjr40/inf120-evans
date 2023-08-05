@@ -41,9 +41,9 @@ type
     MenuItem2: TMenuItem;
     MenuItem20: TMenuItem;
     MenuItem21: TMenuItem;
+    MenuItem22: TMenuItem;
     MenuItem3: TMenuItem;
     MenuItem4: TMenuItem;
-    MenuItem5: TMenuItem;
     MenuItem6: TMenuItem;
     MenuItem7: TMenuItem;
     MenuItem8: TMenuItem;
@@ -67,17 +67,20 @@ type
     procedure MenuItem19Click(Sender: TObject);
     procedure MenuItem20Click(Sender: TObject);
     procedure MenuItem21Click(Sender: TObject);
+    procedure MenuItem22Click(Sender: TObject);
     procedure MenuItem2Click(Sender: TObject);
     //Abre un archivo "Open Dialog"
     procedure MenuItem3Click(Sender: TObject);
     procedure MenuItem4Click(Sender: TObject);
+    procedure MenuItem5Click(Sender: TObject);
     procedure MenuItem7Click(Sender: TObject);
     procedure MenuItem8Click(Sender: TObject);
     procedure MenuItem9Click(Sender: TObject);
+    procedure Mostrar(r: Tipo);
   private
   T:FileTipo; //Objeto
   nota:FileNota;
-  //reg:TIPO;
+  reg : Tipo;
   public
 
   end;
@@ -106,21 +109,38 @@ end;
 
 
 procedure TForm1.Button1Click(Sender: TObject);
-var r:Tipo;
 begin
-  T.Posicionar(1);
-  r:=T.LeerTipo;
-  Edit1.Text:=IntToStr(r.Ci);
-  Edit2.Text:=IntToStr(r.Reg);
-  Edit3.Text:=r.Nom;
-  Edit4.Text:=r.Dir;
+  T.Posicionar(0);
+  self.reg:=T.LeerTipo;
+  self.Mostrar(reg);
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
+begin
+  if (T.getpos() = 1) then begin
+    ShowMessage('Esta en el primer registro');
+  end else begin
+    T.Posicionar(T.getpos()-2);
+    reg:=T.LeerTipo;
+    self.Mostrar(reg);
+  end;
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
 var r:Tipo;
 begin
-  if (T.getpos()-2 >= 0) then begin
-    T.Posicionar(T.getpos()-2);
+  //if (T.getpos() <= T.tamano()) then begin
+  //  T.Posicionar(T.getpos());
+  //  r:=T.LeerTipo;
+  //  Edit1.Text:=IntToStr(r.Ci);
+  //  Edit2.Text:=IntToStr(r.Reg);
+  //  Edit3.Text:=r.Nom;
+  //  Edit4.Text:=r.Dir;
+  //end;
+  if t.EsFin() then
+  begin
+    ShowMessage('esta en el ultimo registro');
+  end else begin
     r:=T.LeerTipo;
     Edit1.Text:=IntToStr(r.Ci);
     Edit2.Text:=IntToStr(r.Reg);
@@ -128,28 +148,11 @@ begin
     Edit4.Text:=r.Dir;
   end;
 end;
-
-procedure TForm1.Button3Click(Sender: TObject);
-var r:Tipo;
-begin
-if (T.getpos() <= T.tamano()) then begin
-  T.Posicionar(T.getpos());
-  r:=T.LeerTipo;
-  Edit1.Text:=IntToStr(r.Ci);
-  Edit2.Text:=IntToStr(r.Reg);
-  Edit3.Text:=r.Nom;
-  Edit4.Text:=r.Dir;
-end;
-end;
 procedure TForm1.Button4Click(Sender: TObject);
-var r:Tipo;
 begin
-  T.Posicionar(T.tamano()); //posicion mas uno
-  r:=T.LeerTipo;
-  Edit1.Text:=IntToStr(r.Ci);
-  Edit2.Text:=IntToStr(r.Reg);
-  Edit3.Text:=r.Nom;
-  Edit4.Text:=r.Dir;
+  T.Posicionar(T.tamano()-1);
+  reg:=T.LeerTipo;
+  self.Mostrar(reg);
 end;
 
 
@@ -173,52 +176,48 @@ begin
       i:=i+1;
     end;
     T.setExt(ext);//set 'nombre' de extencion'txt'
-    //Un ves teniendo el "nombre"+"ext"
-    T.abrir();    //Abrimos el objeto
-    ShowMessage('Archivo de alumno Abierto...');
-    t.Cerrar();
   end;
 end;
 
 procedure TForm1.MenuItem4Click(Sender: TObject);
 begin
+ try
   T.Cerrar();
-  ShowMessage('Archivo de alumno Cerrado...');
+ except
+   on E: Exception do ShowMessage(E.Message);
+ end;
+end;
+
+procedure TForm1.MenuItem5Click(Sender: TObject);
+begin
+
 end;
 
 procedure TForm1.MenuItem7Click(Sender: TObject);
 var cad:String;
       r:Tipo;
 begin
-  if(t.existe(T.getNom(),t.getExt()))then begin
     t.Abrir();
-    T.Posicionar(1);//el puntero lo iniciamos en la posicion 1
+    T.Posicionar(0);//el puntero lo iniciamos en la posicion 1
     cad:='Ci    Registro   Nombre         Direccion'+#10#13;
     WHILE(not T.EsFin())do begin //Incrementa el indice automaticamente Hasta llegar al ultimo registro
        r:= T.LeerTipo;
        cad:=cad+IntToStr(r.Ci)+'  '+IntToStr(r.Reg)+'  '+r.Nom+'  '+r.Dir+#10#13;
     end;
-     ShowMessage(cad);
      t.Cerrar();
-  end else begin
-     ShowMessage('El archivo '+t.getNom()+'.'+t.getExt()+' no existe');
-  end;
+     ShowMessage(cad);
 end;
 
 procedure TForm1.MenuItem8Click(Sender: TObject);
-var r:Tipo;
 begin
- if(t.existe(t.getNom(),t.getExt()))then begin
-     r.Ci:=StrToInt(InputBox('Adicionar ','Carnet','000'));
-     r.Reg:=StrToInt(InputBox('Adicionar ','Registro','000000'));
-     r.Nom:=InputBox('Adicionar ','Nombre_Completo','Juan Perez');
-     r.Dir:=InputBox('Adicionar ','Diecion','Av.Bush');
-     t.Abrir();
-     T.Posicionar(T.tamano()+1); //seek(f,filesize(f)) Estamos en T[0]
-     T.EscribirTipo(r); //write(f,r)
- end else begin
-  ShowMessage('El archivo '+t.getNom()+'.'+t.getExt()+' no existe');
- end;
+ reg.Ci:=StrToInt(InputBox('Adicionar ','Carnet','000'));
+ reg.Reg:=StrToInt(InputBox('Adicionar ','Registro','000000'));
+ reg.Nom:=InputBox('Adicionar ','Nombre_Completo','Juan Perez');
+ reg.Dir:=InputBox('Adicionar ','Diecion','Av.Bush');
+ t.Abrir();
+ T.Posicionar(T.tamano());
+ T.EscribirTipo(reg);
+ t.Cerrar();
 end;
 
 procedure TForm1.MenuItem9Click(Sender: TObject);
@@ -228,10 +227,18 @@ begin
           StrToInt(InputBox('Adicionar ','Ingrese una posicion','000')));
 end;
 
+procedure TForm1.Mostrar(r: Tipo);
+begin
+ Edit1.Text:=IntToStr(r.Ci);
+ Edit2.Text:=IntToStr(r.Reg);
+ Edit3.Text:=r.Nom;
+ Edit4.Text:=r.Dir;
+end;
+
 procedure TForm1.MenuItem11Click(Sender: TObject);
 begin
    //t.setNom('alumnos');    t.setExt('dat');
-  if(t.existe(t.getNom(),t.getExt()))then begin
+  if(t.existe())then begin
       T.ejerF(StrToInt(InputBox('Eliminar','Registro','202001')));
   end else begin
       ShowMessage('El archivo '+t.getNom()+'.'+t.getExt()+' no existe');
@@ -241,7 +248,7 @@ end;
 procedure TForm1.MenuItem12Click(Sender: TObject);
 begin
      t.setNom('alumnos');    t.setExt('dat');
-  if(t.existe(t.getNom(),t.getExt()))then begin
+  if(t.existe())then begin
      T.ejerI();
   end else begin
       ShowMessage('El archivo '+t.getNom()+'.'+t.getExt()+' no existe');
@@ -252,7 +259,7 @@ end;
 procedure TForm1.MenuItem13Click(Sender: TObject);
 begin
      t.setNom('alumnos');    t.setExt('dat');
-  if(t.existe(t.getNom(),t.getExt()))then begin
+  if(t.existe())then begin
      T.ejerJ();
   end else begin
       ShowMessage('El archivo '+t.getNom()+'.'+t.getExt()+' no existe');
@@ -282,7 +289,7 @@ var Ci:Integer;
     dom:String;
 begin
   //t.setNom('alumnos');  t.setExt('dat');
- if(t.existe(t.getNom(),t.getExt()))then begin
+ if(t.existe())then begin
        ci:=StrToInt(InputBox('Buscar','CI','111'));
        dom:=InputBox('Modificar','Domicilio','calle ichilo');
        t.ejerD(ci,dom);
@@ -292,11 +299,14 @@ begin
 end;
 
 procedure TForm1.MenuItem18Click(Sender: TObject);
-var nombre,extension:String;
 begin
-  nombre:=InputBox('Cambiar Archivo','Nombre','');
-  extension:=InputBox('Cambiar Archivo','Extensión','');
-  ShowMessage(BoolToStr(t.existe(nombre,extension),true));
+  //asumir que esta abierto
+  t.Posicionar(t.getpos()-1);
+  reg.Ci  := StrToInt(Edit1.Text);
+  reg.Reg := StrToInt(Edit2.Text);
+  reg.Nom := Edit3.Text;
+  reg.Dir := Edit4.Text;
+  t.EscribirTipo(reg);
 end;
 
 procedure TForm1.MenuItem19Click(Sender: TObject);
@@ -332,16 +342,17 @@ end;
 procedure TForm1.Button5Click(Sender: TObject);
 var n :UnitNota.nota;
 begin
- NOTA.Crear();
- n.INF110:=70;   n.LIN100:=80; n.MAT101:=50; n.FIS101:=20;  n.INF119:=80;
- nota.EscribirTipo(n);
- n.INF110:=80;   n.LIN100:=50; n.MAT101:=100; n.FIS101:=30;  n.INF119:=90;
- nota.EscribirTipo(n);
- n.INF110:=50;   n.LIN100:=90; n.MAT101:=80; n.FIS101:=90;  n.INF119:=70;
-  nota.EscribirTipo(n);
- n.INF110:=90;   n.LIN100:=80; n.MAT101:=80; n.FIS101:=70;  n.INF119:=60;
- nota.EscribirTipo(n);
- NOTA.Cerrar();
+ ShowMessage(IntToStr(T.getpos()));
+ //NOTA.Crear();
+ //n.INF110:=70;   n.LIN100:=80; n.MAT101:=50; n.FIS101:=20;  n.INF119:=80;
+ //nota.EscribirTipo(n);
+ //n.INF110:=80;   n.LIN100:=50; n.MAT101:=100; n.FIS101:=30;  n.INF119:=90;
+ //nota.EscribirTipo(n);
+ //n.INF110:=50;   n.LIN100:=90; n.MAT101:=80; n.FIS101:=90;  n.INF119:=70;
+ // nota.EscribirTipo(n);
+ //n.INF110:=90;   n.LIN100:=80; n.MAT101:=80; n.FIS101:=70;  n.INF119:=60;
+ //nota.EscribirTipo(n);
+ //NOTA.Cerrar();
 end;
 
 procedure TForm1.Button6Click(Sender: TObject);
@@ -353,6 +364,12 @@ end;
 procedure TForm1.MenuItem21Click(Sender: TObject);
 begin
   t.ejerG(nota);
+end;
+
+procedure TForm1.MenuItem22Click(Sender: TObject);
+begin
+  self.T.Abrir();
+  self.Button1.Click;
 end;
 
 

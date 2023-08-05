@@ -7,6 +7,16 @@ interface
 uses
   Classes, SysUtils,Dialogs,UnitNota;
 Type
+
+  TModo = class
+    public
+      const
+       CERRADO = 0;
+       ABIERTO = 1;
+       LECTURA = 2;
+       ESCRITURA = 3;
+  end;
+
    Alumno=Record
      Ci:Integer;
      Reg:Integer;
@@ -54,7 +64,7 @@ Type
        function tamano():Integer;//Cantidad de registros del archivo
        function getpos():integer;//en que registro me encuentro
        function getModo():Integer;//devuelve en que modo esta el archivo
-       function existe(nombre, extension: String):Boolean;
+       function existe():Boolean;
        procedure eliminar(nombre,extension:string);
        procedure cambiar_nom(nombre, extension: String);
        //Permite copiar la informacion de los registros en las variables que entran por "referencia"
@@ -64,10 +74,7 @@ Type
        //Intercambia dos regristros
        procedure permutar(c1, r1: Integer; n1, d1: String;a,c2, r2: Integer; n2, d2: String;b: integer);
 
-
-
        procedure ejerB(c1, r1: Integer; n1, d1: String); //b) Agregar los datos de un Nuevo Alumno.
-
        function ejerC(registro:Integer):String; //c) buscar por registro y mostrar
        procedure ejerD(CI:Integer;Dom:String);  //d)Modificar el "domicilio" del alumno con CI: 111
        procedure ejerF(registro:Integer); //Elimina un registro
@@ -84,9 +91,10 @@ implementation
 //inicializa el nombre que tendra el archivo y activa el modo
 constructor FileTipo.Create();
 begin
-  nom:='FileTipo';
-  ext:='dat';
-  modo:=-1;
+  nom := 'FileTipo';
+  ext := 'dat';
+  modo := -1;
+  //modo := TModo.CERRADO;
 end;
 
 procedure FileTipo.setNom(s: String);
@@ -111,20 +119,25 @@ end;
 //Crea un archivo nuevo, Activa modo escritura
 procedure FileTipo.Crear();
 begin
+ //if self.modo = TModo.CERRADO then begin
+ //  ShowMessage('El archivo esta abierto');
+ //  exit;
+ //end;
+
  Assign(f,nom+'.'+ext);//Asignando un nombre a f
-   {$I-}
-   Rewrite(f);//Crea o sobreEscribe un nuevo texto
-   {$I+}
-   if(IOResult<>0)then begin
-     ShowMessage('FileTipo.Crear : Error en creacion de TIPO.');
-   end else begin //ShowMessage('Texto.Crear : Archivo TXT creado');
-     modo:=0;   //0 -> modo escritura
-   end;
+ {$I-}
+  Rewrite(f);//Crea o sobreEscribe un nuevo texto
+ {$I+}
+ if(IOResult<>0)then begin
+   ShowMessage('FileTipo.Crear : Error en creacion de TIPO.');
+ end else begin //ShowMessage('Texto.Crear : Archivo TXT creado');
+   modo:=0;   //0 -> modo escritura
+ end;
 end;
-//Activamos modo lectura
+//abrir modo lectura
 procedure FileTipo.Abrir();
 begin
-Assign(f,nom+'.'+ext);//Asignando un nombre a f
+  Assign(f,nom+'.'+ext);//Asignando un nombre a f
   {$I-}
   Reset(f);//abre un texto con el nombre que se le asigno
   {$I+}
@@ -162,20 +175,23 @@ begin
 end;
 //devuelve true si esta vacion o si llego al ultimo registro
 function FileTipo.EsFin(): Boolean;
+var r: boolean;
 begin
-  Result:=EOf(f);
+  if (modo = -1)then r:=True else r:=EOf(f);
+  Result:=r;
 end;
 //Cerramos el archivo
 procedure FileTipo.Cerrar();
 begin
+  if (modo = -1) then raise Exception.Create('El archivo estaba CERRADO');
   Close(f);
   modo:=-1;
 end;
-//Establece el puntero en esa direccion pos (1..)
+//Establece el puntero en esa direccion pos
 procedure FileTipo.Posicionar(pos: Integer);
 begin
- if((pos>=1)and((pos-1)<=FileSize(f)))then begin
-   Seek(f,pos-1); //texto empieza en el registro 0
+ if((pos>=0)and((pos)<=FileSize(f)))then begin
+   Seek(f,pos); //texto empieza en el registro 0
  end else begin
    ShowMessage('FileTipo.posicionar: Fuera de rango...');
  end;
@@ -196,9 +212,9 @@ begin
   result:=modo;
 end;
 
-function FileTipo.existe(nombre, extension: String): Boolean;
+function FileTipo.existe: Boolean;
 begin
- Assign(f,nombre+'.'+extension);
+ Assign(f,self.nom+'.'+self.ext);//Asignando un nombre a f
  {$I-}  Reset(f);  {$I+}  //abrir archivo
  if(IOResult<>0)then begin
    result:=false;
@@ -210,7 +226,7 @@ end;
 
 procedure FileTipo.eliminar(nombre, extension: string);
 begin
- if(existe(nombre,extension))then begin
+ if(existe())then begin
   Erase(f);
  end else begin
   // ShowMessage('El archivo '+nombre+'.'+extension+' no existe');
@@ -220,7 +236,7 @@ end;
 procedure FileTipo.cambiar_nom(nombre, extension: String);
 begin
    eliminar(nombre,extension); //elimina, si existe el archivo nombre.extension
-   if(existe(getnom(),getExt()))then begin //existe "alumnos.dat"
+   if(existe())then begin //existe "alumnos.dat"
        setNom(nombre); setExt(extension);  //cambiamos nombres del objeto
        Rename(f,nombre+'.'+extension);     //cambiar nombre "alumnos.dat"-->"nuevo.txt"
    end else begin
@@ -258,7 +274,7 @@ end;
 procedure FileTipo.ejerB(c1, r1: Integer; n1, d1: String);
 var pos:integer;
 begin
-   if(existe(getNom(),getExt()))then begin
+   if(existe())then begin
       Abrir();
       pos:=tamano()+1;
       grabar(c1,r1,n1,d1,pos);
@@ -272,7 +288,7 @@ function FileTipo.ejerC(registro: Integer): String;
 var     c,r,i:integer;
      n,d:String;
 begin
- if(existe(getNom(),getExt()))then begin
+ if(existe())then begin
       Abrir();
       i:=1; c:=0;r:=0;n:='';d:='';
       Accesar(c,r,n,d,i);

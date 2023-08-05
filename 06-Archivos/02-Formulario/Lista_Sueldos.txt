@@ -1,5 +1,0 @@
-Juan Perez            H     Tecnico        500   $u$
-Josefina Mojica   M     Secretaria     200   $u$
-Maria Nuñez        M    Experto         300    $u$
-Marco Condori    H     Jefe               1000  $u$
-Ana Maria             M    Profesional   800   $u$   

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units Count="13">
+      <Unit0>
+        <Filename Value="e5.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="24" Y="10"/>
+        <UsageCount Value="115"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="ftexto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Ftexto"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="60"/>
+        <CursorPos X="32" Y="74"/>
+        <UsageCount Value="115"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="utexto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Utexto"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="89"/>
+        <CursorPos X="26" Y="99"/>
+        <UsageCount Value="115"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="C:\lazarus\lcl\include\menuitem.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="58"/>
+        <CursorPos Y="87"/>
+        <UsageCount Value="10"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32callback.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2657"/>
+        <CursorPos Y="2681"/>
+        <UsageCount Value="4"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1561"/>
+        <CursorPos Y="1583"/>
+        <UsageCount Value="4"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32wsforms.pp"/>
+        <UnitName Value="Win32WSForms"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="374"/>
+        <CursorPos Y="388"/>
+        <UsageCount Value="4"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32object.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="409"/>
+        <CursorPos Y="423"/>
+        <UsageCount Value="4"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="C:\lazarus\lcl\include\application.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1403"/>
+        <CursorPos Y="1419"/>
+        <UsageCount Value="4"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="nuevo.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="7"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="cadenas.pas"/>
+        <UnitName Value="Cadenas"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="32"/>
+        <CursorPos X="35" Y="32"/>
+        <UsageCount Value="28"/>
+        <Loaded Value="True"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="C:\lazarus\lcl\include\messagedialogs.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="211"/>
+        <CursorPos Y="227"/>
+        <UsageCount Value="10"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="..\..\03_Vector_Char\cadenas.pas"/>
+        <UnitName Value="Cadenas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="207"/>
+        <CursorPos Y="215"/>
+        <UsageCount Value="10"/>
+      </Unit12>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="ftexto.pas"/>
+        <Caret Line="282" Column="27" TopLine="272"/>
+      </Position1>
+      <Position2>
+        <Filename Value="ftexto.pas"/>
+        <Caret Line="313" Column="37" TopLine="296"/>
+      </Position2>
+      <Position3>
+        <Filename Value="ftexto.pas"/>
+        <Caret Line="280" Column="15" TopLine="276"/>
+      </Position3>
+      <Position4>
+        <Filename Value="utexto.pas"/>
+        <Caret Line="505" TopLine="499"/>
+      </Position4>
+      <Position5>
+        <Filename Value="utexto.pas"/>
+        <Caret Line="258" TopLine="250"/>
+      </Position5>
+      <Position6>
+        <Filename Value="utexto.pas"/>
+        <Caret Line="259" TopLine="250"/>
+      </Position6>
+      <Position7>
+        <Filename Value="utexto.pas"/>
+        <Caret Line="260" TopLine="250"/>
+      </Position7>
+      <Position8>
+        <Filename Value="utexto.pas"/>
+        <Caret Line="506" TopLine="499"/>
+      </Position8>
+      <Position9>
+        <Filename Value="utexto.pas"/>
+        <Caret Line="501" Column="14" TopLine="499"/>
+      </Position9>
+      <Position10>
+        <Filename Value="ftexto.pas"/>
+        <Caret Line="280" Column="15" TopLine="276"/>
+      </Position10>
+      <Position11>
+        <Filename Value="ftexto.pas"/>
+        <Caret Line="70" Column="49" TopLine="63"/>
+      </Position11>
+      <Position12>
+        <Filename Value="ftexto.pas"/>
+        <Caret Line="337" Column="3" TopLine="310"/>
+      </Position12>
+      <Position13>
+        <Filename Value="ftexto.pas"/>
+        <Caret Line="70" Column="34" TopLine="70"/>
+      </Position13>
+      <Position14>
+        <Filename Value="ftexto.pas"/>
+        <Caret Line="287" Column="16" TopLine="277"/>
+      </Position14>
+      <Position15>
+        <Filename Value="utexto.pas"/>
+        <Caret Line="92" Column="26" TopLine="86"/>
+      </Position15>
+      <Position16>
+        <Filename Value="ftexto.pas"/>
+        <Caret Line="287" Column="16" TopLine="277"/>
+      </Position16>
+      <Position17>
+        <Filename Value="ftexto.pas"/>
+        <Caret Line="284" Column="9" TopLine="277"/>
+      </Position17>
+      <Position18>
+        <Filename Value="ftexto.pas"/>
+        <Caret Line="68" Column="28" TopLine="66"/>
+      </Position18>
+      <Position19>
+        <Filename Value="ftexto.pas"/>
+        <Caret Line="69" Column="36" TopLine="57"/>
+      </Position19>
+      <Position20>
+        <Filename Value="ftexto.pas"/>
+        <Caret Line="187" Column="23" TopLine="177"/>
+      </Position20>
+      <Position21>
+        <Filename Value="ftexto.pas"/>
+        <Caret Line="201" Column="23" TopLine="190"/>
+      </Position21>
+      <Position22>
+        <Filename Value="ftexto.pas"/>
+        <Caret Line="208" Column="23" TopLine="197"/>
+      </Position22>
+      <Position23>
+        <Filename Value="ftexto.pas"/>
+        <Caret Line="227" Column="23" TopLine="216"/>
+      </Position23>
+      <Position24>
+        <Filename Value="ftexto.pas"/>
+        <Caret Line="235" Column="23" TopLine="224"/>
+      </Position24>
+      <Position25>
+        <Filename Value="ftexto.pas"/>
+        <Caret Line="241" Column="23" TopLine="230"/>
+      </Position25>
+      <Position26>
+        <Filename Value="ftexto.pas"/>
+        <Caret Line="263" Column="23" TopLine="252"/>
+      </Position26>
+      <Position27>
+        <Filename Value="ftexto.pas"/>
+        <Caret Line="283" Column="27" TopLine="57"/>
+      </Position27>
+      <Position28>
+        <Filename Value="ftexto.pas"/>
+        <Caret Line="121" Column="21" TopLine="142"/>
+      </Position28>
+      <Position29>
+        <Filename Value="ftexto.pas"/>
+        <Caret Line="139" Column="8" TopLine="130"/>
+      </Position29>
+      <Position30>
+        <Filename Value="ftexto.pas"/>
+        <Caret Line="70" Column="27" TopLine="62"/>
+      </Position30>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <Watches>
+      <Item>
+        <Expression Value="pos"/>
+      </Item>
+      <Item>
+        <Expression Value="cad"/>
+      </Item>
+      <Item>
+        <Expression Value="pal"/>
+      </Item>
+      <Item>
+        <Expression Value="pos"/>
+      </Item>
+      <Item>
+        <Expression Value="cadenafil"/>
+      </Item>
+      <Item>
+        <Expression Value="cad"/>
+      </Item>
+      <Item>
+        <Expression Value="f"/>
+      </Item>
+      <Item>
+        <Expression Value="nom"/>
+      </Item>
+      <Item>
+        <Expression Value="ext"/>
+      </Item>
+      <Item>
+        <Expression Value="nombre"/>
+      </Item>
+      <Item>
+        <Expression Value="extension"/>
+      </Item>
+      <Item>
+        <Expression Value="T.nom"/>
+      </Item>
+      <Item>
+        <Expression Value="t.ext"/>
+      </Item>
+      <Item>
+        <Expression Value="v.elem"/>
+      </Item>
+      <Item>
+        <Expression Value="i"/>
+      </Item>
+      <Item>
+        <Expression Value="moda"/>
+      </Item>
+    </Watches>
+  </Debugging>
+</CONFIG>

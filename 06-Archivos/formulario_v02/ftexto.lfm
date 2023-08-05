@@ -1,0 +1,135 @@
+object Form1: TForm1
+  Left = 426
+  Height = 571
+  Top = 167
+  Width = 938
+  Caption = ' Mi Block de Notas'
+  ClientHeight = 546
+  ClientWidth = 938
+  DesignTimePPI = 120
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '2.2.4.0'
+  object M: TMemo
+    Left = 0
+    Height = 546
+    Top = 0
+    Width = 938
+    Align = alClient
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Lines.Strings = (
+      ''
+    )
+    OnChange = MChange
+    ParentFont = False
+    ScrollBars = ssBoth
+    TabOrder = 0
+  end
+  object MainMenu1: TMainMenu
+    Left = 24
+    Top = 16
+    object MenuItem9: TMenuItem
+      Caption = 'Archivo'
+      object MenuItem13: TMenuItem
+        Caption = 'Nuevo'
+        OnClick = MenuItem13Click
+      end
+      object MenuItem14: TMenuItem
+        Caption = 'Abrir'
+        OnClick = MenuItem14Click
+      end
+      object MenuItem15: TMenuItem
+        Caption = 'Guardar'
+        OnClick = MenuItem15Click
+      end
+      object MenuItem16: TMenuItem
+        Caption = 'Guardar Como'
+        OnClick = MenuItem16Click
+      end
+      object MenuItem17: TMenuItem
+        Caption = 'Salir'
+        OnClick = MenuItem17Click
+      end
+    end
+    object MenuItem10: TMenuItem
+      Caption = 'Edicion'
+    end
+    object MenuItem11: TMenuItem
+      Caption = 'Formato'
+    end
+    object MenuItem12: TMenuItem
+      Caption = 'Ayuda'
+      object MenuItem29: TMenuItem
+        Caption = 'MenuItem29'
+        OnClick = MenuItem29Click
+      end
+    end
+    object MenuItem20: TMenuItem
+      Caption = 'Practico'
+      OnClick = MenuItem20Click
+      object MenuItem19: TMenuItem
+        Caption = '01_copiar'
+        OnClick = MenuItem19Click
+      end
+      object MenuItem21: TMenuItem
+        Caption = '02_eliminar'
+        OnClick = MenuItem21Click
+      end
+      object MenuItem22: TMenuItem
+        Caption = '03_invertir-filas'
+        OnClick = MenuItem22Click
+      end
+      object MenuItem25: TMenuItem
+        Caption = '04_renombrar'
+        OnClick = MenuItem25Click
+      end
+      object MenuItem26: TMenuItem
+        Caption = '05_invertir-cada-linea'
+        OnClick = MenuItem26Click
+      end
+      object MenuItem27: TMenuItem
+        Caption = '06_guardar_numeros_reales'
+        OnClick = MenuItem27Click
+      end
+      object MenuItem28: TMenuItem
+        Caption = '07_total_caracteres,palabras,lineas'
+        OnClick = MenuItem28Click
+      end
+      object MenuItem23: TMenuItem
+        Caption = 'Tamaño'
+        OnClick = MenuItem23Click
+      end
+      object MenuItem24: TMenuItem
+        Caption = 'Get(pos)'
+        OnClick = MenuItem24Click
+      end
+      object MenuItem4: TMenuItem
+        Caption = 'Mezclar(ta,tb)'
+        OnClick = MenuItem4Click
+      end
+    end
+    object MenuItem1: TMenuItem
+      Caption = 'Examen'
+      object MenuItem2: TMenuItem
+        Caption = 'Frecuencia de palabras'
+        OnClick = MenuItem2Click
+      end
+      object MenuItem3: TMenuItem
+        Caption = 'promedio y mayor'
+        OnClick = MenuItem3Click
+      end
+    end
+  end
+  object OD: TOpenDialog
+    DefaultExt = '.txt'
+    Left = 104
+    Top = 16
+  end
+  object SD: TSaveDialog
+    Left = 168
+    Top = 16
+  end
+end

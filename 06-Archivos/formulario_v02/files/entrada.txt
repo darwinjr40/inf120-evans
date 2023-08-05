@@ -1,0 +1,4 @@
+﻿La programación de computadoras es el arte de hacer
+que una computadora haga lo que nosotros queramos.
+En el nivel más simple consiste en ingresar en la computadora
+una secuencia de órdenes para lograr un cierto objetivo.

@@ -1,8 +1,0 @@
-hola - mezcla1
-alistate - mezcla2
-bienvenido - mezcla1 
-el- mezcla2
-a - mezcla1 
-sabado - mezcla2
-inf120 - mezcla1
-hay examen - mezcla2

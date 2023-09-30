@@ -16,9 +16,12 @@ type
     Button2: TButton;
     Edit1: TEdit;
     Edit2: TEdit;
+    Edit3: TEdit;
     MainMenu1: TMainMenu;
     MenuItem1: TMenuItem;
     MenuItem10: TMenuItem;
+    MenuItem11: TMenuItem;
+    MenuItem12: TMenuItem;
     MenuItem2: TMenuItem;
     MenuItem3: TMenuItem;
     MenuItem4: TMenuItem;
@@ -96,19 +99,25 @@ end;
 
 procedure TForm1.MenuItem11Click(Sender: TObject);
 begin
-  //codgio
+  obj.Invertir();
 end;
 
 procedure TForm1.MenuItem12Click(Sender: TObject);
+var r: boolean;
+    resp: string;
 begin
-  //metodo2
+  r := obj.EsCapicua();
+  resp := BoolToStr(r, true);
+  ShowMessage(resp);
 end;
 
 procedure TForm1.Button1Click(Sender: TObject);
 var cadena : string;
+    nro: cardinal;
 begin
   cadena := Edit1.Text;   //'5' //strtoint('5')=> 5
-  obj.SetValor(StrToInt(cadena));
+  nro := StrToInt(cadena);
+  obj.SetValor(nro);
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);

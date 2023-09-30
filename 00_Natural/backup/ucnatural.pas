@@ -24,6 +24,8 @@ type
       function  ToBaseN(b : cardinal) : String;
       {procesos}
       procedure  SetValor(x: cardinal);
+      procedure Invertir();
+      function EsCapicua(): boolean;
       {procesos estaticos}
       class function Pot(b,e: Cardinal):Cardinal; static;
       class function VerifPartFracc(x:real):boolean; static;
@@ -32,6 +34,7 @@ type
       class function  ToDecenas(n : byte) : String; static;
       class function  ToCentenas(n : word) : String; static;
       class function  ToLiteral(n : cardinal) : String; overload; static;
+      //34,54 => 54,34
   end;
 
 implementation
@@ -43,6 +46,26 @@ implementation
 procedure Natural.SetValor(x: cardinal);
 begin
   self.valor := x; //valor = x
+end;
+
+procedure Natural.Invertir;
+var aux : Cardinal;
+begin
+  aux := 0;
+  while valor > 0 do
+  begin
+    aux := aux * 10 + (valor mod 10);
+    valor := valor div 10;
+  end;
+  valor := aux;
+end;
+
+function Natural.EsCapicua: boolean;
+var aux : Natural;
+begin
+  aux.valor:=valor;
+  aux.Invertir();
+  result := (aux.valor = valor);
 end;
 
 function Natural.GetValor: cardinal;

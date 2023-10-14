@@ -17,10 +17,13 @@ type
     Edit1: TEdit;
     Edit2: TEdit;
     Edit3: TEdit;
+    ListBox1: TListBox;
     MainMenu1: TMainMenu;
     MenuItem1: TMenuItem;
     MenuItem10: TMenuItem;
     MenuItem11: TMenuItem;
+    MenuItem12: TMenuItem;
+    MenuItem13: TMenuItem;
     MenuItem2: TMenuItem;
     MenuItem3: TMenuItem;
     MenuItem4: TMenuItem;
@@ -34,6 +37,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure MenuItem11Click(Sender: TObject);
     procedure MenuItem12Click(Sender: TObject);
+    procedure MenuItem13Click(Sender: TObject);
     procedure MenuItem2Click(Sender: TObject);
     procedure MenuItem4Click(Sender: TObject);
     procedure MenuItem5Click(Sender: TObject);
@@ -102,8 +106,29 @@ begin
 end;
 
 procedure TForm1.MenuItem12Click(Sender: TObject);
+var r: boolean;
+    resp: string;
 begin
-  //metodo2
+  r := obj.EsCapicua();
+  resp := BoolToStr(r, true);
+  ShowMessage(resp);
+end;
+
+procedure TForm1.MenuItem13Click(Sender: TObject);
+var aux : Natural;
+      n, i: cardinal;//0 ..num de 10 dig
+begin
+  aux:= Natural.create;
+  n := obj.GetValor();
+  ListBox1.Clear;
+  for i:=1 to n do begin
+     aux.SetValor(i);
+     if (aux.EsCapicua()
+         and aux.VerifPrimoV02()) then
+     begin
+        ListBox1.Items.Add(IntToStr(i));//5->'5'
+     end;
+  end;
 end;
 
 procedure TForm1.Button1Click(Sender: TObject);

@@ -12,7 +12,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="34"/>
+        <UsageCount Value="36"/>
       </Unit>
       <Unit>
         <Filename Value="unit1.pas"/>
@@ -22,9 +22,8 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="100"/>
-        <CursorPos X="19" Y="111"/>
-        <UsageCount Value="34"/>
+        <CursorPos X="24" Y="14"/>
+        <UsageCount Value="36"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -33,9 +32,9 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="UCNatural"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="58"/>
-        <CursorPos X="27" Y="63"/>
-        <UsageCount Value="34"/>
+        <TopLine Value="10"/>
+        <CursorPos X="32" Y="28"/>
+        <UsageCount Value="36"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -54,54 +53,6 @@
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="ucnatural.pas"/>
-        <Caret Line="179" TopLine="164"/>
-      </Position>
-      <Position>
-        <Filename Value="ucnatural.pas"/>
-        <Caret Line="180" TopLine="164"/>
-      </Position>
-      <Position>
-        <Filename Value="ucnatural.pas"/>
-        <Caret Line="181" TopLine="164"/>
-      </Position>
-      <Position>
-        <Filename Value="ucnatural.pas"/>
-        <Caret Line="182" TopLine="164"/>
-      </Position>
-      <Position>
-        <Filename Value="ucnatural.pas"/>
-        <Caret Line="177" TopLine="164"/>
-      </Position>
-      <Position>
-        <Filename Value="ucnatural.pas"/>
-        <Caret Line="178" TopLine="164"/>
-      </Position>
-      <Position>
-        <Filename Value="ucnatural.pas"/>
-        <Caret Line="179" TopLine="164"/>
-      </Position>
-      <Position>
-        <Filename Value="ucnatural.pas"/>
-        <Caret Line="180" TopLine="164"/>
-      </Position>
-      <Position>
-        <Filename Value="ucnatural.pas"/>
-        <Caret Line="181" TopLine="164"/>
-      </Position>
-      <Position>
-        <Filename Value="ucnatural.pas"/>
-        <Caret Line="182" TopLine="164"/>
-      </Position>
-      <Position>
-        <Filename Value="ucnatural.pas"/>
-        <Caret Line="177" TopLine="164"/>
-      </Position>
-      <Position>
-        <Filename Value="ucnatural.pas"/>
-        <Caret Line="178" TopLine="164"/>
-      </Position>
       <Position>
         <Filename Value="ucnatural.pas"/>
         <Caret Line="179" TopLine="164"/>
@@ -173,6 +124,54 @@
       <Position>
         <Filename Value="unit1.pas"/>
         <Caret Line="101" Column="19" TopLine="100"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="111" Column="19" TopLine="100"/>
+      </Position>
+      <Position>
+        <Filename Value="ucnatural.pas"/>
+        <Caret Line="21" Column="27" TopLine="17"/>
+      </Position>
+      <Position>
+        <Filename Value="ucnatural.pas"/>
+        <Caret Line="117" Column="13" TopLine="101"/>
+      </Position>
+      <Position>
+        <Filename Value="ucnatural.pas"/>
+        <Caret Line="22" Column="30" TopLine="16"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="104" TopLine="100"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="105" TopLine="102"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="122" Column="19" TopLine="114"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="124" Column="16" TopLine="118"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="118" Column="11" TopLine="116"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="127" Column="16" TopLine="120"/>
+      </Position>
+      <Position>
+        <Filename Value="ucnatural.pas"/>
+        <Caret Line="136" Column="16" TopLine="122"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="123" Column="22" TopLine="117"/>
       </Position>
     </JumpHistory>
     <RunParams>

@@ -19,6 +19,8 @@ type
       function  GetValor(): cardinal;
       function  SumarDigitos(): byte;
       function  VerifPrimo():boolean;
+      function  VerifPrimoV02():boolean;
+      function  VerifPrimoV03():boolean;
       function  ToRomano(): String;  // 'XX'
       function  ToLiteral(): String;
       function  ToBaseN(b : cardinal) : String;
@@ -100,6 +102,37 @@ begin
     dec(i);
   end;
   exit(true);
+end;
+//utilizando bandera
+function Natural.VerifPrimoV02: boolean;
+var i : cardinal;
+   sw : boolean;
+begin
+  if (valor = 1) then
+    result := false
+  else begin
+    i := self.valor div 2;
+    sw := true;
+    while (i >= 2)AND(sw) do begin
+      if (valor mod i = 0)  then begin
+        sw := false;
+      end;
+      dec(i); // i = i - 1
+    end;
+    result := sw;
+  end;
+end;
+
+function Natural.VerifPrimoV03: boolean;
+var i, c : cardinal;
+begin
+  c := 1;
+  for i:= 1 to valor do begin
+    if (valor mod i = 0)  then begin
+        c := c + 1;
+    end;
+  end;
+  result := (c = 2)
 end;
 
 function Natural.ToRomano: String;

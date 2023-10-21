@@ -77,6 +77,8 @@ uses
                procedure DivRepNoRep(v1,v2:vector);
                //funcionar 4 vectores ordenados en un quinto ordenado sin usar sort’s
                procedure Mezcla_A_ordenar1(v1, v2, v3, v4:vector);
+               procedure addAsc(x: integer);
+               procedure FusionAsc(v1, v2, v3, v4:vector);
    //-------------------UOTRAS TECNICAS--------------------------
 
                //muestra la cantidad de cortes de control   #1#
@@ -295,7 +297,7 @@ var vecAux : vector;
 begin
  vecAux := Vector.crear(self);
  for i:=1 to dim do
-   self.elem[i] := vecAux.elem[(i-1+dim-cant) mod dim + 1];
+   self.elem[i] := vecAux.elem[(i-1+cant) mod dim + 1];
 end;
 
 procedure vector.RotarDerecha(cant: byte);
@@ -304,7 +306,7 @@ var vecAux : vector;
 begin
  vecAux := Vector.crear(self);
  for i:=1 to dim do
-   self.elem[i] := vecAux.elem[(i-1+cant) mod dim + 1];
+   self.elem[i] := vecAux.elem[(i-1+dim-cant) mod dim + 1];
 end;
 
 //Busca un elemento      (ele=2)
@@ -730,6 +732,28 @@ begin
      end;
      k:=k-1;
    end;
+end;
+
+procedure vector.addAsc(x: integer);
+var i : integer;
+begin
+  i := dim;
+  while ((i>=1) and (elem[i] > x)) do
+  begin
+    elem[i+1] := elem[i];
+    i := i - 1;
+  end;
+  dim := dim +1;
+  elem[i+1] := x;
+end;
+
+procedure vector.FusionAsc(v1, v2, v3, v4: vector);
+var i : integer;
+begin
+  for i:= 1 to v1.dim do
+    self.addAsc(v1.elem[i]);
+
+
 end;
 
 procedure vector.Mezcla_A_ordenar(v1, v2: vector);

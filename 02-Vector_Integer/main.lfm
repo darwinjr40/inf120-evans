@@ -1,14 +1,14 @@
 object Form1: TForm1
   Left = 342
-  Height = 330
+  Height = 581
   Top = 234
   Width = 1376
   Caption = 'Form1'
-  ClientHeight = 330
+  ClientHeight = 581
   ClientWidth = 1376
   DesignTimePPI = 120
   OnCreate = FormCreate
-  LCLVersion = '2.2.4.0'
+  LCLVersion = '2.2.6.0'
   object ComboBox1: TComboBox
     Left = 24
     Height = 28
@@ -18,10 +18,6 @@ object Form1: TForm1
     ItemIndex = 0
     Items.Strings = (
       'Mostrar Vector'
-      'vector 1'
-      'vector 2'
-      'vector 3'
-      'vector 4'
     )
     OnChange = ComboBox1Change
     Style = csDropDownList
@@ -31,7 +27,7 @@ object Form1: TForm1
   object StringGrid1: TStringGrid
     Left = 180
     Height = 109
-    Top = 130
+    Top = 128
     Width = 910
     ColCount = 10
     DefaultColWidth = 44

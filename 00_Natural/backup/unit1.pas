@@ -24,6 +24,7 @@ type
     MenuItem11: TMenuItem;
     MenuItem12: TMenuItem;
     MenuItem13: TMenuItem;
+    MenuItem14: TMenuItem;
     MenuItem2: TMenuItem;
     MenuItem3: TMenuItem;
     MenuItem4: TMenuItem;
@@ -38,6 +39,7 @@ type
     procedure MenuItem11Click(Sender: TObject);
     procedure MenuItem12Click(Sender: TObject);
     procedure MenuItem13Click(Sender: TObject);
+    procedure MenuItem14Click(Sender: TObject);
     procedure MenuItem2Click(Sender: TObject);
     procedure MenuItem4Click(Sender: TObject);
     procedure MenuItem5Click(Sender: TObject);
@@ -129,6 +131,13 @@ begin
         ListBox1.Items.Add(IntToStr(i));//5->'5'
      end;
   end;
+end;
+
+procedure TForm1.MenuItem14Click(Sender: TObject);
+begin
+  obj.InvMitad(3);
+  //ShowMessage(inttostr(obj.getDigsDer(3)));
+  //ShowMessage(inttostr(obj.get()));
 end;
 
 procedure TForm1.Button1Click(Sender: TObject);

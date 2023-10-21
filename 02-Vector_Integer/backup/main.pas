@@ -30,8 +30,8 @@ type
   private
 
   public
-        v, v1, v2, v3, v4 :vector;
-        VEC: array[0..4] of vector;
+        v, v1, v2, v3, v4, v5 :vector;
+        VEC: array[0..5] of vector;
   end;
 
 var
@@ -44,17 +44,24 @@ implementation
 { TForm1 }
 
 procedure TForm1.FormCreate(Sender: TObject);
+var i : integer;
 begin
      v1 := vector.crear();
      v2 := vector.crear();
      v3 := vector.crear();
      v4 := vector.crear();
+     v5 := vector.crear();
      v := v1;
      VEC[0] := SELF.v;
      VEC[1] := SELF.v1;
      VEC[2] := SELF.v2;
      VEC[3] := SELF.v3;
      VEC[4] := SELF.v4;
+     VEC[5] := SELF.v5;
+     for i:=1 to 5 do begin
+       ComboBox1.Items.Add('Vector' + IntToStr(i));
+     end;
+
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
@@ -72,6 +79,7 @@ begin
 end;
 
 procedure TForm1.Button4Click(Sender: TObject);
+ VAR N : integer;
 begin
   //v.ord_seleccion();
   //v.CargarMult2yMul3(v2,v3);
@@ -80,8 +88,11 @@ begin
   //v.mezclarDesc(v1,v2);
   //v.intercalar3Vectores(v1,v2,v3)
 
-  v.RotarIzquierdaV2(StrToInt(InputBox('','','')));
-
+  //v.RotarIzquierdaV2(StrToInt(InputBox('','','')));
+     //CTRL + /
+   //n := StrToInt(InputBox('','','')); //'12'=> 12
+   //V.addAsc(n);
+   v5.FusionAsc(v1,v2,v3,v4);
 end;
 
 procedure TForm1.Button5Click(Sender: TObject);

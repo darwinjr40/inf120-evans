@@ -59,7 +59,6 @@ type
     MenuItem9: TMenuItem;
     StringGrid1: TStringGrid;
     StringGrid2: TStringGrid;
-    StringGrid3: TStringGrid;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
@@ -269,14 +268,14 @@ begin
   //  InputBox('','sub cadena: ','h')
   //));
   cant:= StrToInt(InputBox('','cantidad',''));
-  self.cad.RotarIzq(3);
+  self.cad.RotarIzq(cant);
 end;
 
 procedure TForm1.MenuItem34Click(Sender: TObject);
 var cant: word;
 begin
    cant:= StrToInt(InputBox('','cantidad',''));
-  self.cad.RotarDer(3);
+  self.cad.RotarDer(cant);
 end;
 
 procedure TForm1.MenuItem3Click(Sender: TObject);

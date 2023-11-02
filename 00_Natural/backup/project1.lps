@@ -23,7 +23,7 @@
         <UnitName Value="Unit1"/>
         <IsVisibleTab Value="True"/>
         <TopLine Value="87"/>
-        <CursorPos X="24" Y="94"/>
+        <CursorPos X="6" Y="97"/>
         <UsageCount Value="38"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -33,8 +33,8 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="UCNatural"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="273"/>
-        <CursorPos X="38" Y="284"/>
+        <TopLine Value="281"/>
+        <CursorPos X="39" Y="296"/>
         <UsageCount Value="38"/>
         <Loaded Value="True"/>
       </Unit>

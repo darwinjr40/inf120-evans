@@ -10,7 +10,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos Y="15"/>
-        <UsageCount Value="117"/>
+        <UsageCount Value="118"/>
       </Unit0>
       <Unit1>
         <Filename Value="formulario.pas"/>
@@ -19,10 +19,12 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Formulario"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="114"/>
-        <CursorPos Y="121"/>
-        <UsageCount Value="117"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="29"/>
+        <CursorPos X="16" Y="62"/>
+        <UsageCount Value="118"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="conjunto.pas"/>
@@ -31,7 +33,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="89"/>
         <CursorPos X="38" Y="12"/>
-        <UsageCount Value="117"/>
+        <UsageCount Value="118"/>
       </Unit2>
       <Unit3>
         <Filename Value="cadena.pas"/>
@@ -39,88 +41,103 @@
         <UnitName Value="Cadena1"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="13"/>
-        <UsageCount Value="116"/>
+        <UsageCount Value="117"/>
       </Unit3>
       <Unit4>
         <Filename Value="cadenas.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Cadenas"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="20" Y="10"/>
-        <UsageCount Value="115"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="635"/>
+        <CursorPos X="26" Y="637"/>
+        <UsageCount Value="116"/>
+        <Loaded Value="True"/>
       </Unit4>
       <Unit5>
+        <Filename Value="..\..\03-vector-caracter\form.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form2"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="47" Y="6"/>
+        <UsageCount Value="21"/>
+      </Unit5>
+      <Unit6>
         <Filename Value="C:\lazarus\lcl\include\menuitem.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="282"/>
         <CursorPos Y="298"/>
         <UsageCount Value="6"/>
-      </Unit5>
-      <Unit6>
+      </Unit6>
+      <Unit7>
         <Filename Value="C:\lazarus\lcl\interfaces\win32\win32callback.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="2657"/>
         <CursorPos Y="2681"/>
         <UsageCount Value="5"/>
-      </Unit6>
-      <Unit7>
+      </Unit7>
+      <Unit8>
         <Filename Value="C:\lazarus\lcl\include\control.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="1561"/>
         <CursorPos Y="1583"/>
         <UsageCount Value="5"/>
-      </Unit7>
-      <Unit8>
+      </Unit8>
+      <Unit9>
         <Filename Value="C:\lazarus\lcl\interfaces\win32\win32proc.pp"/>
         <UnitName Value="Win32Proc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="824"/>
         <CursorPos Y="842"/>
         <UsageCount Value="5"/>
-      </Unit8>
-      <Unit9>
+      </Unit9>
+      <Unit10>
         <Filename Value="C:\lazarus\lcl\interfaces\win32\win32wsforms.pp"/>
         <UnitName Value="Win32WSForms"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="374"/>
         <CursorPos Y="388"/>
         <UsageCount Value="5"/>
-      </Unit9>
-      <Unit10>
+      </Unit10>
+      <Unit11>
         <Filename Value="C:\lazarus\lcl\interfaces\win32\win32object.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="385"/>
         <CursorPos Y="406"/>
         <UsageCount Value="5"/>
-      </Unit10>
-      <Unit11>
+      </Unit11>
+      <Unit12>
         <Filename Value="C:\lazarus\lcl\interfaces\win32\win32winapi.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="2680"/>
         <CursorPos Y="2696"/>
         <UsageCount Value="5"/>
-      </Unit11>
-      <Unit12>
+      </Unit12>
+      <Unit13>
         <Filename Value="natural.pas"/>
         <UnitName Value="Natural"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="703"/>
         <CursorPos X="6" Y="103"/>
         <UsageCount Value="38"/>
-      </Unit12>
-      <Unit13>
-        <Filename Value="..\..\03-vector-caracter\form.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form2"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="Form"/>
-        <CursorPos X="18" Y="11"/>
-        <UsageCount Value="20"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit13>
     </Units>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory Count="3" HistoryIndex="2">
+      <Position1>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="68" Column="28" TopLine="59"/>
+      </Position1>
+      <Position2>
+        <Filename Value="formulario.pas"/>
+        <Caret Line="245" Column="87" TopLine="231"/>
+      </Position2>
+      <Position3>
+        <Filename Value="formulario.pas"/>
+        <Caret Line="62" Column="16" TopLine="29"/>
+      </Position3>
+    </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>

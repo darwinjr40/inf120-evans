@@ -50,6 +50,7 @@ type
     MenuItem31: TMenuItem;
     MenuItem32: TMenuItem;
     MenuItem33: TMenuItem;
+    MenuItem34: TMenuItem;
     MenuItem4: TMenuItem;
     MenuItem5: TMenuItem;
     MenuItem6: TMenuItem;
@@ -86,6 +87,7 @@ type
     procedure MenuItem31Click(Sender: TObject);
     procedure MenuItem32Click(Sender: TObject);
     procedure MenuItem33Click(Sender: TObject);
+    procedure MenuItem34Click(Sender: TObject);
     procedure MenuItem3Click(Sender: TObject);
     procedure MenuItem4Click(Sender: TObject);
     procedure MenuItem5Click(Sender: TObject);
@@ -259,12 +261,22 @@ begin
 end;
 
 procedure TForm1.MenuItem33Click(Sender: TObject);
+var cant: word;
 begin
-  edit3.Text:= IntToStr(cad.Posicion(
-    StrToInt(InputBox('','rango a','')),
-    StrToInt(InputBox('','rango b','')),
-    InputBox('','sub cadena: ','h')
-  ));
+  //edit3.Text:= IntToStr(cad.Posicion(
+  //  StrToInt(InputBox('','rango a','')),
+  //  StrToInt(InputBox('','rango b','')),
+  //  InputBox('','sub cadena: ','h')
+  //));
+  cant:= StrToInt(InputBox('','cantidad',''));
+  self.cad.RotarIzq(3);
+end;
+
+procedure TForm1.MenuItem34Click(Sender: TObject);
+var cant: word;
+begin
+   cant:= StrToInt(InputBox('','cantidad',''));
+  self.cad.RotarDer(3);
 end;
 
 procedure TForm1.MenuItem3Click(Sender: TObject);

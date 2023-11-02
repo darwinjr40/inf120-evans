@@ -64,7 +64,8 @@ const MAX_ELE = 1200;
        procedure DeleteAllPalabra(palabraBusc : String);
        procedure Invertir(a, b: byte);
        procedure InvertirCadaPalabra;
-
+       procedure RotarIzq(cant : word);
+       procedure RotarDer(cant : word);
        {funciones}
        function LeerPal(var a: integer; b: integer): String; overload;
        function LeerPal(var pos: integer): String;overload;
@@ -631,6 +632,32 @@ begin
     self.Invertir(posIni, posfin);
   end;
  end;
+
+procedure cadena.RotarIzq(cant: word);
+ var e: char;
+    j, i: word;
+begin
+   for j:=1 to cant do begin
+     e := self.elem[1];
+     for i:=1 to dim-1 do begin
+       elem[i] := elem[i+1];
+     end;
+     elem[dim] := e;
+   end;
+end;
+
+procedure cadena.RotarDer(cant: word);
+ var e: char;
+    j, i: word;
+begin
+   for j:=1 to cant do begin
+     e := self.elem[dim];
+     for i:=dim downto 2 do begin
+       elem[i] := elem[i-1];
+     end;
+     elem[1] := e;
+   end;
+end;
 
 procedure cadena.Invertir(a, b: byte);
 begin

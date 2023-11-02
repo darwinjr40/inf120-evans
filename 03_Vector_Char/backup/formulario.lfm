@@ -1,11 +1,11 @@
 object Form1: TForm1
   Left = 383
-  Height = 512
+  Height = 682
   Top = 150
-  Width = 951
+  Width = 1171
   Caption = 'Form1'
-  ClientHeight = 487
-  ClientWidth = 951
+  ClientHeight = 657
+  ClientWidth = 1171
   DesignTimePPI = 120
   Menu = MainMenu1
   OnCreate = FormCreate
@@ -71,10 +71,10 @@ object Form1: TForm1
   end
   object StringGrid1: TStringGrid
     Left = 152
-    Height = 50
+    Height = 66
     Top = 184
     Width = 640
-    DefaultColWidth = 22
+    DefaultColWidth = 25
     DefaultRowHeight = 21
     FixedCols = 0
     FixedRows = 0
@@ -100,7 +100,7 @@ object Form1: TForm1
   object StringGrid2: TStringGrid
     Left = 152
     Height = 25
-    Top = 234
+    Top = 280
     Width = 640
     DefaultColWidth = 22
     DefaultRowHeight = 21
@@ -128,7 +128,7 @@ object Form1: TForm1
   object Label3: TLabel
     Left = 82
     Height = 20
-    Top = 234
+    Top = 281
     Width = 79
     Caption = 'Cadena2 : ='
     ParentColor = False
@@ -136,7 +136,7 @@ object Form1: TForm1
   object StringGrid3: TStringGrid
     Left = 152
     Height = 140
-    Top = 272
+    Top = 320
     Width = 690
     ColCount = 10
     DefaultColWidth = 19
@@ -238,8 +238,12 @@ object Form1: TForm1
         OnClick = MenuItem32Click
       end
       object MenuItem33: TMenuItem
-        Caption = 'prueba'
+        Caption = 'prueba1'
         OnClick = MenuItem33Click
+      end
+      object MenuItem34: TMenuItem
+        Caption = 'prueba2'
+        OnClick = MenuItem34Click
       end
     end
     object MenuItem13: TMenuItem

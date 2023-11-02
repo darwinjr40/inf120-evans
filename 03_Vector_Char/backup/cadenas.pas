@@ -64,7 +64,7 @@ const MAX_ELE = 1200;
        procedure DeleteAllPalabra(palabraBusc : String);
        procedure Invertir(a, b: byte);
        procedure InvertirCadaPalabra;
-
+       procedure RotarIzq(cant : word);
        {funciones}
        function LeerPal(var a: integer; b: integer): String; overload;
        function LeerPal(var pos: integer): String;overload;
@@ -77,6 +77,9 @@ const MAX_ELE = 1200;
        function frecuenciaPal(pal:String):integer;        //frecuencia de una palabra(pal)
        function frecuenciaPal(a,b:integer; pal:String):integer;        //frecuencia de una palabra(pal)
 
+
+       class function CifradoCesar(x : string; d : byte): String; static;
+       class function DescifradoCesar(x : string; d : byte): String; static;
   end;
 implementation
 
@@ -299,6 +302,46 @@ begin
      c:=c+1;
   end;
   result:=c;
+end;
+
+class function cadena.CifradoCesar(x: string; d: byte): String;
+const abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var n,i : Cardinal;
+      p : byte;
+      r : string;
+begin
+ x := UpperCase(x);
+ n := Length(x);
+ r := '';
+ for i := 1 to n do begin
+   p :=  Pos(x[i], abc);
+    if p > 0 then begin          //0  22
+      r := r + ABC[(((p-1)+d) mod 26)+1];
+    end else begin
+      r := r + ' ';
+    end;
+ end;
+ result := r;
+end;
+
+class function cadena.DescifradoCesar(x: string; d: byte): String;
+const abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var n,i : Cardinal;
+      p : byte;
+      r : string;
+begin
+ x := UpperCase(x);
+ n := Length(x);
+ r := '';
+ for i := 1 to n do begin
+   p :=  Pos(x[i], abc);
+    if p > 0 then begin          //0  22
+      r := r + ABC[(((p-1)+26 - d) mod 26)+1];
+    end else begin
+      r := r + ' ';
+    end;
+ end;
+ result := r;
 end;
 
 
@@ -589,6 +632,19 @@ begin
   end;
  end;
 
+procedure cadena.RotarIzq(cant: word);
+ var e: char;
+    j, i: word;
+begin
+   for j:=1 to cant do begin
+     e := self.elem[1];
+     for i:=1 to dim-1 do begin
+       elem[i] := elem[i+1];
+     end;
+     elem[dim] := e;
+   end;
+end;
+
 procedure cadena.Invertir(a, b: byte);
 begin
   while a < b  do  begin
@@ -719,6 +775,7 @@ function cadena.LeerPal(var pos: integer): String;
 begin
   result := self.LeerPal(pos, self.dim);
 end;
+
 
 
 end.

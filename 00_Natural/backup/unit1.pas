@@ -135,7 +135,7 @@ end;
 
 procedure TForm1.MenuItem14Click(Sender: TObject);
 begin
-  obj.InvMitad(3);
+  obj.InvMitad();
   //ShowMessage(inttostr(obj.getDigsDer(3)));
   //ShowMessage(inttostr(obj.get()));
 end;

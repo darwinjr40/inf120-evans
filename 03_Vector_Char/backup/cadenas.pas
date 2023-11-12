@@ -55,7 +55,7 @@ const MAX_ELE = 1200;
        function getDim():integer;
        function getChar(pos:integer):char;
        {procesos}
-
+       procedure CargarPosPatron(a, b: integer; patron: string; var s: string);
        procedure Encriptar(k: byte);
        procedure Desencriptar(k: byte);
 
@@ -67,6 +67,7 @@ const MAX_ELE = 1200;
        procedure RotarIzq(cant : word);
        procedure RotarIzqV1(cant : word);
        procedure RotarDer(cant : word);
+
        {funciones}
        function LeerPal(var a: integer; b: integer): String; overload;
        function LeerPal(var pos: integer): String;overload;
@@ -287,6 +288,24 @@ begin
    else
       result:=char(0);
 end;
+
+procedure cadena.CargarPosPatron(a, b: integer; patron: string; var s: string);
+var p : word;
+begin
+  s := '';
+  while a <= b do begin
+    p := self.Posicion(a, b, patron);
+    if p = 0 then
+    begin
+      a := b + 1;
+    end
+    else begin
+      s := s + inttostr(p) + ', ';
+      a := p + 1;
+    end;
+  end;
+end;
+
 //frecuencia de una palabra(pal)
 function cadena.frecuenciaPal(pal:String): integer;
 begin
@@ -648,15 +667,12 @@ begin
 end;
 
 procedure cadena.RotarIzqV1(cant: word);
- var e: char;
-    j, i: word;
+var i : word;
 begin
-  for i:=1 to cant do begin
+  for i:=1 to cant do
     elem[dim+i] := elem[i];
-  end;
-  for i:=1 to dim do begin
+  for i:=1 to dim do
     elem[i] := elem[i+cant];
-  end;
 end;
 
 procedure cadena.RotarDer(cant: word);

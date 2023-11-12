@@ -59,7 +59,6 @@ type
     MenuItem9: TMenuItem;
     StringGrid1: TStringGrid;
     StringGrid2: TStringGrid;
-    StringGrid3: TStringGrid;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);

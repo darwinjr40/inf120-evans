@@ -82,17 +82,18 @@ procedure Natural.InvMitad;
 var cantDig, aux, mitad : integer;
 begin
   cantDig := self.getCantDig();
+  mitad := self.getDigsDer(cantDig div 2);
+  //self.DeleteDigsDer(cantDig div 2);
   if valor mod 2 = 0 then
   begin
-
+    self.DeleteDigsDer(cantDig div 2);
+    self.AddNumero(mitad);
   end else begin
-    mitad := self.getDigsDer(cantDig div 2);
     self.DeleteDigsDer(cantDig div 2);
     aux := self.valor;
     valor := 0;
     self.AddNumero(aux);
     UnirNumDer(mitad);
-    self.AddNumero(mitad);
   end;
 end;
 

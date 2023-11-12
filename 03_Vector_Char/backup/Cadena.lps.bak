@@ -20,8 +20,8 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Formulario"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="29"/>
-        <CursorPos X="16" Y="62"/>
+        <TopLine Value="273"/>
+        <CursorPos X="18" Y="282"/>
         <UsageCount Value="118"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -48,8 +48,8 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Cadenas"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="635"/>
-        <CursorPos X="26" Y="637"/>
+        <TopLine Value="289"/>
+        <CursorPos X="33" Y="292"/>
         <UsageCount Value="116"/>
         <Loaded Value="True"/>
       </Unit4>
@@ -124,7 +124,7 @@
         <UsageCount Value="38"/>
       </Unit13>
     </Units>
-    <JumpHistory Count="3" HistoryIndex="2">
+    <JumpHistory Count="5" HistoryIndex="4">
       <Position1>
         <Filename Value="cadenas.pas"/>
         <Caret Line="68" Column="28" TopLine="59"/>
@@ -137,6 +137,14 @@
         <Filename Value="formulario.pas"/>
         <Caret Line="62" Column="16" TopLine="29"/>
       </Position3>
+      <Position4>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="58" Column="33" TopLine="53"/>
+      </Position4>
+      <Position5>
+        <Filename Value="formulario.pas"/>
+        <Caret Line="68" Column="18" TopLine="61"/>
+      </Position5>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

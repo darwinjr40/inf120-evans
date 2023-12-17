@@ -50,8 +50,11 @@ uses
        procedure Cerrar();
        procedure Posicionar(pos:Integer);//fijar el puntero en registro
        procedure adicionar(nombre,se,car  :String; sue : Integer; mon :String);
-       function  examen1():String;
-       function  examen2():String;
+       function  getSueldoMayorTipo(genero: char): cardinal;
+       function  get2sueldosMayoresAndMostrarMujeres():String;
+       function  getPromedioSueldo():real;
+       function  getMayorAlPromAndMayorSueldo():String;
+       function  EmpleadoToStr(e: Empleado): String;
   end;
 implementation
 
@@ -164,78 +167,96 @@ begin
   e.moneda:=mon;
   EscribirTipo(e);
 end;
-
-function FileEmpleado.examen1(): String;
+//asumir que el archivo esta abierto
+function FileEmpleado.getSueldoMayorTipo(genero: char): cardinal;
 var e : Empleado;
-    cad : String;
-    sueldo1,sueldo2 :Integer;
+    s :Integer;
 begin
-   Abrir();
-   cad := '';
-   sueldo1 := 0;   //1 > 0
-   sueldo2 := 0;   //  < 2147483647
-   while (not EsFin()) do begin
+  s := 0;
+  Posicionar(1);
+  while (not EsFin()) do begin
        e := LeerTipo;
-       if (e.sexo = 'M') then begin
-          cad := cad + e.Nombre+'  ' + e.sexo+'  '+ e.cargo +'  '+ Inttostr(e.sueldo) + e.moneda + #10#13;
-           if (e.sueldo > sueldo1) then begin
-               sueldo1 := e.sueldo;
-           end;
+       if ((e.sexo = genero)and(e.sueldo > s)) then begin
+          s := e.sueldo;
        end;
    end;
+  result := s;
+end;
 
+
+function FileEmpleado.get2sueldosMayoresAndMostrarMujeres(): String;
+var e : Empleado;
+    sueldo1,sueldo2 :Integer;
+    lista : String;
+begin
+   Abrir();
+   sueldo1 := self.getSueldoMayorTipo('M');
+   sueldo2 := 0;
+   lista := '--Lista Mujeres--' + #10#13;
    Posicionar(1);
-
    while (not EsFin()) do begin
        e := LeerTipo;
        if (e.sexo = 'M') then begin
+          lista := lista + EmpleadoToStr(e);
            if (e.sueldo > sueldo2 )and (e.sueldo <> sueldo1) then begin
                sueldo2 := e.sueldo;
            end;
        end;
    end;
-
    Cerrar();
-   cad := cad + #10#13 +
-          'Primer sueldo mayor = ' + IntToStr(sueldo1) + #10#13 +
-          'segundo sueldo mayor = ' + IntToStr(sueldo2);
-   result := cad ;
+   result :=  #10#13 +lista +
+             'Primer sueldo mayor = ' + IntToStr(sueldo1) + #10#13 +
+             'segundo sueldo mayor = ' + IntToStr(sueldo2);
+end;
+//asumir que el archivo esa abierto
+function FileEmpleado.getPromedioSueldo: real;
+var prom : Real;
+    cp, sp :Integer;
+    e : Empleado;
+begin
+   self.Posicionar(1);
+   cp := 0;
+   sp := 0;
+   while (not EsFin()) do begin
+       e := LeerTipo;
+       sp := sp + e.sueldo ;
+       cp := cp + 1 ;
+   end;
+   if(cp > 0)then prom:= sp/cp ;
+   result := prom;
 end;
 
-function FileEmpleado.examen2(): String;
+function FileEmpleado.getMayorAlPromAndMayorSueldo(): String;
 var e : Empleado;
     cad, cad2 : String;
     prom : Real;
-    cant, may :Integer;
+    may :Integer;
 begin //prom = (500 + 200 + 300 + 1000 + 800 ) / 5 ==> 560
    Abrir();
    cad := ''; cad2 :='';
-   prom := 0;
-   cant := 0;
-   may := 0
-   //obtener el promedio de sueldos
-   while (not EsFin()) do begin
-       e := LeerTipo;
-       prom := prom + e.sueldo ;
-       cant := cant + 1 ;
-   end;
-   prom := prom / cant ;
+   may := 0;
+   prom := self.getPromedioSueldo();
    //Sacar el (Mayor sueldo) y (empleados con sueldo mayor al promedio)
-   Posicionar(1);
+   self.Posicionar(1);
    while (not EsFin()) do begin
        e := LeerTipo;
        if (e.sueldo > prom ) then begin
-         cad := cad + e.Nombre+'  ' + e.sexo+'  '+ e.cargo +'  '+ Inttostr(e.sueldo) + e.moneda + #10#13;
+         cad := cad + EmpleadoToStr(e);
        end;
        if (e.sueldo > may ) then begin
          may := e.sueldo;
          cad2 := 'EL EMPLEADO CON MAYOR SUELDO ES : ' + #10#13 +
-                 e.Nombre+'  ' + e.sexo+'  '+ e.cargo +'  '+ Inttostr(e.sueldo) + e.moneda ;
+                 EmpleadoToStr(e);
        end;
    end;
    Cerrar();
    //result:= 'el promedio es = ' + FloatToStr(prom);
    result:= 'LISTA DE EMPLEADOS CON SUELDO MAYOR AL PROMEDIO : ' +cad +#10#13 + cad2;
+end;
+
+function FileEmpleado.EmpleadoToStr(e: Empleado): String;
+begin
+  result := e.Nombre+'  ' + e.sexo+'  '+ e.cargo +'  '+ Inttostr(e.sueldo) + e.moneda + #10#13;
 end;
 
 end.

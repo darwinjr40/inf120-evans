@@ -19,6 +19,7 @@ uses
      public
        Constructor crear();
        function  descargar():String;
+       procedure cargar(cad: String);
        procedure LeerPal(var pos:integer;var pal:String);
        procedure AddPal(pal :String);
        procedure Inserchar(pos:integer;ele:char);
@@ -46,7 +47,7 @@ uses
        procedure selectReal();
        procedure leerNumReales(var pos: integer; var pal: String);
        procedure EliminarAll(delPal:String);
-
+       function LeerFirstNumero(): String;
   end;
 implementation
 
@@ -85,6 +86,17 @@ begin
      c:=c+elem[i];
   end;
   result:=c;
+end;
+
+procedure cadena.cargar(cad: String);
+var i, n: integer;
+begin
+  i := 1;
+  self.dim := Length(cad);
+  while i <= dim do begin
+    self.elem[i] := cad[i];
+    i:=i+1;
+  end;
 end;
 
 //Adiciona una nueva palabra al objeto
@@ -465,8 +477,26 @@ begin
          for j:=p to (dim-(pos-p)) do
              elem[j]:=elem[j+(pos-p)];
          dim:=dim-(pos-p);
+         pos:=1;
      end;
   end;
+end;
+
+function cadena.LeerFirstNumero: String;
+const NUMEROS = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' ];
+  var i : integer;
+      n : string;
+begin
+  i := 1;
+  n := '';
+  while ((i<=self.dim)AND not(elem[i] in Numeros)) do begin
+    i:= i + 1;
+  end;
+  while ((i<=self.dim)AND (elem[i] in Numeros)) do begin
+    n := n+elem[i];
+    i:= i + 1;
+  end;
+  result := n;
 end;
 
 

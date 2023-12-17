@@ -267,11 +267,13 @@ begin
 end;
 
 procedure TForm1.MenuItem3Click(Sender: TObject);
-var p, may : real;
+var p  : real;
+    may : String;
 begin
-  t.MayorYpromedio(p, may);
+  self.SeleccionarArchivoV2(self.t);
+  self.t.MayorYpromedio(p, may);
   ShowMessage('promedio: ' + FloatToStr(p));
-  ShowMessage('mayor: ' + FloatToStr(may));
+  ShowMessage('mayor: ' + may);
 end;
 
 procedure TForm1.MenuItem4Click(Sender: TObject);

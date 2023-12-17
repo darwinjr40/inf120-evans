@@ -77,8 +77,8 @@ end;
 
 procedure TForm1.Button3Click(Sender: TObject);
 begin
-  //ShowMessage(t.examen1());
-  ShowMessage(t.examen2());
+  ShowMessage(t.get2sueldosMayoresAndMostrarMujeres());
+  //ShowMessage(t.getMayorAlPromAndMayorSueldo());
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);

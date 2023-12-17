@@ -88,7 +88,7 @@ uses
         procedure mezclar(ta, tb :Texto);
         //examen
         procedure frecuenciaDePalabras(new : Texto);
-        procedure MayorYpromedio(var promedio, mayor : real);
+        procedure MayorYpromedio(var promedio: real; var mayor : String);
  end;
 
 implementation
@@ -548,12 +548,32 @@ begin
  end;
 end;
 
-procedure Texto.MayorYpromedio(var promedio, mayor: real);
+procedure Texto.MayorYpromedio(var promedio: real; var mayor : String);
+ var cad: Cadena;
+     cp, sp, may, num : integer;
+     n : string;
 begin
-
- promedio :=5.5;
- mayor := 10;
-
+ promedio := 0;
+ mayor := '';
+ cp := 0; sp := 0;
+ may := 0;
+ self.abrir();
+ cad := Cadena.crear();
+ while (not self.esfin()) do begin
+   cad.cargar(self.leerLinea());
+   n := cad.LeerFirstNumero();
+   if n <> '' then begin
+     num :=  StrToInt(n);
+     sp := sp + num;
+     cp := cp + 1;
+     if ( num > may) then begin
+       may := num;
+       mayor := cad.descargar();
+     end;
+   end;
+ end;
+ if (cp > 0)then promedio := sp/cp;
+ self.cerrar();
 end;
 
 

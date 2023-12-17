@@ -67,7 +67,7 @@ type
   public
      procedure SeleccionarArchivoV1(a :Texto);
      procedure SeleccionarArchivoV2(archivo: texto );
-     function GuardarArchivoComo(archivo: texto ): boolean;
+     procedure GuardarArchivoComo(archivo: texto );
   end;
 
 var
@@ -267,11 +267,12 @@ begin
 end;
 
 procedure TForm1.MenuItem3Click(Sender: TObject);
-var p, may : real;
+var p  : real;
+    may : String;
 begin
   t.MayorYpromedio(p, may);
   ShowMessage('promedio: ' + FloatToStr(p));
-  ShowMessage('mayor: ' + FloatToStr(may));
+  ShowMessage('mayor: ' + may);
 end;
 
 procedure TForm1.MenuItem4Click(Sender: TObject);
@@ -334,7 +335,7 @@ begin
   end;
 end;
 
-function TForm1.GuardarArchivoComo(archivo: texto): boolean;
+procedure TForm1.GuardarArchivoComo(archivo: texto);
 VAR ext,nom:String;
           i:integer;
     sw: boolean;

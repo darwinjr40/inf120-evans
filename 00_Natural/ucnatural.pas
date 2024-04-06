@@ -25,10 +25,11 @@ type
       function  ToRomano(): String;  // 'XX'
       function  ToLiteral(): String;
       function  ToBaseN(b : cardinal) : String;
+      function EsCapicua(): boolean;
+      function EsPar(): boolean;
       {procesos}
       procedure  SetValor(x: cardinal);
       procedure Invertir();
-      function EsCapicua(): boolean;
       procedure InvMitad();
       function getDigsDer(cantD : integer): integer;
       procedure DeleteDigsDer(cantD : integer);
@@ -76,6 +77,11 @@ begin
   aux.valor:=valor;
   aux.Invertir();
   result := (aux.valor = valor);
+end;
+
+function Natural.EsPar: boolean;
+begin
+    result := (valor mod 2 = 0);
 end;
 
 procedure Natural.InvMitad;

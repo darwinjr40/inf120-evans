@@ -83,7 +83,6 @@ var cantDig, aux, mitad : integer;
 begin
   cantDig := self.getCantDig();
   mitad := self.getDigsDer(cantDig div 2);
-  //self.DeleteDigsDer(cantDig div 2);
   if valor mod 2 = 0 then
   begin
     self.DeleteDigsDer(cantDig div 2);

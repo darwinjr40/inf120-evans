@@ -32,6 +32,11 @@ type
   public
         v :vector;
         VEC: array[1..5] of vector;
+        property v1: vector read VEC[1];
+        property v2: vector read VEC[2];
+        property v3: vector read VEC[3];
+        property v4: vector read VEC[4];
+        property v5: vector read VEC[5];
   end;
 
 var
@@ -83,7 +88,8 @@ begin
    //n := StrToInt(InputBox('','','')); //'12'=> 12
    //V.addAsc(n);
    //v.FusionAsc(vec[1], vec[2], vec[3],vec[4]);
-   v.RotarDerecha(StrToInt(InputBox('','','')));
+   //v.RotarDerecha(StrToInt(InputBox('','','')));
+   v.ordInsercionV2();
 end;
 
 procedure TForm1.Button5Click(Sender: TObject);

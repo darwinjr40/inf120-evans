@@ -14,7 +14,7 @@ uses
 
        vector=class
          private
-           elem:array[1..MAX_ELE]of integer; //elem [ 1 | 2 | 1000 | 1000000 |.....| 2147483647 |] 2^31 -1
+           elem:array[0..MAX_ELE]of integer; //elem [ 1 | 2 | 1000 | 1000000 |.....| 2147483647 |] 2^31 -1
            dim:integer;                      //dim    1    2    3       4     .........1024
 
          public                      //puntero
@@ -28,6 +28,7 @@ uses
                function  getDim():integer;
                function  getElem(pos:integer):integer;
                procedure addElem(ele:integer);       //adiciona un elemento al final
+               procedure addElem(var vec: array of Integer; var n: Integer; e: Integer);  //adiciona un elemento manteniendo el orden ascendente
                procedure insElem(pos,ele:integer);   //Inserta elemento en un posicion y recorre el resto
                procedure RemElem(pos:integer);    //Elimina una "posicion"
                procedure InteElem(pos1,pos2:integer);  //Intercambia dos posiciones
@@ -47,6 +48,7 @@ uses
                procedure ord_burbuja(a,b:integer);
                procedure ord_inserc();
                procedure ord_insercion();
+               procedure ordInsercionV2();
                //ordena segun la "cantidad de divisores" ascendente
                procedure ord_CantDiv();
 
@@ -208,6 +210,19 @@ begin
    end
    else
    ShowMessage('Almacenamiento lleno...');
+end;
+
+procedure vector.addElem(var vec: array of Integer; var n: Integer; e: Integer);
+var  i : Integer;
+begin
+  i := n;
+  while (i >= 1) and (vec[i] > e) do
+  begin
+    vec[i+1] := vec[i];
+    i := i-1;
+  end;
+  vec[i+1] := e;
+  n := n+1;
 end;
 
 function vector.getElem(pos: integer): integer;
@@ -446,6 +461,17 @@ begin
       end;
       elem[j+1]:=aux;
   end;
+end;
+
+procedure vector.ordInsercionV2;
+var i, n: integer;
+    vector:array[0..MAX_ELE]of integer;
+begin
+  n := 0;
+  for i:=1 to dim do begin
+    self.addElem(vector, n, elem[i]);
+  end;
+  self.elem := vector;
 end;
 
 //ordenar segun la cantidad de divisores

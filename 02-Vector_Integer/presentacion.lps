@@ -8,11 +8,9 @@
       <Unit0>
         <Filename Value="presentacion.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
+        <EditorIndex Value="2"/>
         <UsageCount Value="48"/>
+        <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="main.pas"/>
@@ -21,8 +19,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="71"/>
-        <CursorPos X="15" Y="73"/>
+        <TopLine Value="46"/>
+        <CursorPos X="48" Y="73"/>
         <UsageCount Value="48"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -37,7 +35,7 @@
       <Unit3>
         <Filename Value="natural.pas"/>
         <UnitName Value="Natural"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="3"/>
         <TopLine Value="866"/>
         <CursorPos X="24" Y="895"/>
         <UsageCount Value="23"/>
@@ -46,7 +44,6 @@
       <Unit4>
         <Filename Value="uvector.pas"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="286"/>
         <CursorPos X="24" Y="298"/>
         <UsageCount Value="23"/>
         <Loaded Value="True"/>

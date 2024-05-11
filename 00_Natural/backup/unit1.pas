@@ -144,7 +144,7 @@ end;
 
 procedure TForm1.MenuItem15Click(Sender: TObject);
 begin
-
+  edit2.Text:= BoolToStr(obj.EsPar(), true);
 end;
 
 procedure TForm1.Button1Click(Sender: TObject);

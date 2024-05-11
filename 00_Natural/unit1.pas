@@ -14,6 +14,7 @@ type
   TForm1 = class(TForm)
     Button1: TButton;
     Button2: TButton;
+    Button3: TButton;
     Edit1: TEdit;
     Edit2: TEdit;
     Edit3: TEdit;
@@ -36,6 +37,7 @@ type
     MenuItem9: TMenuItem;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure MenuItem11Click(Sender: TObject);
     procedure MenuItem12Click(Sender: TObject);
@@ -161,6 +163,11 @@ var x : cardinal;
 begin
   x := obj.GetValor();
   Edit2.Text := IntToStr(x);
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+begin
+  Edit3.Text :=obj.ToPlaca();
 end;
 
 end.

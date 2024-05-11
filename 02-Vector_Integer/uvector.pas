@@ -49,6 +49,7 @@ uses
                procedure ord_inserc();
                procedure ord_insercion();
                procedure ordInsercionV2();
+               //procedure ordBurbujaV22();
                //ordena segun la "cantidad de divisores" ascendente
                procedure ord_CantDiv();
 

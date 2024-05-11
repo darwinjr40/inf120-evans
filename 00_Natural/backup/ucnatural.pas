@@ -25,10 +25,12 @@ type
       function  ToRomano(): String;  // 'XX'
       function  ToLiteral(): String;
       function  ToBaseN(b : cardinal) : String;
+      function EsCapicua(): boolean;
+      function EsPar(): boolean;
+      function ToPlaca(): String;
       {procesos}
       procedure  SetValor(x: cardinal);
       procedure Invertir();
-      function EsCapicua(): boolean;
       procedure InvMitad();
       function getDigsDer(cantD : integer): integer;
       procedure DeleteDigsDer(cantD : integer);
@@ -42,6 +44,7 @@ type
       class function  ToDecenas(n : byte) : String; static;
       class function  ToCentenas(n : word) : String; static;
       class function  ToLiteral(n : cardinal) : String; overload; static;
+      class function  getCharPlaca(n : cardinal) : char; static;
       //34,54 => 54,34
 
   end;
@@ -76,6 +79,20 @@ begin
   aux.valor:=valor;
   aux.Invertir();
   result := (aux.valor = valor);
+end;
+
+function Natural.EsPar: boolean;
+begin
+    result := (valor mod 2 = 0);
+end;
+
+function Natural.ToPlaca: String;
+var a,b,c: byte;
+begin
+  a := (valor  div 100) mod 100;
+  b := (valor  div 10) mod 100;
+  c := valor mod 100;
+  result := IntToStr(valor)+getCharPlaca(a)+getCharPlaca(b)+getCharPlaca(c);
 end;
 
 procedure Natural.InvMitad;
@@ -353,6 +370,14 @@ begin
     p := p + 1;
   end;
   result := r;
+end;
+
+class function Natural.getCharPlaca(n: cardinal): char;
+const VECTOR: Array of char = ('T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E');
+var pos : word;
+begin
+  pos := (n-1+23) mod 23;
+  result := VECTOR[pos];
 end;
 
 end.

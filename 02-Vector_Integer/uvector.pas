@@ -29,6 +29,7 @@ uses
                function  getElem(pos:integer):integer;
                procedure addElem(ele:integer);       //adiciona un elemento al final
                procedure addElem(var vec: array of Integer; var n: Integer; e: Integer);  //adiciona un elemento manteniendo el orden ascendente
+               procedure addElemUnique(e: Integer);  //adiciona un elemento manteniendo el orden ascendente
                procedure insElem(pos,ele:integer);   //Inserta elemento en un posicion y recorre el resto
                procedure RemElem(pos:integer);    //Elimina una "posicion"
                procedure InteElem(pos1,pos2:integer);  //Intercambia dos posiciones
@@ -76,6 +77,7 @@ uses
                procedure ElimPri();
                //retorna el elemento menor entra rango (A..B)
                function  Men(a,b:integer):integer;
+               function  getElemMay():integer;
                //carga en v1[unicos] & v2[repetidos]
                procedure DivRepNoRep(v1,v2:vector);
                //funcionar 4 vectores ordenados en un quinto ordenado sin usar sort’s
@@ -123,7 +125,9 @@ uses
                function elementoModa():integer;
                procedure intercalar3Vectores(v1,v2,v3:vector);
                procedure mezclarDesc(v1,v2: vector);
-
+               //--
+               Procedure LoadFrequency(vo : vector);
+               Function  GetModas(): String;
        end;
 
 implementation
@@ -226,6 +230,17 @@ begin
   n := n+1;
 end;
 
+procedure vector.addElemUnique(e: Integer);
+var fr : integer;
+begin
+   fr := self.frec(e);
+   if (fr = 0) then
+   begin
+     self.dim:=dim+1;
+     self.elem[dim]:=e;
+   end;
+end;
+
 function vector.getElem(pos: integer): integer;
 begin
     result:=elem[pos];
@@ -323,6 +338,35 @@ begin
  vecAux := Vector.crear(self);
  for i:=1 to dim do
    self.elem[i] := vecAux.elem[(i-1+dim-cant) mod dim + 1];
+end;
+
+procedure vector.LoadFrequency(vo: vector);
+var i, e : integer;
+begin
+  for i:= 1 to vo.dim do
+  begin
+    e := vo.elem[i];
+    self.elem[i] := vo.frec(e);
+  end;
+  dim := vo.dim;
+end;
+
+function vector.GetModas: String;
+var vf, vs : vector;
+    fMax, i : integer;
+begin
+  vs := vector.crear();
+  vf := vector.crear();
+  vf.LoadFrequency(self);
+  fmax := vf.getElemMay();
+  for i:= 1 to dim do
+  begin
+    if (vf.elem[i] = fMax) then
+    begin
+      vs.addElemUnique(self.elem[i]);
+    end;
+  end;
+  result := vs.descargar();
 end;
 
 //Busca un elemento      (ele=2)
@@ -661,6 +705,20 @@ begin
 
 end;
 
+function vector.getElemMay: integer;
+var i, mayor :integer;
+begin
+  if(dim = 0)then begin
+    raise Exception.create('getElemMay: Vector Vacio');
+  end;
+  mayor := self.elem[1];
+  for i := 2 to self.dim do
+  begin
+    if(elem[i] > mayor)then mayor := elem[i];
+  end;
+  result := mayor;
+end;
+
 procedure vector.Inter_ordenar(v1, v2: vector);
 var i,j,m1,m2:integer;
 begin
@@ -996,29 +1054,27 @@ begin
 end;
 
 procedure vector.intercalar3Vectores(v1, v2, v3: vector);
-var i1,i2,i3,n:Integer;
-begin //3,1,2
-i1:= 1;
-i2:= 1;
-i3:= 1;
-n:= v1.dim+v2.dim+v3.dim;
-while (self.dim < n) do begin
- if(i3<=v3.dim) then begin
-   addElem(v3.elem[i3]);
-   i3:=i3+1;
+var i, j, k :Integer;
+begin
+i:= 1;
+j:= 1;
+k:= 1;
+while (i<=v1.dim)or(j<=v2.dim)or(k<=v3.dim) do begin
+ if(k<=v3.dim) then begin
+   addElem(v3.elem[k]);
+   k:=k+1;
  end;
 
- if(i1<=v1.dim) then begin
-   addElem(v1.elem[i1]);
-   i1:=i1+1;
+ if(i<=v1.dim) then begin
+   addElem(v1.elem[i]);
+   i:=i+1;
  end;
 
- if(i2<=v2.dim) then begin
-   addElem(v2.elem[i2]);
-   i2:=i2+1;
+ if(j<=v2.dim) then begin
+   addElem(v2.elem[j]);
+   j:=j+1;
  end;
 end;
-
 end;
 
 procedure vector.mezclarDesc(v1, v2: vector);
@@ -1026,6 +1082,7 @@ var i,j : integer;
 begin
   i := 1;
   j := 1;
+  self.dim := 0;
   while (i<=v1.dim)and(j<=v2.dim) do begin
     if (v1.elem[i] > v2.elem[j])then begin
       self.addElem(v1.elem[i]);

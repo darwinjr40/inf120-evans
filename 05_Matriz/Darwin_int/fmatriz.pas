@@ -117,10 +117,11 @@ begin
    // m.Ordenar_Fil_NumPar();  updateSG1();
    //m.cargaTsd(); updateSG1();
    //m1.Mejor(); m2.descargarM(StringGrid1);
-   //m1.TransponerTriangSinTp();
+   //m.TransponerTriangSinTp();
+   //m.TransponerSinTriprincipal();
    //m1.TranpuestaTII1();
 
-  //try
+  try
   //  //m4.multiplica(m1,m2);
   //  m1.setfils(3);
   //  m1.setcols(4);
@@ -140,12 +141,13 @@ begin
   //  m1.setElem(3,3, -2);
   //  m1.setElem(3,4, 4);
   //  ShowMessage(m1.EcuacionMatriz());
-  //except
-  //  on E:Exception do
-  //    ShowMessage('Se ha producido un error: ' + E.Message);
-  //end;
+      m.SortByRows();
+  except
+    on E:Exception do
+      ShowMessage('Se ha producido un error: ' + E.Message);
+  end;
 
-  m.cargaTSI();
+  //m.cargaTSI();
 end;
 
 

@@ -19,11 +19,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Formulario"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="273"/>
         <CursorPos X="49" Y="281"/>
         <UsageCount Value="119"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="conjunto.pas"/>
@@ -47,11 +46,10 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Cadenas"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="730"/>
         <CursorPos X="22" Y="736"/>
         <UsageCount Value="117"/>
-        <Loaded Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="..\..\03-vector-caracter\form.pas"/>
@@ -124,32 +122,10 @@
         <UsageCount Value="38"/>
       </Unit13>
     </Units>
-    <JumpHistory Count="6" HistoryIndex="5">
-      <Position1>
-        <Filename Value="cadenas.pas"/>
-        <Caret Line="68" Column="28" TopLine="59"/>
-      </Position1>
-      <Position2>
-        <Filename Value="formulario.pas"/>
-        <Caret Line="245" Column="87" TopLine="231"/>
-      </Position2>
-      <Position3>
-        <Filename Value="formulario.pas"/>
-        <Caret Line="62" Column="16" TopLine="29"/>
-      </Position3>
-      <Position4>
-        <Filename Value="cadenas.pas"/>
-        <Caret Line="58" Column="33" TopLine="53"/>
-      </Position4>
-      <Position5>
-        <Filename Value="formulario.pas"/>
-        <Caret Line="68" Column="18" TopLine="61"/>
-      </Position5>
-      <Position6>
-        <Filename Value="cadenas.pas"/>
-        <Caret Line="297" Column="23" TopLine="289"/>
-      </Position6>
-    </JumpHistory>
+    <General>
+      <ActiveWindowIndexAtStart Value="-1"/>
+    </General>
+    <JumpHistory HistoryIndex="-1"/>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>

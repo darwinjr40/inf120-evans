@@ -19,20 +19,21 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FPrincipal"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="289"/>
-        <CursorPos X="51" Y="301"/>
+        <CursorPos X="75" Y="9"/>
         <UsageCount Value="121"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="utipo.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="UTipo"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="33"/>
-        <CursorPos X="29" Y="43"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="320"/>
+        <CursorPos X="18" Y="352"/>
         <UsageCount Value="121"/>
+        <Loaded Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="unota.pas"/>
@@ -46,9 +47,11 @@
         <Filename Value="unitempleado.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="UnitEmpleado"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="43" Y="143"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="5"/>
+        <CursorPos X="29" Y="25"/>
         <UsageCount Value="32"/>
+        <Loaded Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="unitnota.pas"/>
@@ -124,10 +127,16 @@
         <UsageCount Value="10"/>
       </Unit14>
     </Units>
-    <General>
-      <ActiveWindowIndexAtStart Value="-1"/>
-    </General>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory Count="2" HistoryIndex="1">
+      <Position1>
+        <Filename Value="fprincipal.pas"/>
+        <Caret Line="9" Column="75"/>
+      </Position1>
+      <Position2>
+        <Filename Value="utipo.pas"/>
+        <Caret Line="80" Column="23" TopLine="55"/>
+      </Position2>
+    </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>

@@ -19,20 +19,22 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FPrincipal"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="289"/>
-        <CursorPos X="51" Y="301"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="155"/>
+        <CursorPos Y="164"/>
         <UsageCount Value="121"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="utipo.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="UTipo"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="33"/>
-        <CursorPos X="29" Y="43"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="328"/>
+        <CursorPos X="38" Y="344"/>
         <UsageCount Value="121"/>
+        <Loaded Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="unota.pas"/>
@@ -46,9 +48,11 @@
         <Filename Value="unitempleado.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="UnitEmpleado"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="43" Y="143"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="5"/>
+        <CursorPos X="29" Y="25"/>
         <UsageCount Value="32"/>
+        <Loaded Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="unitnota.pas"/>
@@ -124,16 +128,35 @@
         <UsageCount Value="10"/>
       </Unit14>
     </Units>
-    <General>
-      <ActiveWindowIndexAtStart Value="-1"/>
-    </General>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory Count="3" HistoryIndex="2">
+      <Position1>
+        <Filename Value="fprincipal.pas"/>
+        <Caret Line="9" Column="75"/>
+      </Position1>
+      <Position2>
+        <Filename Value="utipo.pas"/>
+        <Caret Line="80" Column="23" TopLine="55"/>
+      </Position2>
+      <Position3>
+        <Filename Value="fprincipal.pas"/>
+        <Caret Line="9" Column="75"/>
+      </Position3>
+    </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>
     </RunParams>
   </ProjectSession>
   <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="fprincipal.pas"/>
+        <Line Value="164"/>
+      </Item>
+    </BreakPoints>
     <Watches>
       <Item>
         <Expression Value="C"/>

@@ -5,7 +5,8 @@ unit Form;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls,UnitEmpleado;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Grids,
+  Buttons, UnitEmpleado;
 
 type
 
@@ -15,9 +16,12 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
+    Button4: TButton;
+    StringGrid1: TStringGrid;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
     T : FileEmpleado;
@@ -35,7 +39,7 @@ implementation
 { TForm1 }
 
 procedure TForm1.Button1Click(Sender: TObject);
-var e : Empleado;
+//var e : Empleado;
 begin
   T.Crear();
   {
@@ -55,30 +59,22 @@ begin
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
-var cad:String;
-      r:Empleado;
 begin
-  //if(t.existe(T.getNom(),t.getExt()))then begin
-    t.Abrir();
-    T.Posicionar(1);//el puntero lo iniciamos en la posicion 1
-    cad:='Nombre    sexo   cargo     sueldo    moneda'+#10#13;
-    WHILE(not T.EsFin())do begin //Incrementa el indice automaticamente Hasta llegar al ultimo registro
-       r:= T.LeerTipo;
-       cad:=cad+ r.Nombre+'  ' + r.sexo+'  '+ r.cargo +'  '+ Inttostr(r.sueldo) + r.moneda + #10#13;
-    end;
-     ShowMessage(cad);
-     t.Cerrar();
-  {
-  end else begin
-     ShowMessage('El archivo '+t.getNom()+'.'+t.getExt()+' no existe');
-  end;
-  }
+    showMessage(t.Descargar());
 end;
 
 procedure TForm1.Button3Click(Sender: TObject);
+var salida: string;
 begin
   //ShowMessage(t.get2sueldosMayoresAndMostrarMujeres());
-  ShowMessage(t.getMayorAlPromAndMayorSueldo());
+  //ShowMessage(t.getMayorAlPromAndMayorSueldo());
+  salida := t.ListarMujeres();
+  ShowMessage(salida);
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+begin
+  t.Descargar(StringGrid1);
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);

@@ -10,7 +10,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="58" Y="10"/>
-        <UsageCount Value="121"/>
+        <UsageCount Value="123"/>
       </Unit0>
       <Unit1>
         <Filename Value="fprincipal.pas"/>
@@ -19,8 +19,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FPrincipal"/>
-        <CursorPos X="75" Y="9"/>
-        <UsageCount Value="121"/>
+        <TopLine Value="279"/>
+        <CursorPos X="19" Y="162"/>
+        <UsageCount Value="123"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -30,9 +31,9 @@
         <UnitName Value="UTipo"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="320"/>
-        <CursorPos X="18" Y="352"/>
-        <UsageCount Value="121"/>
+        <TopLine Value="360"/>
+        <CursorPos X="16" Y="381"/>
+        <UsageCount Value="123"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -41,7 +42,7 @@
         <UnitName Value="UNota"/>
         <EditorIndex Value="-1"/>
         <CursorPos Y="38"/>
-        <UsageCount Value="50"/>
+        <UsageCount Value="52"/>
       </Unit3>
       <Unit4>
         <Filename Value="unitempleado.pas"/>
@@ -50,7 +51,7 @@
         <EditorIndex Value="2"/>
         <TopLine Value="5"/>
         <CursorPos X="29" Y="25"/>
-        <UsageCount Value="32"/>
+        <UsageCount Value="34"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
@@ -60,7 +61,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="117"/>
         <CursorPos X="28" Y="8"/>
-        <UsageCount Value="28"/>
+        <UsageCount Value="30"/>
       </Unit5>
       <Unit6>
         <Filename Value="..\07-Archivos\t7e1\t7el.lpr"/>
@@ -127,7 +128,7 @@
         <UsageCount Value="10"/>
       </Unit14>
     </Units>
-    <JumpHistory Count="2" HistoryIndex="1">
+    <JumpHistory Count="9" HistoryIndex="8">
       <Position1>
         <Filename Value="fprincipal.pas"/>
         <Caret Line="9" Column="75"/>
@@ -136,6 +137,34 @@
         <Filename Value="utipo.pas"/>
         <Caret Line="80" Column="23" TopLine="55"/>
       </Position2>
+      <Position3>
+        <Filename Value="fprincipal.pas"/>
+        <Caret Line="9" Column="75"/>
+      </Position3>
+      <Position4>
+        <Filename Value="utipo.pas"/>
+        <Caret Line="350" Column="50" TopLine="328"/>
+      </Position4>
+      <Position5>
+        <Filename Value="utipo.pas"/>
+        <Caret Line="69" Column="29" TopLine="65"/>
+      </Position5>
+      <Position6>
+        <Filename Value="utipo.pas"/>
+        <Caret Line="351" Column="19" TopLine="328"/>
+      </Position6>
+      <Position7>
+        <Filename Value="utipo.pas"/>
+        <Caret Line="69" Column="29" TopLine="48"/>
+      </Position7>
+      <Position8>
+        <Filename Value="utipo.pas"/>
+        <Caret Line="351" Column="19" TopLine="339"/>
+      </Position8>
+      <Position9>
+        <Filename Value="utipo.pas"/>
+        <Caret Line="69" Column="29" TopLine="56"/>
+      </Position9>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
@@ -143,6 +172,15 @@
     </RunParams>
   </ProjectSession>
   <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="fprincipal.pas"/>
+        <Line Value="164"/>
+      </Item>
+    </BreakPoints>
     <Watches>
       <Item>
         <Expression Value="C"/>
@@ -164,6 +202,9 @@
       </Item>
       <Item>
         <Expression Value="e"/>
+      </Item>
+      <Item>
+        <Expression Value="od"/>
       </Item>
     </Watches>
   </Debugging>

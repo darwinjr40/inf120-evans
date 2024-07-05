@@ -1,23 +1,22 @@
 object Form1: TForm1
   Left = 426
-  Height = 571
+  Height = 457
   Top = 167
-  Width = 938
+  Width = 750
   Caption = ' Mi Block de Notas'
-  ClientHeight = 546
-  ClientWidth = 938
-  DesignTimePPI = 120
+  ClientHeight = 437
+  ClientWidth = 750
   Menu = MainMenu1
   OnCreate = FormCreate
-  LCLVersion = '2.2.4.0'
+  LCLVersion = '2.2.6.0'
   object M: TMemo
     Left = 0
-    Height = 546
+    Height = 437
     Top = 0
-    Width = 938
+    Width = 750
     Align = alClient
     Font.CharSet = ANSI_CHARSET
-    Font.Height = -23
+    Font.Height = -18
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Lines.Strings = (
@@ -29,8 +28,8 @@ object Form1: TForm1
     TabOrder = 0
   end
   object MainMenu1: TMainMenu
-    Left = 24
-    Top = 16
+    Left = 19
+    Top = 13
     object MenuItem9: TMenuItem
       Caption = 'Archivo'
       object MenuItem13: TMenuItem
@@ -110,6 +109,10 @@ object Form1: TForm1
         Caption = 'Mezclar(ta,tb)'
         OnClick = MenuItem4Click
       end
+      object MenuItem5: TMenuItem
+        Caption = 'prueba'
+        OnClick = MenuItem5Click
+      end
     end
     object MenuItem1: TMenuItem
       Caption = 'Examen'
@@ -121,15 +124,19 @@ object Form1: TForm1
         Caption = 'promedio y mayor'
         OnClick = MenuItem3Click
       end
+      object MenuItem6: TMenuItem
+        Caption = 'cifrar vocales'
+        OnClick = MenuItem6Click
+      end
     end
   end
   object OD: TOpenDialog
     DefaultExt = '.txt'
-    Left = 104
-    Top = 16
+    Left = 83
+    Top = 13
   end
   object SD: TSaveDialog
-    Left = 168
-    Top = 16
+    Left = 134
+    Top = 13
   end
 end

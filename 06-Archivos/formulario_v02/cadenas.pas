@@ -20,6 +20,7 @@ uses
        Constructor crear();
        function  descargar():String;
        procedure LeerPal(var pos:integer;var pal:String);
+       procedure Cargar(cad :String);
        procedure AddPal(pal :String);
        procedure Inserchar(pos:integer;ele:char);
        procedure InserPal(pos:integer;pal:String);
@@ -46,6 +47,8 @@ uses
        procedure selectReal();
        procedure leerNumReales(var pos: integer; var pal: String);
        procedure EliminarAll(delPal:String);
+       class function CifrarVocal(x: char): char; static;
+       procedure cifradoInvertidoVocales();
 
   end;
 implementation
@@ -143,6 +146,18 @@ begin
   begin //pos queda como puntero de la siguiente palabra
     pos:=pos+1;
   end;
+end;
+
+procedure cadena.Cargar(cad: String);
+var n,i:integer;
+begin
+   n:=Length(cad);
+   if(dim+n+1<=MAX_ELE)then begin
+       dim:=n;
+       for i:=1 to n do begin
+         elem[i]:=cad[i];
+       end;
+   end;
 end;
 
 //agarra palabra*palabra y verifica si EXISTE(palB)
@@ -256,13 +271,12 @@ var a,b:integer;
      aux:char;
 begin
    a:=1;   b:=dim;
-   while(a<b)do
-   begin
-   aux:=elem[a];
-   elem[a]:=elem[b];
-   elem[b]:=aux;
-   a:=a+1;
-   b:=b-1;
+   while(a<b)do begin
+     aux:=elem[a];
+     elem[a]:=elem[b];
+     elem[b]:=aux;
+     a:=a+1;
+     b:=b-1;
    end;
 end;
 
@@ -469,6 +483,38 @@ begin
      end;
   end;
 end;
+
+class function cadena.CifrarVocal(x: char): char;
+var res: char;
+begin
+  case UpCase(x) of
+    'A' : res:= '!';
+    'E' : res:= '*';
+    'I' : res:= char(35);
+    'O' : res:= '$';
+    'U' : res:= '%';
+    ' ' : res:= char(64);
+  else
+    res := x;
+  end;
+  result := res;
+end;
+
+procedure cadena.cifradoInvertidoVocales;
+var a,b:integer;
+     aux:char;
+begin
+   a:=1;   b:=dim;
+   while(a<b)do begin
+     aux:= CifrarVocal(elem[a]);
+     elem[a]:=CifrarVocal(elem[b]);
+     elem[b]:=aux;
+     a:=a+1;
+     b:=b-1;
+   end;
+end;
+
+
 
 
 

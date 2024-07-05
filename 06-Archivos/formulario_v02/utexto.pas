@@ -90,8 +90,10 @@ uses
         procedure informe(O:Texto);
         procedure mezclar(ta, tb :Texto);
         //examen
-        procedure frecuenciaDePalabras(new : Texto);
+        procedure frecuenciaDePalabras(new : Texto);overload;
+        procedure frecuenciaDePalabras(newFileName: String); overload;
         procedure MayorYpromedio(var promedio, mayor : real);
+        procedure CifrarVocales(newFileName: String);
  end;
 
 implementation
@@ -509,12 +511,60 @@ begin
     new.cerrar();
 end;
 
+procedure Texto.frecuenciaDePalabras(newFileName: String);
+var cad : cadena;
+    i, moda: Integer;
+    pal:String;
+    aux : Texto;
+begin
+    aux := Texto.create();
+    aux.setNom(newFileName);
+    aux.crear();  //listo para escribir
+    self.abrir();
+    cad := cadena.crear();
+    while(not esfin()) do begin
+      cad.AddPal(leerLinea());
+    end;
+    i:=1; //procesar objeto cadena
+    while (i <= cad.getDim()) do begin
+      cad.LeerPal(i, pal);//cargamos la primera palabra
+      if (pal <> '') then begin //se cargo una palabra
+         moda := cad.frecuenciaPal(pal); //moda 3
+         aux.escribirLinea(pal + '     '+ IntToStr(moda));
+         cad.EliminarAll(pal);
+         i:=1;
+      end;
+    end;
+    cerrar();
+    aux.cerrar();
+end;
+
 procedure Texto.MayorYpromedio(var promedio, mayor: real);
 begin
 
  promedio :=5.5;
  mayor := 10;
 
+end;
+
+procedure Texto.CifrarVocales(newFileName: String);
+var cad : cadena;
+    aux : Texto;
+    linea :string;
+begin
+    self.abrir();
+    aux := Texto.create();
+    aux.setNom(newFileName);
+    aux.crear();  //listo para escribir
+    cad := cadena.crear();
+    while(not esfin()) do begin
+      linea := leerLinea();
+      cad.Cargar(linea);
+      cad.cifradoInvertidoVocales();
+      aux.escribirLinea(cad.descargar());
+    end;
+    cerrar();
+    aux.cerrar();
 end;
 
 

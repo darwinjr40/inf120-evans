@@ -19,20 +19,19 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Ftexto"/>
-        <TopLine Value="268"/>
-        <CursorPos X="18" Y="276"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="312"/>
+        <CursorPos X="24" Y="274"/>
         <UsageCount Value="116"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="utexto.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Utexto"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="557"/>
-        <CursorPos X="33" Y="571"/>
+        <TopLine Value="553"/>
+        <CursorPos X="25" Y="559"/>
         <UsageCount Value="116"/>
         <Loaded Value="True"/>
       </Unit2>
@@ -120,123 +119,123 @@
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="ftexto.pas"/>
-        <Caret Line="235" Column="23" TopLine="224"/>
+        <Caret Line="241" Column="23" TopLine="230"/>
       </Position1>
       <Position2>
         <Filename Value="ftexto.pas"/>
-        <Caret Line="241" Column="23" TopLine="230"/>
+        <Caret Line="263" Column="23" TopLine="252"/>
       </Position2>
       <Position3>
         <Filename Value="ftexto.pas"/>
-        <Caret Line="263" Column="23" TopLine="252"/>
+        <Caret Line="283" Column="27" TopLine="57"/>
       </Position3>
       <Position4>
         <Filename Value="ftexto.pas"/>
-        <Caret Line="283" Column="27" TopLine="57"/>
+        <Caret Line="139" Column="8" TopLine="130"/>
       </Position4>
       <Position5>
         <Filename Value="ftexto.pas"/>
-        <Caret Line="139" Column="8" TopLine="130"/>
+        <Caret Line="70" Column="27" TopLine="62"/>
       </Position5>
       <Position6>
-        <Filename Value="ftexto.pas"/>
-        <Caret Line="70" Column="27" TopLine="62"/>
+        <Filename Value="utexto.pas"/>
+        <Caret Line="91" Column="33" TopLine="82"/>
       </Position6>
       <Position7>
         <Filename Value="utexto.pas"/>
-        <Caret Line="91" Column="33" TopLine="82"/>
+        <Caret Line="553" Column="11" TopLine="549"/>
       </Position7>
       <Position8>
         <Filename Value="utexto.pas"/>
-        <Caret Line="553" Column="11" TopLine="549"/>
+        <Caret Line="551" Column="17" TopLine="544"/>
       </Position8>
       <Position9>
         <Filename Value="utexto.pas"/>
-        <Caret Line="551" Column="17" TopLine="544"/>
+        <Caret Line="91" Column="33" TopLine="82"/>
       </Position9>
       <Position10>
         <Filename Value="utexto.pas"/>
-        <Caret Line="91" Column="33" TopLine="82"/>
+        <Caret Line="551" Column="51" TopLine="533"/>
       </Position10>
       <Position11>
         <Filename Value="utexto.pas"/>
-        <Caret Line="551" Column="51" TopLine="533"/>
+        <Caret Line="553" Column="15" TopLine="544"/>
       </Position11>
       <Position12>
         <Filename Value="utexto.pas"/>
-        <Caret Line="553" Column="15" TopLine="544"/>
+        <Caret Line="8" Column="28"/>
       </Position12>
       <Position13>
         <Filename Value="utexto.pas"/>
-        <Caret Line="8" Column="28"/>
+        <Caret Line="559" Column="15" TopLine="546"/>
       </Position13>
       <Position14>
-        <Filename Value="utexto.pas"/>
-        <Caret Line="559" Column="15" TopLine="546"/>
+        <Filename Value="cadenas.pas"/>
+        <Caret Line="23" Column="24" TopLine="12"/>
       </Position14>
       <Position15>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="23" Column="24" TopLine="12"/>
+        <Caret Line="22" Column="38" TopLine="11"/>
       </Position15>
       <Position16>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="22" Column="38" TopLine="11"/>
+        <Caret Line="97" Column="20" TopLine="87"/>
       </Position16>
       <Position17>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="97" Column="20" TopLine="87"/>
+        <Caret Line="98" Column="25" TopLine="86"/>
       </Position17>
       <Position18>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="98" Column="25" TopLine="86"/>
+        <Caret Line="50" Column="43" TopLine="40"/>
       </Position18>
       <Position19>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="50" Column="43" TopLine="40"/>
+        <Caret Line="487" Column="24" TopLine="474"/>
       </Position19>
       <Position20>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="487" Column="24" TopLine="474"/>
+        <Caret Line="9" Column="16"/>
       </Position20>
       <Position21>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="9" Column="16"/>
+        <Caret Line="489" Column="10" TopLine="478"/>
       </Position21>
       <Position22>
         <Filename Value="cadenas.pas"/>
-        <Caret Line="489" Column="10" TopLine="478"/>
+        <Caret Line="490" Column="27" TopLine="478"/>
       </Position22>
       <Position23>
-        <Filename Value="cadenas.pas"/>
-        <Caret Line="490" Column="27" TopLine="478"/>
+        <Filename Value="ftexto.pas"/>
+        <Caret Line="269" Column="32" TopLine="266"/>
       </Position23>
       <Position24>
         <Filename Value="ftexto.pas"/>
-        <Caret Line="269" Column="32" TopLine="266"/>
+        <Caret Line="277" Column="65" TopLine="266"/>
       </Position24>
       <Position25>
         <Filename Value="ftexto.pas"/>
-        <Caret Line="277" Column="65" TopLine="266"/>
+        <Caret Line="316" Column="38" TopLine="310"/>
       </Position25>
       <Position26>
         <Filename Value="ftexto.pas"/>
-        <Caret Line="316" Column="38" TopLine="310"/>
+        <Caret Line="281" Column="39" TopLine="268"/>
       </Position26>
       <Position27>
         <Filename Value="ftexto.pas"/>
-        <Caret Line="281" Column="39" TopLine="268"/>
+        <Caret Line="66" Column="21" TopLine="62"/>
       </Position27>
       <Position28>
-        <Filename Value="ftexto.pas"/>
-        <Caret Line="66" Column="21" TopLine="62"/>
-      </Position28>
-      <Position29>
         <Filename Value="cadenas.pas"/>
         <Caret Line="21" Column="27" TopLine="18"/>
+      </Position28>
+      <Position29>
+        <Filename Value="utexto.pas"/>
+        <Caret Line="570" Column="11" TopLine="557"/>
       </Position29>
       <Position30>
         <Filename Value="utexto.pas"/>
-        <Caret Line="570" Column="11" TopLine="557"/>
+        <Caret Line="91" Column="33" TopLine="83"/>
       </Position30>
     </JumpHistory>
     <RunParams>

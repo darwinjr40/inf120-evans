@@ -358,7 +358,7 @@ end;
 
 class function Natural.ToLiteral(n: cardinal): String;
 const VEC:Array[0..3] of string = ('', ' mil ',' millon ',' billon ');
-var r, cad : string;//uno mil veintitres
+var r : string;//uno mil veintitres
     p, d  : word;   //dos mil
 begin
   r := '';

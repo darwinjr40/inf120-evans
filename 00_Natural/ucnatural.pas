@@ -89,7 +89,7 @@ end;
 function Natural.ToPlaca: String;
 var a,b,c: byte;
 begin
-  a := (valor  div 100) mod 100;
+  a := valor  div 100;
   b := (valor  div 10) mod 100;
   c := valor mod 100;
   result := IntToStr(valor)+getCharPlaca(a)+getCharPlaca(b)+getCharPlaca(c);

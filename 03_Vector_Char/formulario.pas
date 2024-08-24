@@ -275,11 +275,11 @@ procedure TForm1.MenuItem34Click(Sender: TObject);
 var cant: word;
     s, patron: string;
 begin
-  // cant:= StrToInt(InputBox('','cantidad',''));
-  //self.cad.RotarDer(cant);
-  patron := InputBox('','patron a buscar','');
-  cad.CargarPosPatron(1, cad.getDim(), patron, s);
-  edit2.Text:= s;
+   cant:= StrToInt(InputBox('','cantidad',''));
+  self.cad.RotarDer(cant);
+  //patron := InputBox('','patron a buscar','');
+  //cad.CargarPosPatron(1, cad.getDim(), patron, s);
+  //edit2.Text:= s;
 end;
 
 procedure TForm1.MenuItem3Click(Sender: TObject);

@@ -1,0 +1,6 @@
+Juan     1
+Maria     3
+Pedro     2
+alla     4
+aquí     2
+mas     1

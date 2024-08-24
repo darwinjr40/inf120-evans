@@ -19,7 +19,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Ftexto"/>
-        <TopLine Value="268"/>
+        <TopLine Value="311"/>
         <CursorPos X="24" Y="274"/>
         <UsageCount Value="116"/>
         <Loaded Value="True"/>
@@ -31,8 +31,8 @@
         <UnitName Value="Utexto"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="553"/>
-        <CursorPos X="9" Y="556"/>
+        <TopLine Value="62"/>
+        <CursorPos X="25" Y="559"/>
         <UsageCount Value="116"/>
         <Loaded Value="True"/>
       </Unit2>

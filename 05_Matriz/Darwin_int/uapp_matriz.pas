@@ -120,6 +120,10 @@ CONST
           procedure TranpuestaTII1();
           procedure TranpuestaTSD1();
           procedure TransponerTriangSinTp();
+          procedure TransponerSinTriprincipal();
+          //Ordenar la matriz por filas
+          procedure SortByRows();
+          procedure IntercambiarFils(i, j: integer);
     end;
 
 implementation
@@ -139,8 +143,8 @@ begin
 procedure Matriz.CargarMRnd(a, b: integer);
 var f1,c1:integer;
 begin
-   fils:=StrToInt(InputBox('cantidad de filas','filas',''));
-   cols:=StrToInt(InputBox('cantidad de columnas','columnas',''));
+   fils:=StrToInt(InputBox('cantidad de filas','filas','4'));
+   cols:=StrToInt(InputBox('cantidad de columnas','columnas','4'));
     for f1:=1 to fils do begin
        for c1:=1 to cols do begin
                  //           10-1 = 9->(0..9)+1
@@ -966,5 +970,44 @@ begin
     end;
   end;
 end;
+
+procedure Matriz.TransponerSinTriprincipal;
+var ia, ib, j, x : integer;
+begin
+  ia := 2;
+  ib := self.fils;
+  while (ia < ib) do begin
+    x := 0;
+    for j := ia to ib do begin
+      interElem(ia-1, ia+x, ib-1-x, ib);
+      interElem(ia+x, ia-1, ib, ib-1-x);
+      x := x+1;
+    end;
+    ia := ia+1;
+    ib := ib-1;
+  end;
+end;
+
+procedure Matriz.SortByRows;
+var i, j : integer;
+begin
+  for  i:=1 to fils-1 do begin
+    for  j:=i+1 to fils do begin
+      if (elem[i,1] > elem[j,1]) then
+        IntercambiarFils(i,j);
+    end;
+  end;
+end;
+
+procedure Matriz.IntercambiarFils(i, j: integer);
+var c, aux: integer;
+begin
+  for c:=1 to cols do begin
+    aux := elem[i,c];
+    elem[i,c] := elem[j,c];
+    elem[j,c] := aux;
+  end;
+end;
+
 end.
 

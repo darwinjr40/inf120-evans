@@ -30,13 +30,8 @@ type
   private
 
   public
-        v :vector;
+        v, v1, v2, v3, v4, v5 :vector;
         VEC: array[1..5] of vector;
-        property v1: vector read VEC[1];
-        property v2: vector read VEC[2];
-        property v3: vector read VEC[3];
-        property v4: vector read VEC[4];
-        property v5: vector read VEC[5];
   end;
 
 var
@@ -51,12 +46,21 @@ implementation
 procedure TForm1.FormCreate(Sender: TObject);
 var i : integer;
 begin
-     for i:=1 to 5 do begin
-       ComboBox1.Items.Add('Vector' + IntToStr(i));
-       VEC[i] := vector.crear();
-     end;
-     ComboBox1.ItemIndex := 0;
-     v := VEC[1];
+  v1 := vector.crear();
+  v2 := vector.crear();
+  v3 := vector.crear();
+  v4 := vector.crear();
+  v5 := vector.crear();
+  VEC[1] := v1;
+  VEC[2] := v2;
+  VEC[3] := v3;
+  VEC[4] := v4;
+  VEC[5] := v5;
+  for i:=1 to 5 do begin
+    ComboBox1.Items.Add('Vector' + IntToStr(i));
+  end;
+  ComboBox1.ItemIndex := 0;
+  v := v1;
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
@@ -89,7 +93,15 @@ begin
    //V.addAsc(n);
    //v.FusionAsc(vec[1], vec[2], vec[3],vec[4]);
    //v.RotarDerecha(StrToInt(InputBox('','','')));
-   v.ordInsercionV2();
+   //v.ordInsercionV2();
+   //showmessage(
+   //  IntToStr(v.getElemMay())
+   //);
+   //Edit1.Text:= v.GetModas();
+  {Mezclar 2 vectores}
+   //v3.mezclarDesc(v1, v2);
+  {Intercalar 3 vectores}
+  v4.intercalar3Vectores(v1, v2, v3);
 end;
 
 procedure TForm1.Button5Click(Sender: TObject);
@@ -109,10 +121,10 @@ end;
 procedure TForm1.ComboBox1Change(Sender: TObject);
 var pos: integer;
 begin
-  pos := ComboBox1.ItemIndex;
+  pos := ComboBox1.ItemIndex + 1;
   {comentar rapido => ctrl + / }
-  ShowMessage(inttostr(pos));
-  v := self.VEC[pos+1];
+  //ShowMessage(inttostr(pos));
+  v := self.VEC[pos];
   v.descargar(StringGrid1);
 end;
 

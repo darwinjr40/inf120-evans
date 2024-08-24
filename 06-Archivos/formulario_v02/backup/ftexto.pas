@@ -37,6 +37,8 @@ type
     MenuItem29: TMenuItem;
     MenuItem3: TMenuItem;
     MenuItem4: TMenuItem;
+    MenuItem5: TMenuItem;
+    MenuItem6: TMenuItem;
     MenuItem9: TMenuItem;
     OD: TOpenDialog;
     SD: TSaveDialog;
@@ -61,6 +63,8 @@ type
     procedure MenuItem2Click(Sender: TObject);
     procedure MenuItem3Click(Sender: TObject);
     procedure MenuItem4Click(Sender: TObject);
+    procedure MenuItem5Click(Sender: TObject);
+    procedure MenuItem6Click(Sender: TObject);
 
   private
    T, T1, T2:Texto;
@@ -219,9 +223,8 @@ end;
 
 procedure TForm1.MenuItem2Click(Sender: TObject);
 begin
-  SeleccionarArchivoV1(T);//OpenDialog : CARGAR NOMBRE Y EXTENSION AL OBJETO
-  self.T1.setNom('salida.txt');
-  T.frecuenciaDePalabras(T1);
+  SeleccionarArchivoV2(T);//OpenDialog : CARGAR NOMBRE Y EXTENSION AL OBJETO
+  T.frecuenciaDePalabras('salida-frec-palabras.txt');
 end;
 
 procedure TForm1.MenuItem3Click(Sender: TObject);
@@ -244,6 +247,22 @@ begin
  ShowMessage('NOMBRE DEL ARCHIVO A GUARDAR:');
  self.GuardarArchivoComo(T); //guardamos el nom y ext
  self.T.mezclar(self.t1, self.t2);
+end;
+
+procedure TForm1.MenuItem5Click(Sender: TObject);
+var cad: Cadena;
+begin
+  cad := Cadena.crear();
+  cad.AddPal('La PROgramacion');
+  cad.cifradoInvertidoVocales();
+  Cadena.CifrarVocal('a');
+  ShowMessage(cad.descargar());
+end;
+
+procedure TForm1.MenuItem6Click(Sender: TObject);
+begin
+  SeleccionarArchivoV2(T);
+  T.CifrarVocales('salida-cifrar-vocales.txt');
 end;
 
 procedure TForm1.SeleccionarArchivoV1(a: Texto);
@@ -270,24 +289,27 @@ begin
 end;
 
 procedure TForm1.SeleccionarArchivoV2(archivo: texto);
-VAR ext,nom:String;
-          i:integer;
+VAR select: boolean;
 begin
-  if(OD.Execute)then begin
-    nom:='';
-    ext:='';
-    i:=1;
-    while(OD.FileName[i]<>'.')do begin//
-      nom:=nom+od.FileName[i];
-      i:=i+1;
-    end;
-    i:=i+1;
-    while(OD.FileName[i]<>'.')do begin
-      ext:=ext+od.FileName[i];
-      i:=i+1;
-    end;
-    archivo.setNom(nom);
+  select := OD.Execute();
+  if(select)then begin
+   archivo.setNom(od.FileName);
   end;
+  //if(OD.Execute)then begin
+  //  nom:='';
+  //  ext:='';
+  //  i:=1;
+  //  while(OD.FileName[i]<>'.')do begin//
+  //    nom:=nom+od.FileName[i];
+  //    i:=i+1;
+  //  end;
+  //  i:=i+1;
+  //  while(OD.FileName[i]<>'.')do begin
+  //    ext:=ext+od.FileName[i];
+  //    i:=i+1;
+  //  end;
+  //  archivo.setNom(nom);
+  //end;
 end;
 
 procedure TForm1.GuardarArchivoComo(archivo: texto);

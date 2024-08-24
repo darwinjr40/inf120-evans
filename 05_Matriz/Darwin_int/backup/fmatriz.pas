@@ -89,24 +89,13 @@ begin
 end;
 
 procedure TForm1.MenuItem2Click(Sender: TObject);
-VAR a,b:Integer;
 begin
-   m1:=Matriz.crear();
-   m1.setfils(StrToInt(InputBox('Cantidad ','Filas','')));
-   m1.setcols(StrToInt(InputBox('Cantidad ','Columnas','')));
-   a:=StrToInt(InputBox('Rango','A',''));
-   b:=StrToInt(InputBox('Rango','B',''));
-   m1.CargarMRnd(a,b);
-   m1.descargarM(StringGrid1);
+   m.setfils(StrToInt(InputBox('Cantidad ','Filas:','')));
 end;
 
 procedure TForm1.MenuItem3Click(Sender: TObject);
 begin
-   m1:=Matriz.crear();
-   m1.setfils(StrToInt(InputBox('Cantidad ','Filas','')));
-   m1.setcols(StrToInt(InputBox('Cantidad ','Columnas','')));
-   m1.CargarM();
-   m1.descargarM(StringGrid1);
+   m.setcols(StrToInt(InputBox('Cantidad ','Columnas:','')));
 end;
 
 procedure TForm1.MenuItem4Click(Sender: TObject);
@@ -128,7 +117,8 @@ begin
    // m.Ordenar_Fil_NumPar();  updateSG1();
    //m.cargaTsd(); updateSG1();
    //m1.Mejor(); m2.descargarM(StringGrid1);
-   //m1.TransponerTriangSinTp();
+   //m.TransponerTriangSinTp();
+   m.TransponerSinTriprincipal();
    //m1.TranpuestaTII1();
 
   //try
@@ -156,7 +146,7 @@ begin
   //    ShowMessage('Se ha producido un error: ' + E.Message);
   //end;
 
-  m.cargaTSI();
+  //m.cargaTSI();
 end;
 
 

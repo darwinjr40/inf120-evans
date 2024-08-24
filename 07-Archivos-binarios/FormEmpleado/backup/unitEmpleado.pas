@@ -5,11 +5,11 @@ unit UnitEmpleado;
 interface
 
 uses
-  Classes, SysUtils, Dialogs;
+  Classes, SysUtils, Dialogs, Grids;
   type
       Empleado = Record
         Nombre:String[60];
-        sexo :String[60];
+        sexo :char;
         cargo :String[60];
         sueldo : integer;
         moneda :String[60];
@@ -28,6 +28,8 @@ uses
 
        public
          Constructor Create();
+       procedure Descargar(v: TStringGrid);
+       function Descargar():String;
        //enviar nombre del archivo
        Procedure setNom(s:String);
        //cargar extencion del archico"txt"
@@ -49,12 +51,14 @@ uses
        //cierra un archivo
        procedure Cerrar();
        procedure Posicionar(pos:Integer);//fijar el puntero en registro
-       procedure adicionar(nombre,se,car  :String; sue : Integer; mon :String);
+       procedure adicionar(nombr:String;se:char; car: String; sue: Integer; mon: String);
        function  getSueldoMayorTipo(genero: char): cardinal;
        function  get2sueldosMayoresAndMostrarMujeres():String;
        function  getPromedioSueldo():real;
        function  getMayorAlPromAndMayorSueldo():String;
        function  EmpleadoToStr(e: Empleado): String;
+       function  ListarMujeres(): String;
+       function  ListarSueldosMayoreMujeres(): String;
   end;
 implementation
 
@@ -65,10 +69,52 @@ implementation
 
 constructor FileEmpleado.Create();
 begin
-   nom:='FileTipo';
+  nom:='FileTipo';
   ext:='dat';
   modo:=-1;
 end;
+
+procedure FileEmpleado.Descargar(v: TStringGrid);
+var r: Empleado;
+    c : byte;
+begin
+  self.Abrir();
+  c := 0;
+  v.ColCount:= 5;
+  v.RowCount:= 50;
+  v.Cells[0, c] := 'nombre';
+  v.Cells[1, c] := 'Sexo';
+  v.Cells[2, c] := 'Cargo';
+  v.Cells[3, c] := 'Sueldo';
+  v.Cells[4, c] := 'Moneda';
+  WHILE(not self.EsFin())do begin //Incrementa el indice automaticamente Hasta llegar al ultimo registro
+       r := LeerTipo();
+       c := c + 1;
+       v.Cells[0, c] := r.Nombre;
+       v.Cells[1, c] := r.sexo;
+       v.Cells[2, c] := r.cargo;
+       v.Cells[3, c] := Inttostr(r.sueldo);
+       v.Cells[4, c] := r.moneda;
+  end;
+
+  self.Cerrar();
+end;
+
+function FileEmpleado.Descargar: String;
+var cad:String;
+      r:Empleado;
+begin
+    Abrir();
+    cad:='Nombre    sexo   cargo     sueldo    moneda'+#10#13;
+    WHILE(not EsFin())do begin //Incrementa el indice automaticamente Hasta llegar al ultimo registro
+       r:= LeerTipo;
+       cad:=cad+ r.Nombre+'  ' + r.sexo+'  '+ r.cargo +'  '+ Inttostr(r.sueldo) + r.moneda + #10#13;
+    end;
+     Cerrar();
+result := cad;
+end;
+
+
 
 procedure FileEmpleado.setNom(s: String);
 begin
@@ -114,16 +160,11 @@ end;
 function FileEmpleado.LeerTipo: Empleado;
 var r : Empleado;
 begin
-   if(modo=1)then begin //modo lectura
-    read(f,r)         // r = F.TEXTo[puntero];
-  end else begin
-    r.Nombre:='';
-    r.sexo:='';
-    r.cargo:='';
-    r.sueldo:=-1;
-    r.moneda:='';
+  if(modo<>1)then begin //modo lectura
+    raise Exception.Create('Error!, Modo no Lectura');
   end;
-    result:=r;
+  read(f,r);
+  result:=r;
 end;
 
 function FileEmpleado.getNom(): String;
@@ -138,13 +179,13 @@ end;
 
 function FileEmpleado.EsFin(): Boolean;
 begin
-     Result:=EOf(f);
+  Result := EOf(f);
 end;
 
 procedure FileEmpleado.Cerrar();
 begin
-   Close(f);
-  modo:=-1;
+  Close(f);
+  self.modo := -1;
 end;
 
 procedure FileEmpleado.Posicionar(pos: Integer);
@@ -156,11 +197,11 @@ begin
  end;
 end;
 
-procedure FileEmpleado.adicionar(nombre, se, car: String; sue: Integer; mon: String
+procedure FileEmpleado.adicionar(nombr:String;se:char; car: String; sue: Integer; mon: String
   );
 var e : Empleado;
 begin
-  e.Nombre:=nombre;
+  e.Nombre:=nombr;
   e.sexo:=se;
   e.cargo:=car;
   e.sueldo:=sue;
@@ -204,7 +245,7 @@ begin
        end;
    end;
    Cerrar();
-   result :=  #10#13 +lista +
+   result :=  lista +
              'Primer sueldo mayor = ' + IntToStr(sueldo1) + #10#13 +
              'segundo sueldo mayor = ' + IntToStr(sueldo2);
 end;
@@ -257,6 +298,54 @@ end;
 function FileEmpleado.EmpleadoToStr(e: Empleado): String;
 begin
   result := e.Nombre+'  ' + e.sexo+'  '+ e.cargo +'  '+ Inttostr(e.sueldo) + e.moneda + #10#13;
+end;
+
+function FileEmpleado.ListarMujeres: String;
+var r: empleado;
+    s: string;
+begin
+  s := '';
+  self.Abrir();
+  while (not self.EsFin()) do begin
+    r := self.LeerTipo();
+    if (r.sexo = 'M') then
+    begin
+      s := s + EmpleadoToStr(r);
+    end;
+  end;
+  self.Cerrar();
+  result := s;
+end;
+
+function FileEmpleado.ListarSueldosMayoreMujeres: String;
+var s1, s2: integer;
+    r: empleado;
+    sw: boolean;
+begin
+  Abrir();
+  sw := false;
+  while ((not self.EsFin())and(not sw)) then begin
+    r := self.LeerTipo();
+    if (r.sexo = 'M') then begin
+      s1 := r.sueldo;
+      s2 := 0;
+      sw := true;
+    end;
+  end;
+  while (not self.EsFin()) do begin
+    r := self.LeerTipo();
+    if (r.sexo = 'M') then
+    begin
+      if r.sueldo > s1 then begin
+        s2 := s1;
+        s1 := r.sueldo;
+      end else if(r.sueldo > s2) then begin
+        s2 := r.sueldo;
+      end;
+    end;
+  end;
+  Cerrar();
+result := 'sueldo1: ' + IntToStr(s1) + #10+#13 + 'sueldo2: ' + IntToStr(s2);
 end;
 
 end.

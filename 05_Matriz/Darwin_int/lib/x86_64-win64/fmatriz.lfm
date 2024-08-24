@@ -1,43 +1,42 @@
 object Form1: TForm1
-  Left = 313
-  Height = 600
-  Top = 191
-  Width = 1402
+  Left = 306
+  Height = 596
+  Top = 124
+  Width = 1178
   Caption = 'Form1'
-  ClientHeight = 575
-  ClientWidth = 1402
-  DesignTimePPI = 120
+  ClientHeight = 576
+  ClientWidth = 1178
   Menu = MainMenu1
   OnCreate = FormCreate
   LCLVersion = '2.2.6.0'
   object StringGrid1: TStringGrid
-    Left = 200
-    Height = 350
-    Top = 70
-    Width = 510
+    Left = 160
+    Height = 280
+    Top = 56
+    Width = 408
     ColCount = 9
-    DefaultColWidth = 56
-    DefaultRowHeight = 38
+    DefaultColWidth = 45
+    DefaultRowHeight = 30
     FixedCols = 0
     FixedRows = 0
     RowCount = 9
     TabOrder = 0
   end
   object Button1: TButton
-    Left = 20
-    Height = 31
-    Top = 170
-    Width = 94
+    Left = 16
+    Height = 25
+    Top = 136
+    Width = 75
     Caption = 'cargar Rnd'
     OnClick = Button1Click
     TabOrder = 1
   end
   object ComboBox1: TComboBox
-    Left = 40
-    Height = 28
-    Top = 90
-    Width = 125
-    ItemHeight = 20
+    Left = 32
+    Height = 23
+    Top = 72
+    Width = 100
+    ItemHeight = 15
     ItemIndex = 0
     Items.Strings = (
       'mostrar Matriz'
@@ -52,36 +51,36 @@ object Form1: TForm1
     Text = 'mostrar Matriz'
   end
   object Button2: TButton
-    Left = 20
-    Height = 31
-    Top = 210
-    Width = 94
+    Left = 16
+    Height = 25
+    Top = 168
+    Width = 75
     Caption = 'cargar '
     OnClick = Button2Click
     TabOrder = 3
   end
   object StringGrid2: TStringGrid
-    Left = 740
-    Height = 350
-    Top = 70
-    Width = 510
-    DefaultColWidth = 56
-    DefaultRowHeight = 38
+    Left = 592
+    Height = 280
+    Top = 56
+    Width = 408
+    DefaultColWidth = 45
+    DefaultRowHeight = 30
     FixedCols = 0
     FixedRows = 0
     TabOrder = 4
   end
   object Button3: TButton
-    Left = 20
-    Height = 31
-    Top = 260
-    Width = 94
+    Left = 16
+    Height = 25
+    Top = 208
+    Width = 75
     Caption = 'Descargar'
     OnClick = Button3Click
     TabOrder = 5
   end
   object MainMenu1: TMainMenu
-    Left = 10
+    Left = 8
     object MenuItem1: TMenuItem
       Caption = 'M1'
       object MenuItem2: TMenuItem

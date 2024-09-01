@@ -18,16 +18,16 @@ type
       {funciones}
       function  GetValor(): cardinal;
       function  SumarDigitos(): byte;
-      function getCantDig(): byte;
+      function  getCantDig(): byte;
       function  VerifPrimo():boolean;
       function  VerifPrimoV02():boolean;
       function  VerifPrimoV03():boolean;
       function  ToRomano(): String;  // 'XX'
       function  ToLiteral(): String;
       function  ToBaseN(b : cardinal) : String;
-      function EsCapicua(): boolean;
-      function EsPar(): boolean;
-      function ToPlaca(): String;
+      function  EsCapicua(): boolean;
+      function  EsPar(): boolean;
+      function  ToPlaca(): String;
       {procesos}
       procedure  SetValor(x: cardinal);
       procedure Invertir();
@@ -366,7 +366,10 @@ begin
   while n > 0 do  begin //123123456
     d := n mod 1000;
     n := n div 1000;
-    r := Natural.ToCentenas(d) + VEC[p] + r;
+    r :=  VEC[p] + r;
+    if d <>1 then begin
+      r := Natural.ToCentenas(d) + r;
+    end;
     p := p + 1;
   end;
   result := r;

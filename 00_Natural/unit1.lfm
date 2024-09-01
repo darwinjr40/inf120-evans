@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 368
+  Left = 507
   Height = 515
-  Top = 186
+  Top = 222
   Width = 855
   Caption = 'Form1'
   ClientHeight = 495
@@ -111,7 +111,8 @@ object Form1: TForm1
         OnClick = MenuItem9Click
       end
       object MenuItem10: TMenuItem
-        Caption = 'MenuItem10'
+        Caption = 'ToBaseN'
+        OnClick = MenuItem10Click
       end
       object MenuItem11: TMenuItem
         Caption = 'Invertir'

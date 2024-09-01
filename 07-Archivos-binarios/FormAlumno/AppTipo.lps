@@ -19,8 +19,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FPrincipal"/>
-        <TopLine Value="279"/>
-        <CursorPos X="19" Y="162"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="206"/>
+        <CursorPos Y="216"/>
         <UsageCount Value="123"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -29,10 +30,9 @@
         <Filename Value="utipo.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="UTipo"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="360"/>
-        <CursorPos X="16" Y="381"/>
+        <TopLine Value="361"/>
+        <CursorPos X="11" Y="364"/>
         <UsageCount Value="123"/>
         <Loaded Value="True"/>
       </Unit2>
@@ -128,7 +128,7 @@
         <UsageCount Value="10"/>
       </Unit14>
     </Units>
-    <JumpHistory Count="9" HistoryIndex="8">
+    <JumpHistory Count="11" HistoryIndex="10">
       <Position1>
         <Filename Value="fprincipal.pas"/>
         <Caret Line="9" Column="75"/>
@@ -165,6 +165,14 @@
         <Filename Value="utipo.pas"/>
         <Caret Line="69" Column="29" TopLine="56"/>
       </Position9>
+      <Position10>
+        <Filename Value="fprincipal.pas"/>
+        <Caret Line="162" Column="19" TopLine="278"/>
+      </Position10>
+      <Position11>
+        <Filename Value="fprincipal.pas"/>
+        <Caret Line="98" Column="10" TopLine="96"/>
+      </Position11>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

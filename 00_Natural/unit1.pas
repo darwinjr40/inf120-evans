@@ -39,6 +39,7 @@ type
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure MenuItem10Click(Sender: TObject);
     procedure MenuItem11Click(Sender: TObject);
     procedure MenuItem12Click(Sender: TObject);
     procedure MenuItem13Click(Sender: TObject);
@@ -104,6 +105,13 @@ end;
 procedure TForm1.FormCreate(Sender: TObject);
 begin
   obj := Natural.create;
+end;
+
+procedure TForm1.MenuItem10Click(Sender: TObject);
+var base: byte;
+begin
+  base := StrToInt(InputBox('Base','','')); // numero = 5
+  edit2.Text := obj.ToBaseN(base);
 end;
 
 procedure TForm1.MenuItem11Click(Sender: TObject);

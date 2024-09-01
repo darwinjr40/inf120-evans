@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos X="8" Y="4"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unatural.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UNatural"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="10"/>
+        <CursorPos X="21" Y="18"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\00_Natural\ucnatural.pas"/>
+        <UnitName Value="UCNatural"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="7"/>
+        <CursorPos X="3" Y="14"/>
+        <UsageCount Value="10"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="66" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="67" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="64" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="66" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="67" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="64" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="66" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="67" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="64" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="66" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="67" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="64" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="66" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="67" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="64" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="66" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="67" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="64" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="66" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="67" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="64" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="66" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="67" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="64" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="66" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="67" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="64" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="66" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="67" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="unatural.pas"/>
+        <Caret Line="64" TopLine="57"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="unatural.pas"/>
+        <Line Value="64"/>
+      </Item>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>

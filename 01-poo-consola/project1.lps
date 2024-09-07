@@ -8,8 +8,9 @@
       <Unit>
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
-        <CursorPos X="8" Y="4"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="20"/>
+        <CursorPos X="39" Y="30"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -18,9 +19,9 @@
         <UnitName Value="UNatural"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="10"/>
-        <CursorPos X="21" Y="18"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="96"/>
+        <CursorPos X="12" Y="89"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -83,75 +84,75 @@
       </Position>
       <Position>
         <Filename Value="unatural.pas"/>
-        <Caret Line="66" TopLine="57"/>
+        <Caret Line="23" Column="21" TopLine="10"/>
       </Position>
       <Position>
         <Filename Value="unatural.pas"/>
-        <Caret Line="67" TopLine="57"/>
+        <Caret Line="24" Column="26" TopLine="17"/>
       </Position>
       <Position>
         <Filename Value="unatural.pas"/>
-        <Caret Line="64" TopLine="57"/>
+        <Caret Line="52" Column="21" TopLine="43"/>
       </Position>
       <Position>
         <Filename Value="unatural.pas"/>
-        <Caret Line="66" TopLine="57"/>
+        <Caret Line="53" Column="16" TopLine="47"/>
       </Position>
       <Position>
         <Filename Value="unatural.pas"/>
-        <Caret Line="67" TopLine="57"/>
+        <Caret Line="56" Column="21" TopLine="48"/>
       </Position>
       <Position>
         <Filename Value="unatural.pas"/>
-        <Caret Line="64" TopLine="57"/>
+        <Caret Line="55" Column="21" TopLine="48"/>
       </Position>
       <Position>
         <Filename Value="unatural.pas"/>
-        <Caret Line="66" TopLine="57"/>
+        <Caret Line="56" TopLine="48"/>
       </Position>
       <Position>
         <Filename Value="unatural.pas"/>
-        <Caret Line="67" TopLine="57"/>
+        <Caret Line="55" Column="26" TopLine="48"/>
       </Position>
       <Position>
         <Filename Value="unatural.pas"/>
-        <Caret Line="64" TopLine="57"/>
+        <Caret Line="8" Column="26"/>
       </Position>
       <Position>
         <Filename Value="unatural.pas"/>
-        <Caret Line="66" TopLine="57"/>
+        <Caret Line="56" Column="25" TopLine="48"/>
       </Position>
       <Position>
         <Filename Value="unatural.pas"/>
-        <Caret Line="67" TopLine="57"/>
+        <Caret Line="55" Column="36" TopLine="48"/>
       </Position>
       <Position>
         <Filename Value="unatural.pas"/>
-        <Caret Line="64" TopLine="57"/>
+        <Caret Line="26" Column="41" TopLine="16"/>
+      </Position>
+      <Position>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="24" Column="27" TopLine="14"/>
       </Position>
       <Position>
         <Filename Value="unatural.pas"/>
-        <Caret Line="66" TopLine="57"/>
+        <Caret Line="27" Column="53" TopLine="24"/>
+      </Position>
+      <Position>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="29" Column="27" TopLine="19"/>
       </Position>
       <Position>
         <Filename Value="unatural.pas"/>
-        <Caret Line="67" TopLine="57"/>
+        <Caret Line="27" Column="25" TopLine="23"/>
       </Position>
       <Position>
         <Filename Value="unatural.pas"/>
-        <Caret Line="64" TopLine="57"/>
+        <Caret Line="29" Column="27" TopLine="21"/>
       </Position>
       <Position>
-        <Filename Value="unatural.pas"/>
-        <Caret Line="66" TopLine="57"/>
-      </Position>
-      <Position>
-        <Filename Value="unatural.pas"/>
-        <Caret Line="67" TopLine="57"/>
-      </Position>
-      <Position>
-        <Filename Value="unatural.pas"/>
-        <Caret Line="64" TopLine="57"/>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="27" Column="21" TopLine="20"/>
       </Position>
     </JumpHistory>
     <RunParams>
@@ -159,15 +160,4 @@
       <Modes ActiveMode=""/>
     </RunParams>
   </ProjectSession>
-  <Debugging>
-    <BreakPoints>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="unatural.pas"/>
-        <Line Value="64"/>
-      </Item>
-    </BreakPoints>
-  </Debugging>
 </CONFIG>

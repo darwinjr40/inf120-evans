@@ -5,7 +5,7 @@ unit UNatural;
 interface
 
 uses
-  Classes, SysUtils;
+  Classes, SysUtils, math;
 
   type
 
@@ -18,10 +18,15 @@ uses
       {publico}
       public
         constructor Crear();
-        procedure setN(x:Cardinal);
+        procedure SetN(x:Cardinal);
         function GetN(): Cardinal;
+        function CantDig(): byte;
         function GetNaturales():string;
         function GetDivisionSucesiva7(m:cardinal):integer;
+        procedure Union(a,b: Cardinal);
+        procedure Union2(a,b: Cardinal);
+        class function Pot(a,b: Cardinal): Cardinal;
+        class function CantD(x: cardinal): byte;
     end;
 
 implementation
@@ -33,7 +38,7 @@ begin
   self.n:=0;
 end;
 
-procedure Natural.setN(x: Cardinal);
+procedure Natural.SetN(x: Cardinal);
 begin
   n := x;
 end;
@@ -41,6 +46,16 @@ end;
 function Natural.GetN: Cardinal;
 begin
   result := n;
+end;
+
+
+function Natural.CantDig: byte;
+begin
+  if(self.n = 0)then begin
+    result := 0;
+  end else begin
+    result := trunc(log10(self.n))+1;   //trunc(10.8) => 10
+  end;
 end;
 
 function Natural.GetNaturales: string;
@@ -67,6 +82,34 @@ begin
     n := n-m;
   end;
   result:=c;
+end;
+
+procedure Natural.Union(a, b: Cardinal);
+var
+    aux : Natural;
+begin
+  aux := Natural.Crear();
+  aux.n := b;
+  n := a * Pot(10, aux.CantDig())+ b;
+end;
+
+procedure Natural.Union2(a, b: Cardinal);
+begin
+  n := a * Pot(10, self.CantD(b))+ b;
+end;
+
+class function Natural.Pot(a, b: Cardinal): Cardinal;
+begin
+  result := trunc(power(a, b));
+end;
+
+class function Natural.CantD(x: cardinal): byte;
+begin
+  if(x = 0)then begin
+    result := 0;
+  end else begin
+    result := trunc(log10(x))+1;   //trunc(10.8) => 10
+  end;
 end;
 
 end.

@@ -101,7 +101,9 @@ begin
   {Mezclar 2 vectores}
    //v3.mezclarDesc(v1, v2);
   {Intercalar 3 vectores}
-  v4.intercalar3Vectores(v1, v2, v3);
+  //v4.intercalar3Vectores(v1, v2, v3);
+   //v.ElimPri();
+   ShowMessage('Elemento mas repetido: ' + IntToStr(v.elementoModa()));
 end;
 
 procedure TForm1.Button5Click(Sender: TObject);

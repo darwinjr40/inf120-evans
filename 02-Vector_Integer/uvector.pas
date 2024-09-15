@@ -678,15 +678,15 @@ end;
 procedure vector.ElimPri();
 var aux,i:integer;
        n:UNatural;
-begin                    //DIM=4
- n:=UNatural.Crear();    //elem[ 4 | 3 | 2 | 6 ]
- aux:=dim;               // aux = 4
- dim := 0; //setdim(0)   //DIM = 0
- for i:=1 to aux do begin  //while (i <= aux)begin  i = i + 1  end
-   n.setValor(elem[i]);  //n.cargar(6)  n=6
-   if(not n.verifPrimo())then //dim=dim+1
-      addElem(elem[i]);    //elem[ 4 | 6 ]
- end;                      //dim = 1+1 =2
+begin
+ n := UNatural.Crear();
+ aux := dim;
+ self.dim := 0;
+ for i:=1 to aux do begin
+   n.setValor(elem[i]);
+   if(not n.verifPrimo())then
+     self.addElem(elem[i]);
+ end;
 end;
 //devuelve el elemento menor entre dos rangos
 function vector.Men(a, b: integer): integer;

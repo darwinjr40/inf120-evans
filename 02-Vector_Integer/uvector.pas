@@ -84,6 +84,7 @@ uses
                procedure Mezcla_A_ordenar1(v1, v2, v3, v4:vector);
                procedure addAsc(x: integer);
                procedure FusionAsc(v1, v2, v3, v4:vector);
+               procedure Dividir4(vp, vnp, vc, vnc:vector);
    //-------------------UOTRAS TECNICAS--------------------------
 
                //muestra la cantidad de cortes de control   #1#
@@ -845,6 +846,37 @@ begin
     self.addAsc(v4.elem[i]);
 end;
 
+procedure vector.Dividir4(vp, vnp, vc, vnc: vector);
+var i: integer;
+    aux: UNatural;
+begin
+  i := 1;
+  vp.dim:=0;
+  vnp.dim:=0;
+  vc.dim:=0;
+  vnc.dim:=0;
+  aux := UNatural.Crear();
+
+  while i<=dim do
+  begin
+    aux.setValor(elem[i]);
+    if aux.verifPrimo() then
+    begin
+      vp.addElem(elem[i]);
+    end else begin
+      vnp.addElem(elem[i]);
+    end;
+
+    if aux.capicua() then
+    begin
+      vc.addElem(elem[i]);
+    end else begin
+      vnc.addElem(elem[i]);
+    end;
+    i := i+1;
+  end;
+end;
+
 procedure vector.Mezcla_A_ordenar(v1, v2: vector);
 var i,j,n1,n2:integer;
 begin
@@ -895,18 +927,24 @@ end;
 procedure vector.intercalar(A, B: vector);
 var i,j:integer;
 begin
-  i:=1;  j:=1;  dim:=0;
-  while (i<=A.getDim())AND(j<=B.getDim())do begin
-     addElem(A.getElem(i));
-     i:=i+1;
-     addElem(B.getElem(j));
-     j:=j+1;
+  i:=1;
+  j:=1;
+  dim:=0;
+  while (i<=A.dim)AND(j<=B.dim)do begin
+    if (A.elem[i] <= B.elem[j]) then
+    begin
+      addElem(A.getElem(i));
+      i:=i+1;
+    end else begin
+      addElem(B.getElem(j));
+      j:=j+1;
+    end;
   end;
-  while(i<=A.getDim())do begin
+  while(i<=A.dim)do begin
       addElem(A.getElem(i));
       i:=i+1;
   end;
-  while(j<=B.getDim())do begin
+  while(j<=B.dim)do begin
       addElem(B.getElem(j));
       j:=j+1;
   end;

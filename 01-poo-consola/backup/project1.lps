@@ -8,7 +8,6 @@
       <Unit>
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <TopLine Value="20"/>
         <CursorPos X="39" Y="30"/>
         <UsageCount Value="21"/>
@@ -18,9 +17,10 @@
         <Filename Value="unatural.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="UNatural"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="93"/>
-        <CursorPos X="25" Y="96"/>
+        <TopLine Value="96"/>
+        <CursorPos X="12" Y="89"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit>

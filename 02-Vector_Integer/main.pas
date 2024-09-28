@@ -103,7 +103,12 @@ begin
   {Intercalar 3 vectores}
   //v4.intercalar3Vectores(v1, v2, v3);
    //v.ElimPri();
-   ShowMessage('Elemento mas repetido: ' + IntToStr(v.elementoModa()));
+   //ShowMessage('Elemento mas repetido: ' + IntToStr(v.elementoModa()));
+  {Fusionar 2 vectores asc}
+  //v1.intercalar(v2, v3);
+
+    {Fusionar 2 vectores asc}
+  v1.Dividir4(v2,v3,v4,v5);
 end;
 
 procedure TForm1.Button5Click(Sender: TObject);

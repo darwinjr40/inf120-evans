@@ -131,18 +131,22 @@ end;
 procedure TForm1.MenuItem13Click(Sender: TObject);
 var aux : Natural;
       n, i: cardinal;//0 ..num de 10 dig
+      r : string;
 begin
   aux:= Natural.create;
   n := obj.GetValor();
   ListBox1.Clear;
+  r := '';
   for i:=1 to n do begin
      aux.SetValor(i);
      if (aux.EsCapicua()
          and aux.VerifPrimoV02()) then
      begin
+        r := r + IntToStr(i) + ', ';
         ListBox1.Items.Add(IntToStr(i));//5->'5'
      end;
   end;
+  edit2.Text:= r;
 end;
 
 procedure TForm1.MenuItem14Click(Sender: TObject);
@@ -174,8 +178,12 @@ begin
 end;
 
 procedure TForm1.Button3Click(Sender: TObject);
+var n: real;
 begin
-  Edit3.Text :=obj.ToPlaca();
+  n := StrToFloat(InputBox('','',''));
+  Natural.ToBinario(n);
+  edit3.Text:= floatToStr(n);
+  //Edit3.Text :=obj.ToPlaca();
 end;
 
 end.

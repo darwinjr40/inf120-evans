@@ -78,7 +78,7 @@ begin
 end;
 
 procedure TForm1.Button4Click(Sender: TObject);
- //VAR N : integer;
+ VAR N : integer;
 begin
   //v.ord_seleccion();
   //v.CargarMult2yMul3(v2,v3);
@@ -108,7 +108,19 @@ begin
   //v1.intercalar(v2, v3);
 
     {Fusionar 2 vectores asc}
-  v1.Dividir4(v2,v3,v4,v5);
+  //v1.Dividir4(v2,v3,v4,v5);
+
+  {cortes de control U4-#1}
+  //n := v.CorteControlN1();
+  //ShowMessage('Existen '+inttostr(n)+'cortes de control de nivel 1');
+
+  {cortes de control U4-#3}
+  //v.Dispersion1(v2,v3);
+  {unidad04 - #5}
+  //v.Inter_ordenarV2(v2, v3);
+
+  {unidad04 - #7}
+  v.ejercicio7V2(v2,v3);
 end;
 
 procedure TForm1.Button5Click(Sender: TObject);

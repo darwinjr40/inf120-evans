@@ -88,15 +88,17 @@ uses
    //-------------------UOTRAS TECNICAS--------------------------
 
                //muestra la cantidad de cortes de control   #1#
-               procedure CorteControlN1();
+               function CorteControlN1(): integer;
                //V1=Elemento    V2=Frecuencia  dentro del corte de control    #3#
                procedure Dispersion1(v1,v2:vector);
                //Mezcla dos vectores ordenados ascendente-mente,cargar en el  objeto ascendentemente #4#
                procedure Mezcla_A_ordenar(v1,v2:vector);
                //Mezcla dos vectores ordenados descendente-mente,cargar en el  objeto ascendentemente #5#
                procedure Inter_ordenar(v1,v2:vector);
+               procedure Inter_ordenarV2(v1,v2:vector);
                //Dividir el vector en 2 v1=[primos]  v2=[no primos]    #7#
                procedure ejercicio7(B:vector);
+               procedure ejercicio7V2(v1, v2:vector);
                //primero "ordena" luego elimina numero repetidos dejando unicos #9#
                procedure ejercicio9();
                //cargar en vector --> A[pares]   B[Impares]
@@ -719,7 +721,7 @@ begin
   end;
   result := mayor;
 end;
-
+//algoritmo que se puede obtimizar
 procedure vector.Inter_ordenar(v1, v2: vector);
 var i,j,m1,m2:integer;
 begin
@@ -736,6 +738,32 @@ begin
      end;
   end;
 end;
+
+procedure vector.Inter_ordenarV2(v1, v2: vector);
+var i,j : integer;
+begin
+   i := v1.dim;
+   j := v2.dim;
+   self.dim :=0;
+   while ((i>0)and(j>0)) do begin
+     if (v1.elem[i] < v2.elem[j]) then begin
+       self.addElem(v1.elem[i]);
+       i := i-1;
+     end else begin
+       self.addElem(v2.elem[j]);
+       j := j-1;
+     end;
+   end;
+   while j>0 do begin
+     self.addElem(v2.elem[j]);
+     j := j-1;
+   end;
+   while i>0 do begin
+     self.addElem(v1.elem[i]);
+     i := i-1;
+   end;
+end;
+
 //dividir el vector en elementos unicos y repetidos
 procedure vector.DivRepNoRep(v1, v2: vector);
 var i:integer;
@@ -754,10 +782,12 @@ procedure vector.Dispersion1(v1,v2:vector);
 var i,cc,ele:integer;
 begin
  cc:=0; i:=1;
+ v1.dim:=0;
+ v2.dim:=0;
  while(i<=dim) do begin
    ele:=elem[i]; //ele=1
    cc:=0;
-   while(ele= elem[i])do begin
+   while(ele=elem[i])do begin
     cc:=cc+1; //1
     i:=i+1;   //[2]
    end;
@@ -1160,7 +1190,25 @@ begin
    end;
 end;
 
-procedure vector.CorteControlN1();
+procedure vector.ejercicio7V2(v1, v2: vector);
+var i :integer;
+        n:UNatural;
+begin
+  n := UNatural.Crear();
+  v1.setDim(0);
+  v2.setDim(0);
+  for i:=1 to dim do begin
+    n.setValor(elem[i]);
+    if n.verifPrimo() then
+    begin
+      v1.addElem(n.getValor());
+    end else begin
+      v2.addElem(n.getValor());
+    end;
+   end;
+end;
+
+function vector.CorteControlN1: integer;
 var i,cc:integer;
 begin
  cc:=0; i:=1;
@@ -1169,7 +1217,7 @@ begin
     cc:=cc+1;
   i:=i+1;
  end;
- ShowMessage('Existen <'+inttostr(cc)+'>cortes de conrol de nivel 1');
+ result := cc;
 end;
 
 end.
